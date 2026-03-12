@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Juegos</title>
+    <link rel="stylesheet" href="estilo_inicio.css" />
+    <link rel="stylesheet" href="carrousel.css" />
+    <link rel="stylesheet" href="estilofondo.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <style>
+      /* Estilos para el cuadro de diálogo (modal) */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding-top: 60px;
+      }
+      .modal-content {
+        background-color: #2a475e;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        color: white;
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      /* Estilos para el menú desplegable de categorías */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #1e1e1e;
+        min-width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.6);
+        z-index: 100;
+        border-radius: 8px;
+        overflow: hidden;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px;
+        border: 1px solid #d4af37;
+        width: auto;
+        max-width: 600px;
+      }
+
+      .dropdown-content.show {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        padding: 20px;
+      }
+
+      .dropdown-content a {
+        color: #f5f5f5;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #d4af37;
+        color: #1e1e1e;
+      }
+
+      /* Estilos para el botón de categorías */
+      .dropbtn {
+        background-color: transparent;
+        color: #f5f5f5;
+        padding: 8px 15px;
+        font-size: 18px;
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-radius: 8px;
+      }
+
+      .dropbtn:hover {
+        background-color: #d4af37;
+        color: #fff;
+        transform: scale(1.05);
+      }
+
+      /* From Uiverse.io by LightAndy1 */
+      .group {
+        display: flex;
+        line-height: 28px;
+        align-items: center;
+        position: relative;
+        max-width: 190px;
+        margin: 20px auto;
+      }
+
+      .input {
+        font-family: "Montserrat", sans-serif;
+        width: 100%;
+        height: 45px;
+        padding-left: 2.5rem;
+        box-shadow: 0 0 0 1.5px #2b2c37, 0 0 25px -17px #000;
+        border: 0;
+        border-radius: 12px;
+        background-color: #16171d;
+        outline: none;
+        color: #bdbecb;
+        transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+        cursor: text;
+        z-index: 0;
+      }
+
+      .input::placeholder {
+        color: #bdbecb;
+      }
+
+      .input:hover {
+        box-shadow: 0 0 0 2.5px #2f303d, 0px 0px 25px -15px #000;
+      }
+
+      .input:active {
+        transform: scale(0.95);
+      }
+
+      .input:focus {
+        box-shadow: 0 0 0 2.5px #2f303d;
+      }
+
+      .search-icon {
+        position: absolute;
+        left: 1rem;
+        fill: #bdbecb;
+        width: 1rem;
+        height: 1rem;
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      /* Nuevos estilos para la navegación */
+      .nav-main {
+        display: flex;
+        justify-content: center; /* Centra todo el contenido de nav-main */
+        align-items: center;
+        width: 100%;
+        padding: -10px 10px;
+      }
+
+      .nav-left {
+        display: flex;
+        align-items: center;
+        gap: 15px; /* Reduce el espacio entre los elementos de nav-left */
+      }
+
+      .nav-right {
+        display: flex;
+        align-items: center;
+        /* Si quieres que el icono de login esté más cerca del centro, puedes ajustar el margen aquí */
+        margin-left: 10px; /* Ajusta este valor para acercar/alejar el icono de login */
+      }
+
+      /* Estilo para el logo de la personita */
+      .login-icon {
+        height: 30px;
+        width: auto;
+        vertical-align: middle;
+        transition: transform 0.3s ease;
+        border-radius: 50%;
+        padding: 3px;
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .login-icon:hover {
+        transform: scale(1.15);
+        background-color: rgba(212, 175, 55, 0.2);
+      }
+
+      .login-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+      }
+
+      .login-link:hover {
+        background-color: rgba(212, 175, 55, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Logop2p">
+      <header>
+        <img src="imagenes/Logop2p.png" alt="logo" class="centered-logo" />
+      </header>
+    </div>
+
+    <div class="categoriaI">
+      <header>
+        <nav class="nav-main">
+          <div class="nav-left">
+            <a href="Inicio.html">Inicio</a>
+            <div class="dropdown">
+              <button class="dropbtn" id="categoriasBtn">Categorías</button>
+              <div class="dropdown-content" id="dropdownContent">
+                <a href="#" data-category="todas">Todas</a>
+                <a href="#" data-category="aventura">Aventura</a>
+                <a href="#" data-category="accion">Acción</a>
+                <a href="#" data-category="deportes">Deportes</a>
+                <a href="#" data-category="estrategia">Estrategia</a>
+                <a href="#" data-category="simulacion">Simulación</a>
+                <a href="#" data-category="survivalHorror">Survival Horror</a>
+                <a href="#" data-category="Casual">Casual</a>
+              </div>
+            </div>
+            <a href="contactanos.html">Contáctanos</a>
+          </div>
+          <div class="nav-right">
+            <a href="inicio de session.html" class="login-link">
+              <img
+                src="imagenes/pngtree-controller-joystick-icon-png-image_3433708-removebg-preview.png"
+                alt="Iniciar Sesión"
+                class="login-icon"
+              />
+            </a>
+          </div>
+        </nav>
+      </header>
+    </div>
+
+    <div class="categoriaTitulo">
+      <nav>
+        <h1>Mas Jugados</h1>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div id="theCarousel" class="carousel">
+        <div class="carousel-item active">
+          <a href="dayz.html">
+            <img
+              src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/221100/header.jpg?t=1741874734"
+              alt="DayZ"
+            />
+          </a>
+          <h3>DayZ</h3>
+        </div>
+
+        <div class="carousel-item">
+          <a href="fifa25.html">
+            <img
+              src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2669320/header.jpg?t=1740132694"
+              alt="Fifa 25"
+            />
+          </a>
+          <h3>Fifa 25</h3>
+        </div>
+        <div class="carousel-item">
+          <a href="f124.html">
+            <img
+              src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2488620/header.jpg?t=1741190193"
+              alt="F1 24"
+            />
+          </a>
+          <h3>F1 24</h3>
+        </div>
+        <div class="carousel-item">
+          <a href="ark.html">
+            <img
+              src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/346110/header.jpg?t=1709879597"
+              alt="Ark"
+            />
+          </a>
+          <h3>Ark</h3>
+        </div>
+      </div>
+    </div>
+    <button class="left carousel-control">❮</button>
+    <button class="right carousel-control">❯</button>
+    <div class="group">
+      <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
+        <g>
+          <path
+            d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+          ></path>
+        </g>
+      </svg>
+
+      <input
+        id="searchInput"
+        class="input"
+        type="search"
+        placeholder="Buscar..."
+        name="searchbar"
+        onkeyup="buscarJuegos()"
+      />
+    </div>
+    <div class="categoriaTitulo">
+      <nav>
+        <h1 id="categoriaTitulo">Todos los Juegos</h1>
+      </nav>
+    </div>
+    <div class="juegos" id="juegosContainer"></div>
+
+    <!-- El modal original se mantiene, pero no se usará para el menú de categorías -->
+    <div id="miModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Categorías</h2>
+        <ul class="category-list">
+          <li data-category="todas">Todas</li>
+          <li data-category="aventura">Aventura</li>
+          <li data-category="accion">Acción</li>
+          <li data-category="deportes">Deportes</li>
+          <li data-category="estrategia">Estrategia</li>
+          <li data-category="simulacion">Simulación</li>
+          <li data-category="survivalHorror">Survival Horror</li>
+          <li data-category="Casual">Casual</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      // Objeto que contiene los juegos organizados por categorías
+      const juegos = {
+        aventura: [
+          {
+            nombre: "Hogwarts Legacy",
+            img: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/990080/header.jpg",
+            link: "Hogwarts Legacy.html",
+          },
+          {
+            nombre: "Hollow Knight",
+            img: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/367520/header.jpg",
+            link: "HollowKnight.html",
+          },
+          {
+            nombre: "The Forest",
+            img: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/242760/header.jpg",
+            link: "the forest.html",
+          },
+          {
+            nombre: "Ark",
+            img: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/346110/header.jpg?t=1709879597",
+            link: "ark.html",
+          },
+          {
+            nombre: "Red Dead Redemption 2",
+            img: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1174180/header.jpg?t=1720558643",
+            link: "rdr2.html",
+          },
+        ],
+        accion: [
+          { nombre: "Gta V", img: "imagenes/gtaimg.jpg", link: "p2price.html" },
+          {
+            nombre: "Mortal Kombat 1",
+            img: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1971870/header.jpg?t=1729006754",
+            link: "mortakkombat1.html",
+          },
+          {
+            nombre: "DayZ",
+            img: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/221100/header.jpg?t=1741874734",
+            link: "dayz.html",
+          },
+          {
+            nombre: "Ark",
+            img: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/346110/header.jpg?t=1709879597",
+            link: "ark.html",
+          },
+          {
+            nombre: "Assassin's Creed Shadows",
+            img: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/3159330/header.jpg?t=1742705129",
+            link: "Assassin's Creed Shadows.html",
+          },
+          {
+            nombre: "Atom Fall",
+            img: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/801800/header.jpg?t=1743088104",
+            link: "atom fall.html",
+          },
+          {
+            nombre: "r.e.p.o",
+            img: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/3241660/header.jpg?t=1740578354",
+            link: "r.e.p.o.html",
+          },
+        ],
+        deportes: [
+          {
+            nombre: "Fifa 25",
+            img: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2669320/header.jpg?t=1740132694",
+            link: "fifa25.html",
+          },
+          {
+            nombre: "NBA 2K25",
+            img: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2878980/header.jpg?t=1740153913",
+            link: "nba2k25.html",
+          },
+          {
+            nombre: "F1 24",
+            img: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2488620/header.jpg?t=1741190193",
+            link: "f124.html",
+          },
+        ],
+        estrategia: [
+          {
+            nombre: "Rust",
+            img: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/252490/header.jpg?t=1738927718",
+            link: "rust.html",
+          },
+          {
+            nombre: "Raft",
+            img: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/648800/header.jpg?t=1727184011",
+            link: "raft.html",
+          },
+        ],
+        simulacion: [
+          {
+            nombre: "Human Fall Flat",
+            img: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/477160/44268367b400f14c5c8b5099df0e4343b80641c9/header_alt_assets_24_spanish.jpg?t=1742834640",
+            link: "humanfallflat.html",
+          },
+          {
+            nombre: "Phasmophobia",
+            img: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/739630/header.jpg?t=1740090955",
+            link: "phasmophobia.html",
+          },
+        ],
+        survivalHorror: [
+          {
+            nombre: "Resident Evil 4",
+            img: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/254700/header.jpg?t=1700452857",
+            link: "Resident Evil 4 (2005).html",
+          },
+          {
+            nombre: "Resident Evil 5",
+            img: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/21690/header.jpg?t=1712193350",
+            link: "Resident Evil 5.html",
+          },
+          {
+            nombre: "Resident Evil 6",
+            img: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/221040/header.jpg?t=1700452901",
+            link: "Resident Evil 6.html",
+          },
+          {
+            nombre: "Resident Evil Zero",
+            img: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/339340/header.jpg?t=1742177237",
+            link: "Resident Evil Zero.html",
+          },
+          {
+            nombre: "Resident Evil",
+            img: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/304240/header.jpg?t=1709710949",
+            link: "Resident Evil.html",
+          },
+        ],
+        Casual: [
+          {
+            nombre: "Among Us",
+            img: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/945360/header.jpg?t=1731953093",
+            link: "amongus.html",
+          },
+          {
+            nombre: "Chained Together",
+            img: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2567870/header.jpg?t=1732288374",
+            link: "Chained Together.html",
+          },
+        ],
+      };
+
+      // Selección de elementos del DOM
+      const categoriasBtn = document.getElementById("categoriasBtn");
+      const dropdownContent = document.getElementById("dropdownContent");
+      const juegosContainer = document.getElementById("juegosContainer");
+      const categoriaTitulo = document.getElementById("categoriaTitulo");
+      const searchInput = document.getElementById("searchInput");
+
+      // Mostrar todos los juegos al cargar la página
+      mostrarTodosLosJuegos();
+
+      // Evento para mostrar/ocultar el menú desplegable al pasar el ratón
+      categoriasBtn.addEventListener("mouseenter", function () {
+        dropdownContent.classList.add("show");
+      });
+
+      categoriasBtn.addEventListener("mouseleave", function () {
+        setTimeout(() => {
+          if (!dropdownContent.matches(":hover")) {
+            dropdownContent.classList.remove("show");
+          }
+        }, 200);
+      });
+
+      dropdownContent.addEventListener("mouseleave", function () {
+        dropdownContent.classList.remove("show");
+      });
+
+      // Evento para seleccionar una categoría desde el menú desplegable
+      document.querySelectorAll("#dropdownContent a").forEach((item) => {
+        item.addEventListener("click", function (event) {
+          event.preventDefault();
+          const category = this.getAttribute("data-category");
+          mostrarJuegos(category);
+          dropdownContent.classList.remove("show");
+        });
+      });
+
+      // Función para mostrar todos los juegos
+      function mostrarTodosLosJuegos() {
+        juegosContainer.innerHTML = "";
+        categoriaTitulo.textContent = "Todos los Juegos";
+        for (const category in juegos) {
+          juegos[category].forEach((juego) => {
+            const juegoDiv = document.createElement("div");
+            juegoDiv.className = "juego";
+            juegoDiv.innerHTML = `
+                                <a href="${juego.link}">
+                                    <img src="${juego.img}" alt="${juego.nombre}" />
+                                    <p>${juego.nombre}</p>
+                                </a>
+                            `;
+            juegosContainer.appendChild(juegoDiv);
+          });
+        }
+      }
+
+      // Función para mostrar juegos según la categoría seleccionada
+      function mostrarJuegos(category) {
+        juegosContainer.innerHTML = "";
+        categoriaTitulo.textContent =
+          category.charAt(0).toUpperCase() + category.slice(1);
+        if (category === "todas") {
+          mostrarTodosLosJuegos();
+        } else {
+          juegos[category].forEach((juego) => {
+            const juegoDiv = document.createElement("div");
+            juegoDiv.className = "juego";
+            juegoDiv.innerHTML = `
+                                <a href="${juego.link}">
+                                    <img src="${juego.img}" alt="${juego.nombre}" />
+                                    <p>${juego.nombre}</p>
+                                </a>
+                            `;
+            juegosContainer.appendChild(juegoDiv);
+          });
+        }
+      }
+
+      // Función para buscar juegos
+      function buscarJuegos() {
+        const searchTerm = searchInput.value.toLowerCase();
+        juegosContainer.innerHTML = "";
+
+        if (searchTerm === "") {
+          categoriaTitulo.textContent = "Todos los Juegos";
+          mostrarTodosLosJuegos();
+          return;
+        }
+
+        categoriaTitulo.textContent =
+          "Resultados de la búsqueda para: " + searchInput.value;
+
+        let resultadosEncontrados = false;
+
+        for (const category in juegos) {
+          juegos[category].forEach((juego) => {
+            if (juego.nombre.toLowerCase().includes(searchTerm)) {
+              const juegoDiv = document.createElement("div");
+              juegoDiv.className = "juego";
+              juegoDiv.innerHTML = `
+                                <a href="${juego.link}">
+                                    <img src="${juego.img}" alt="${juego.nombre}" />
+                                    <p>${juego.nombre}</p>
+                                </a>
+                            `;
+              juegosContainer.appendChild(juegoDiv);
+              resultadosEncontrados = true;
+            }
+          });
+        }
+
+        if (!resultadosEncontrados) {
+          juegosContainer.innerHTML =
+            "<p>No se encontraron juegos con ese nombre.</p>";
+        }
+      }
+
+      // Inicializa el carrusel
+      let currentIndex = 0;
+      const slides = document.querySelectorAll(".carousel-item");
+      const totalSlides = slides.length;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.remove("active");
+          if (i === index) {
+            slide.classList.add("active");
+          }
+        });
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        showSlide(currentIndex);
+      }
+
+      document.querySelector(".right").addEventListener("click", nextSlide);
+      document.querySelector(".left").addEventListener("click", prevSlide);
+      showSlide(currentIndex);
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <footer>
+      <div class="footer-content"></div>
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-section">
+            <h3>p2price</h3>
+            <p>
+              Tu comparador de precios para videojuegos en todas las plataformas.
+              Rápido y actualizado.
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h4>Navegación</h4>
+            <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="contactanos.html">Contactanos</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Protegido por reCAPTCHA</h4>
+            <ul>
+              <li><a href="https://www.argentina.gob.ar/sites/default/files/terminos_y_condiciones_aplicacion_cuidar_-_covid_19_-_v5.pdf">Términos de uso</a></li>
+              <li><a href="https://www.argentinacibersegura.org/pdf/politica-de-privacidad.pdf">Política de privacidad</a></li>
+            </ul>
+          </div>
+          <h4>Síguenos</h4>
+          <div class="footer-section">
+            <ul class="wrapper">
+              <li class="icon facebook">
+                <a href="https://www.facebook.com/profile.php?id=100083564291356">
+                  <span class="tooltip">Facebook</span>
+                  <svg
+                    viewBox="0 0 320 512"
+                    height="1.2em"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                    ></path>
+                  </svg>
+                </a>
+              </li>
+              <li class="icon twitter">
+                <a href="https://x.com/FabrizioRomano">
+                  <span class="tooltip">Twitter</span>
+                  <svg
+                    height="1.8em"
+                    fill="currentColor"
+                    viewBox="0 0 48 48"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="twitter"
+                  >
+                    <path
+                      d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"
+                    ></path>
+                  </svg>
+                </a>
+              </li>
+            <li class="icon instagram">
+              <a href="https://www.instagram.com/jeree_calderon/">
+                <span class="tooltip">Instagram</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1.2em"
+                  fill="currentColor"
+                  class="bi bi-instagram"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+    </ul>
+  </body>
+</html>

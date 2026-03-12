@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="registrarse.css" />
+    <title>Registro de Cuenta</title>
+  </head>
+  <body>
+    <div class="register-container">
+      <h3>Registro de Cuenta</h3>
+      <form id="registerForm">
+        <div>
+          Ingrese su Nombre/Nombres:
+          <input type="text" id="name" name="name" placeholder="Nombre(s)" />
+        </div>
+        <div>
+          Ingrese su Apellido/Apellidos:
+          <input
+            type="text"
+            id="apellido"
+            name="apellido"
+            placeholder="Apellido(s)"
+          />
+        </div>
+        <div>
+          Ingrese su Correo:
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Correo electrónico"
+          />
+        </div>
+        <div>
+          Ingrese su Fecha de Nacimiento:
+          <input type="date" id="fecha" name="fecha" />
+        </div>
+        <div class="excepciondiv">
+          Ingrese su Contraseña:
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Contraseña"
+            />
+            <button
+              type="button"
+              class="ojos"
+              id="togglePassword"
+              aria-label="Mostrar u ocultar contraseña"
+            >
+              <img
+                id="eyeIcon"
+                class="ojos"
+                src="imagenes/ojo.png"
+                alt="Mostrar contraseña"
+              />
+            </button>
+          </div>
+          Repita su Contraseña:
+          <div class="repassword-wrapper">
+            <input
+              type="password"
+              id="repassword"
+              name="repassword"
+              placeholder="Repetir contraseña"
+            />
+            <button
+              type="button"
+              class="ojos"
+              id="togglerePassword"
+              aria-label="Mostrar u ocultar contraseña"
+            >
+              <img
+                id="eyeIcon2"
+                class="ojos"
+                src="imagenes/ojo.png"
+                alt="Mostrar contraseña"
+              />
+            </button>
+          </div>
+        </div>
+        <div>
+          <button type="submit">Registrar</button>
+        </div>
+      </form>
+
+      <div>
+        <button
+          class="back-button"
+          type="button"
+          onclick="window.location.href='inicio de session.html'"
+        >
+          Regresar al Inicio de Sesión
+        </button>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("registerForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const name = document.getElementById("name").value.trim();
+          const apellido = document.getElementById("apellido").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const fecha = document.getElementById("fecha").value;
+          const password = document.getElementById("password").value;
+          const repassword = document.getElementById("repassword").value;
+
+          if (
+            !name ||
+            !apellido ||
+            !email ||
+            !fecha ||
+            !password ||
+            !repassword
+          ) {
+            alert("Por favor, complete todos los campos.");
+            return;
+          }
+          if (password !== repassword) {
+            alert("Las contraseñas no coinciden.");
+            return;
+          }
+          window.location.href = "inicio de session.html";
+        });
+    </script>
+    <script>
+      const togglerePassword = document.getElementById("togglerePassword");
+      const repassword = document.getElementById("repassword");
+      const eyeIcon2 = document.getElementById("eyeIcon2");
+
+      togglerePassword.addEventListener("click", () => {
+        const type = repassword.getAttribute("type");
+        if (type === "password") {
+          repassword.setAttribute("type", "text");
+          eyeIcon2.src = "imagenes/ojo (1).png"; // Cambia a un icono de ojo cerrado si tienes
+          eyeIcon2.alt = "Ocultar contraseña";
+        } else {
+          repassword.setAttribute("type", "password");
+          eyeIcon2.src = "imagenes/ojo.png"; // Icono de ojo abierto
+          eyeIcon2.alt = "Mostrar contraseña";
+        }
+      });
+    </script>
+    <script>
+      const togglePassword = document.getElementById("togglePassword");
+      const password = document.getElementById("password");
+      const eyeIcon = document.getElementById("eyeIcon");
+
+      togglePassword.addEventListener("click", () => {
+        const type = password.getAttribute("type");
+        if (type === "password") {
+          password.setAttribute("type", "text");
+          eyeIcon.src = "imagenes/ojo (1).png"; // Cambia a un icono de ojo cerrado si tienes
+          eyeIcon.alt = "Ocultar contraseña";
+        } else {
+          password.setAttribute("type", "password");
+          eyeIcon.src = "imagenes/ojo.png"; // Icono de ojo abierto
+          eyeIcon.alt = "Mostrar contraseña";
+        }
+      });
+    </script>
+  </body>
+</html>

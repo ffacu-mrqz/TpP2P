@@ -1,0 +1,61 @@
+/* Estilos para el carrusel */
+.container {
+  width: 100%;
+  max-width: 500px; /* Ajusta el tamaño del carrusel */
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-item {
+  display: none; /* Oculta todos los elementos del carrusel por defecto */
+}
+
+.carousel-item.active {
+  display: block; /* Muestra el elemento activo */
+}
+
+.carousel-item img {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1;
+}
+
+.left {
+  left: 28%;
+  top: 380px;
+}
+
+.right {
+  right: 28%;
+  top: 380px;
+}
+
+/* Estilos para la sección de juegos */
+.juegos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.juego {
+  width: 30%; /* Ajusta el tamaño de cada juego */
+  margin: 10px;
+  text-align: center;
+}
+
+.juego img {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}

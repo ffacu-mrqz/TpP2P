@@ -1,0 +1,411 @@
+/* Importar la fuente Montserrat desde Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+/* Estilo global */
+/* From Uiverse.io by kandalgaonkarshubham */
+/* From Uiverse.io by themrsami */
+.centered-logo {
+  display: block;
+  margin: 20px auto 0;
+  width: 60px;  
+  height: auto;
+  padding: 0px 0px;
+}
+.Logop2p {
+  align-items: center;
+  text-align: center;
+  margin-top: 40px;
+}
+.categoriaI {
+  width: 100%;
+  position: fixed;
+  border-bottom: 1px solid #2f283e;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 99;
+  padding: 20 20px;
+  margin-top: -148px;
+}
+a {
+  text-decoration: none; /* Elimina el subrayado */
+}
+
+body {
+  font-family: "Montserrat", sans-serif; /* Fuente moderna y limpia */
+  background: radial-gradient(
+        circle farthest-side at 0% 50%,
+        #282828 23.5%,
+        rgba(255, 170, 0, 0) 0
+      )
+      21px 30px,
+    radial-gradient(
+        circle farthest-side at 0% 50%,
+        #2c3539 24%,
+        rgba(240, 166, 17, 0) 0
+      )
+      19px 30px,
+    linear-gradient(
+        #282828 14%,
+        rgba(240, 166, 17, 0) 0,
+        rgba(240, 166, 17, 0) 85%,
+        #282828 0
+      )
+      0 0,
+    linear-gradient(
+        150deg,
+        #282828 24%,
+        #2c3539 0,
+        #2c3539 26%,
+        rgba(240, 166, 17, 0) 0,
+        rgba(240, 166, 17, 0) 74%,
+        #2c3539 0,
+        #2c3539 76%,
+        #282828 0
+      )
+      0 0,
+    linear-gradient(
+        30deg,
+        #282828 24%,
+        #2c3539 0,
+        #2c3539 26%,
+        rgba(240, 166, 17, 0) 0,
+        rgba(240, 166, 17, 0) 74%,
+        #2c3539 0,
+        #2c3539 76%,
+        #282828 0
+      )
+      0 0,
+    linear-gradient(90deg, #2c3539 2%, #282828 0, #282828 98%, #2c3539 0%) 0 0
+      #282828;
+  background-size: 40px 60px;
+
+  color: #eaeaea; /* Texto gris suave */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Asegura que el padding y margin no afecten el tamaño */
+}
+
+/* Encabezado */
+header {
+  background-color: #1e1e1e; /* Fondo oscuro para el encabezado */
+  padding: 20px 30px;
+
+
+  align-items: center;
+
+  justify-content: space-between;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra más sutil */
+  border-bottom: 2px solid #d4af37; /* Línea dorada */
+}
+
+header h1 {
+  font-size: 32px;
+  color: #d4af37; /* Color dorado para el título */
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5); /* Sombra suave */
+  letter-spacing: 1.2px;
+}
+
+nav a {
+  color: #f5f5f5; /* Color de texto claro */
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #d4af37; /* Fondo dorado al hover */
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  flex: 1;
+  margin-left: 70px; /* Increased margin to shift nav-left more right so Categorías button is centered relative to logo */
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para las cards de los juegos */
+.juego {
+  position: relative;
+  background-color: #2c3e50; /* Fondo gris azulado oscuro */
+  border-radius: 20px; /* Bordes redondeados */
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Sombra más profunda */
+  transition: all 0.4s ease-in-out;
+  margin: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 260px; /* Altura fija */
+  width: 300px; /* Ancho fijo */
+}
+
+.juego:hover {
+  transform: translateY(-5px); /* Efecto de levantado */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.juego img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom: 6px solid #d4af37; /* Borde dorado */
+}
+
+.juego p {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px 30px;
+  background-color: #2c3e50; /* Fondo gris suave */
+  border-radius: 0 0 20px 20px;
+  margin: 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-decoration: none; /* Asegúrate de que no haya subrayado */
+}
+
+.juego:hover p {
+  background-color: #d4af37; /* Fondo dorado al hover */
+  color: white;
+}
+
+/* Detalles de la tarjeta de juego */
+.juego .detalles {
+  font-size: 14px;
+  color: #ddd;
+  padding: 15px 25px;
+  text-align: center;
+  background-color: #34495e; /* Fondo gris suave */
+  border-radius: 0 0 20px 20px;
+  border-top: 1px solid #d4af37; /* Línea dorada */
+  margin-top: auto;
+}
+.footer {
+  background-color: #1f1f1f;
+  color: #ccc;
+  padding: 40px 20px;
+  font-family: sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.social-icons a {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #777;
+}
+
+/* Animación suave para la card */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.juego {
+  animation: fadeInUp 0.6s ease-out;
+}
+.categoriaTitulo {
+  align-items: center;
+  text-align: center;
+  margin: 35px;
+}
+/* Override inline style for nav-main to move login to the right */
+.nav-main {
+  justify-content: space-between !important;
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+  .juego {
+    margin: 10px;
+    flex-direction: column;
+    height: 250px; /* Altura ajustada para pantallas más pequeñas */
+    width: 250px; /* Ancho ajustado para pantallas más pequeñas */
+  }
+
+  .juego p {
+    font-size: 16px; /* Tamaño de fuente ajustado */
+    padding: 10px 15px; /* Padding ajustado */
+  }
+
+  .juego .detalles {
+    font-size: 12px; /* Tamaño de fuente ajustado */
+    padding: 8px 15px; /* Padding ajustado */
+  }
+
+  .juego a {
+    text-decoration: none; /* Sin subrayado */
+    color: white; /* Color del texto */
+  }
+
+  .group {
+    max-width: 90%; /* Ajustar ancho del buscador en pantallas pequeñas */
+  }
+
+  .input {
+    font-size: 14px;
+    padding-left: 2rem; /* Ajustar el padding para el icono */
+    height: 40px;
+  }
+
+  .search-icon {
+    left: 0.5rem; /* Ajustar la posición del icono */
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  .wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 120px;
+    width: 100%;
+    padding-top: 40px;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+    margin: -60px;
+  }
+
+  .wrapper .icon {
+    position: relative;
+    background: #000000;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .wrapper .facebook:hover,
+  .wrapper .facebook:hover .tooltip,
+  .wrapper .facebook:hover .tooltip::before {
+    background: #1877f2;
+    color: #fff;
+  }
+
+  .wrapper .twitter:hover,
+  .wrapper .twitter:hover .tooltip,
+  .wrapper .twitter:hover .tooltip::before {
+    background: #1da1f2;
+    color: #fff;
+  }
+
+  .wrapper .instagram:hover,
+  .wrapper .instagram:hover .tooltip,
+  .wrapper .instagram:hover .tooltip::before {
+    background: #e4405f;
+    color: #fff;
+  }
+}
