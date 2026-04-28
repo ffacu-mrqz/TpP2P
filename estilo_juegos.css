@@ -1,7 +1,30 @@
 body {
   font-family: "Montserrat", sans-serif;
- background: linear-gradient(135deg, #121214 0%, #0a0a0b 100%)
-    
+  /* Imagen de fondo */
+  background-image: url('imagenes/3544d6279113f387bc948261468a4e81.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Capa oscura para mejorar legibilidad */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Ajusta el 0.7 si quieres más o menos brillo */
+  z-index: -1;
+}
+
+.game-tags {
+  color: #ffffff;
 }
 
 .container {
@@ -11,11 +34,12 @@ body {
   padding: 20px;
   max-width: 1200px;
   margin: 20px auto;
+  position: relative; /* Asegura que el contenido esté sobre el fondo */
 }
 
 .sidebar {
   width: 300px;
-  background-color:#121214; 
+  background-color: rgba(18, 18, 20, 0.9); /* Un poco de transparencia */
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -42,6 +66,7 @@ body {
 
 .game-ratings {
   margin-bottom: 20px;
+  color: #ffffff;
 }
 
 .positive {
@@ -66,7 +91,7 @@ body {
 
 .game-tags li {
   display: inline;
-  background-color:#1e1e22;
+  background-color: #1e1e22;
   border-radius: 5px;
   padding: 5px 10px;
   margin-right: 5px;
@@ -76,7 +101,7 @@ body {
 
 .main-content {
   flex: 1;
-  background-color: #121214;
+  background-color: rgba(18, 18, 20, 0.9); /* Un poco de transparencia */
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -85,7 +110,6 @@ body {
 
 .game-media {
   margin-bottom: 20px;
-  
 }
 
 .game-media video {
@@ -136,24 +160,24 @@ body {
 }
 
 .game-requirements li {
-  background-color:#121214; 
+  background-color: #121214;
   border-radius: 5px;
   padding: 5px 10px;
   margin-bottom: 5px;
   font-size: 14px;
   color: #ffffff;
 }
+
 .pagjuegos {
   padding-top: 20px;
   width: -50;
   height: 30px;
 }
 
-
 .seccion-precio {
   margin: 20px 0;
   padding: 15px;
-  background: linear-gradient(135deg, #1e1e1e 0%,#121214 100%);
+  background: linear-gradient(135deg, #1e1e1e 0%, #121214 100%);
   border: 2px solid #121214;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -190,7 +214,7 @@ body {
 
 .nombret {
   font-size: 16px;
-  color:#ffffff;
+  color: #ffffff;
   font-weight: bold;
   margin-bottom: 8px;
 }
