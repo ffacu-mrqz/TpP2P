@@ -1,169 +1,204 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Atomfall</title>
     <link rel="stylesheet" href="estilo_juegos.css" />
-    <link rel="stylesheet" href="estiloheader.css" />
-  </head>
-  <body>
-    <div class="categoriaI">
-      <header>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-box">P2</div>
+            <span class="brand-name">P2Price</span>
+        </div>
+        <style>
+            body {
+                background-color: var(--bg-body);
+                color: var(--text-main);
+                font-family: 'Inter', sans-serif;
+                background-image: url('imagenes/9c896f424d544b562b80d852f0ae3f98.jpg'); /* Asegúrate de que la ruta sea correcta */
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                min-height: 100vh;
+                position: relative;
+            }
+        </style>
+
         <nav>
-          <a href="Inicio.html">Inicio</a>
-          <a href="contactanos.html">Contáctanos</a>
-        </nav>
-      </header>
-    </div>
-    <div class="container">
-      <!-- Barra lateral -->
-      <div class="sidebar">
-        <img
-          src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/801800/header.jpg?t=1743088104"
-          alt="Atomfall"
-          class="game-banner"
-        />
-        <div class="game-details">
-          <h1 class="game-title">Atomfall</h1>
-          <p class="game-descripcion">
-            Atomfall es un juego de supervivencia ambientado en un mundo
-            postapocalíptico donde los jugadores deben explorar, recolectar
-            recursos y enfrentar los peligros de un entorno contaminado por la
-            radiación.
-          </p>
-          <div class="game-ratings">
-            <p>
-              Reseñas recientes: <span class="positive">Muy positivas</span>
-            </p>
-            <p>
-              Reseñas generales:
-              <span class="very-positive">Muy positivas</span>
-            </p>
-          </div>
-          <div class="game-metadata">
-            <p>Fecha de lanzamiento: 2024</p>
-            <p>Desarrollador: Rebellion</p>
-            <p>Editor: Rebellion</p>
-          </div>
-          <div class="game-tags">
-            <p>Etiquetas populares:</p>
-            <ul>
-              <li>Supervivencia</li>
-              <li>Mundo Abierto</li>
-              <li>Postapocalíptico</li>
-              <li>Acción</li>
-            </ul>
-          </div>
-          <div class="seccion-precio">
-            <h3 class="titulo">precios</h3>
-            <div class="preciocuadro">
-              <div class="tarjeta">
-                <div class="nombret">Steam</div>
-                <div class="precio">$22.99 USD</div>
-                <a
-                  href="https://store.steampowered.com/app/801800/Atomfall/"
-                  class="botonp"
-                  target="_blank"
-                  >Comprar en Steam</a
-                >
-              </div>
-              <div class="tarjeta">
-                <div class="nombret">Epic Games Store</div>
-                <div class="precio">22,49 US$</div>
-                <a
-                  href="https://store.epicgames.com/es-ES/p/atomfall"
-                  class="botonp"
-                  target="_blank"
-                  >comprar en epic</a
-                >
-              </div>
-              <div class="tarjeta">
-                <div class="titulo">Microsoft Store</div>
-                <div class="precio">ARS$ 60.000,00</div>
-                <a
-                  href="https://www.xbox.com/es-AR/games/store/atomfall/9NC4WDL5KZBL"
-                  class="botonp"
-                  target="_blank"
-                  >Comprar en Microsoft Store</a
-                >
-              </div>
+            <p class="menu-label">Navegación</p>
+            <a href="Inicio.html" class="menu-item">🏠 Explorar</a>
+            <a href="contactanos.html" class="menu-item">📧 Contacto</a>
+
+            <p class="menu-label">Categorías</p>
+            <div class="category-list">
+                <a href="#" class="category-btn" onclick="filtrar('todas')">Todas</a>
+                <a href="#" class="category-btn" onclick="filtrar('accion')">Acción</a>
+                <a href="#" class="category-btn" onclick="filtrar('aventura')">Aventura</a>
+                <a href="#" class="category-btn" onclick="filtrar('deportes')">Deportes</a>
+                <a href="#" class="category-btn" onclick="filtrar('estrategia')">Estrategia</a>
+                <a href="#" class="category-btn" onclick="filtrar('simulacion')">Simulación</a>
+                <a href="#" class="category-btn" onclick="filtrar('survivalHorror')">Horror</a>
+                <a href="#" class="category-btn" onclick="filtrar('Casual')">Casual</a>
             </div>
-          </div>
-        </div>
-      </div>
+        </nav>
+    </aside>
 
-      <!-- Contenido principal -->
-      <div class="main-content">
-        <div class="game-media">
-          <video controls>
-            <source
-              src="https://video.cloudflare.steamstatic.com/store_trailers/257116770/movie480_vp9.webm?t=1743007369"
-              type="video/webm"
-            />
-          </video>
-        </div>
+    <main class="main-content">
+        <div class="game-container">
+            <div class="game-sidebar">
+                <img
+                    src="imagenes/98b8d7c51b9e5343df5d7b98973deb9e.jpg"
+                    alt="Atomfall"
+                    class="game-banner"
+                />
+                <div class="game-details">
+                    <h1 class="game-title">Atomfall</h1>
+                    <p class="game-descripcion">
+                        Atomfall es un juego de supervivencia ambientado en un mundo
+                        postapocalíptico donde los jugadores deben explorar, recolectar
+                        recursos y enfrentar los peligros de un entorno contaminado.
+                    </p>
+                    <div class="game-ratings">
+                        <p>Reseñas recientes: <span class="positive">Muy positivas</span></p>
+                        <p>Reseñas generales: <span class="very-positive">Muy positivas</span></p>
+                    </div>
+                    <div class="game-metadata">
+                        <p>Fecha de lanzamiento: 2024</p>
+                        <p>Desarrollador: Rebellion</p>
+                        <p>Editor: Rebellion</p>
+                    </div>
+                    <div class="game-tags">
+                        <p>Etiquetas populares:</p>
+                        <ul>
+                            <li>Supervivencia</li>
+                            <li>Postapocalíptico</li>
+                            <li>Mundo Abierto</li>
+                            <li>Acción</li>
+                        </ul>
+                    </div>
 
-        <div class="game-info">
-          <h2>Acerca de este juego</h2>
-          <p>
-            En Atomfall, los jugadores deben sobrevivir en un mundo devastado
-            por un desastre nuclear. Explora ruinas abandonadas, recolecta
-            recursos vitales y enfréntate a amenazas tanto humanas como
-            mutantes. La estrategia y la toma de decisiones definirán tu destino
-            en este juego de mundo abierto.
-          </p>
-        </div>
+                    <div class="seccion-precio">
+                        <h3 class="titulo">Precios</h3>
+                        <div class="preciocuadro">
+                            <div class="tarjeta">
+                                <div class="nombret">Steam</div>
+                                <div class="precio">$22.99 USD</div>
+                                <a href="https://store.steampowered.com/app/801800/Atomfall/" class="botonp" target="_blank">Comprar en Steam</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">Epic Games Store</div>
+                                <div class="precio">22,49 US$</div>
+                                <a href="https://store.epicgames.com/es-ES/p/atomfall" class="botonp" target="_blank">Comprar en Epic</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">Microsoft Store</div>
+                                <div class="precio">ARS$ 60.000,00</div>
+                                <a href="https://www.xbox.com/es-AR/games/store/atomfall/9NC4WDL5KZBL" class="botonp" target="_blank">Comprar en Microsoft Store</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <div class="game-features">
-          <h2>Características:</h2>
-          <ul>
-            <li>Explora un vasto mundo postapocalíptico</li>
-            <li>Supervivencia contra amenazas humanas y mutantes</li>
-            <li>Construcción y personalización de refugios</li>
-            <li>Modo historia y multijugador cooperativo</li>
-            <li>Sistema de creación de armas y herramientas</li>
-          </ul>
-        </div>
+            <div class="game-main-content">
+                <div class="game-media">
+                    <video controls>
+                        <source src="https://video.cloudflare.steamstatic.com/store_trailers/257116770/movie480_vp9.webm?t=1743007369" type="video/webm">
+                    </video>
+                </div>
 
-        <div class="game-languages">
-          <h2>Idiomas:</h2>
-          <ul>
-            <li>Español - Latinoamérica</li>
-            <li>Inglés</li>
-            <li>Francés</li>
-            <li>Italiano</li>
-            <li>Alemán</li>
-            <li>Ruso</li>
-            <li>Chino simplificado</li>
-            <li>Portugués - Brasil</li>
-          </ul>
-        </div>
+                <div class="game-info">
+                    <h2>Acerca de este juego</h2>
+                    <p>
+                        En Atomfall, los jugadores deben sobrevivir en un mundo devastado
+                        por un desastre nuclear. Explora ruinas abandonadas, recolecta
+                        recursos vitales y enfréntate a amenazas tanto humanas como
+                        mutantes. La estrategia y la toma de decisiones definirán tu destino
+                        en este juego de mundo abierto inspirado en hechos reales y ficción británica.
+                    </p>
+                </div>
 
-        <div class="game-requirements">
-          <h2>Requisitos del sistema</h2>
-          <div class="system-minimum">
-            <h3>Mínimo:</h3>
-            <ul>
-              <li>SO: Windows 10 (64 bits)</li>
-              <li>Procesador: Intel Core i5-8400 / AMD Ryzen 3 3300X</li>
-              <li>Memoria: 8 GB de RAM</li>
-              <li>Gráficos: NVIDIA GTX 1060 / AMD Radeon RX 580</li>
-              <li>Almacenamiento: 50 GB de espacio disponible</li>
-            </ul>
-          </div>
-          <div class="system-recommended">
-            <h3>Recomendado:</h3>
-            <ul>
-              <li>SO: Windows 11 (64 bits)</li>
-              <li>Procesador: Intel Core i7-9700K / AMD Ryzen 7 3700X</li>
-              <li>Memoria: 16 GB de RAM</li>
-              <li>Gráficos: NVIDIA RTX 3060 / AMD Radeon RX 6700 XT</li>
-              <li>Almacenamiento: 50 GB de espacio disponible</li>
-            </ul>
-          </div>
+                <div class="game-features">
+                    <h2>Características:</h2>
+                    <ul>
+                        <li>Explora un vasto mundo inspirado en la campiña británica</li>
+                        <li>Supervivencia intensa contra peligros radiactivos</li>
+                        <li>Sistema de combate visceral y sigilo</li>
+                        <li>Gestión de recursos y creación de equipo</li>
+                        <li>Descubre una narrativa profunda llena de misterios</li>
+                    </ul>
+                </div>
+
+                <div class="game-languages">
+                    <h2>Idiomas:</h2>
+                    <ul>
+                        <li>Español - Latinoamérica</li>
+                        <li>Inglés</li>
+                        <li>Francés</li>
+                        <li>Italiano</li>
+                        <li>Alemán</li>
+                        <li>Portugués - Brasil</li>
+                        <li>Ruso</li>
+                    </ul>
+                </div>
+
+                <div class="game-requirements">
+                    <h2>Requisitos del sistema</h2>
+                    <div class="system-minimum">
+                        <h3>Mínimo:</h3>
+                        <ul>
+                            <li>SO: Windows 10 (64 bits)</li>
+                            <li>Procesador: Intel i5-8400 / AMD Ryzen 3 3300X</li>
+                            <li>Memoria: 8 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GTX 1060 / AMD RX 580</li>
+                            <li>Almacenamiento: 50 GB</li>
+                        </ul>
+                    </div>
+                    <div class="system-recommended">
+                        <h3>Recomendado:</h3>
+                        <ul>
+                            <li>SO: Windows 11 (64 bits)</li>
+                            <li>Procesador: Intel i7-9700K / AMD Ryzen 7 3700X</li>
+                            <li>Memoria: 16 GB de RAM</li>
+                            <li>Gráficos: NVIDIA RTX 3060 / AMD RX 6700 XT</li>
+                            <li>Almacenamiento: 50 GB (SSD recomendado)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </body>
+    </main>
+
+    <script>
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const sidebar = document.getElementById('sidebar');
+
+        hamburgerIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !hamburgerIcon.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        function filtrar(cat) {
+            window.location.href = `Inicio.html?categoria=${cat}`;
+        }
+    </script>
+</body>
 </html>

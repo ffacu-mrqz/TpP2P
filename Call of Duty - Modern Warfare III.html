@@ -1,193 +1,201 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Call of Duty: Modern Warfare III</title>
     <link rel="stylesheet" href="estilo_juegos.css" />
-    <link rel="stylesheet" href="estiloheader.css" />
-  </head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
 
-  <body>
-    <div class="categoriaI">
-      <header>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-box">P2</div>
+            <span class="brand-name">P2Price</span>
+        </div>
+        <style>
+            body {
+                background-color: var(--bg-body);
+                color: var(--text-main);
+                font-family: 'Inter', sans-serif;
+                background-image: url('imagenes/e94378d015c20a82b0585c1011f97d7e.jpg'); /* Asegúrate de tener la imagen en tu carpeta */
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                min-height: 100vh;
+                position: relative;
+            }
+        </style>
+
         <nav>
-          <a href="Inicio.html">Inicio</a>
-          <a href="contactanos.html">Contáctanos</a>
-        </nav>
-      </header>
-    </div>
+            <p class="menu-label">Navegación</p>
+            <a href="Inicio.html" class="menu-item">🏠 Explorar</a>
+            <a href="contactanos.html" class="menu-item">📧 Contacto</a>
 
-    <div class="container">
-      <!-- Barra lateral -->
-      <div class="sidebar">
-        <img
-          src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1977530/header.jpg"
-          alt="Call of Duty: Modern Warfare III"
-          class="game-banner"
-        />
-
-        <div class="game-details">
-          <h1 class="game-title">Call of Duty: Modern Warfare III</h1>
-
-          <p class="game-descripcion">
-            Enfréntate a la amenaza definitiva en una campaña intensa, combate
-            multijugador competitivo y el clásico modo zombies en una nueva
-            entrega de la saga Modern Warfare.
-          </p>
-
-          <div class="game-ratings">
-            <p>
-              Reseñas recientes:
-              <span class="negative">Mixtas</span>
-            </p>
-            <p>
-              Reseñas generales:
-              <span class="mixed">Mixtas</span>
-            </p>
-          </div>
-
-          <div class="game-metadata">
-            <p>Fecha de lanzamiento: 10 NOV 2023</p>
-            <p>Desarrollador: Sledgehammer Games</p>
-            <p>Editor: Activision</p>
-          </div>
-
-          <div class="game-tags">
-            <p>Etiquetas populares:</p>
-            <ul>
-              <li>Disparos</li>
-              <li>FPS</li>
-              <li>Multijugador</li>
-              <li>Acción</li>
-              <li>Militar</li>
-              <li>Cooperativo</li>
-              <li>Zombies</li>
-              <li>Competitivo</li>
-              <li>Realista</li>
-              <li>Online</li>
-              <li>Campaña</li>
-            </ul>
-          </div>
-
-          <div class="seccion-precio">
-            <h3 class="titulo">Precios</h3>
-
-            <div class="preciocuadro">
-              <div class="tarjeta">
-                <div class="nombret">Steam</div>
-                <div class="precio">$69.99 USD</div>
-                <a
-                  href="https://store.steampowered.com/app/1977530/Call_of_Duty_Modern_Warfare_III/"
-                  class="botonp"
-                  target="_blank"
-                  >Comprar en Steam</a
-                >
-              </div>
-
-              <div class="tarjeta">
-                <div class="nombret">Battle.net</div>
-                <div class="precio">$69.99 USD</div>
-                <a
-                  href="https://us.shop.battle.net/"
-                  class="botonp"
-                  target="_blank"
-                  >Comprar en Battle.net</a
-                >
-              </div>
-
-              <div class="tarjeta">
-                <div class="nombret">PlayStation Store</div>
-                <div class="precio">$69.99 USD</div>
-                <a
-                  href="https://store.playstation.com/"
-                  class="botonp"
-                  target="_blank"
-                  >Comprar en PlayStation</a
-                >
-              </div>
+            <p class="menu-label">Categorías</p>
+            <div class="category-list">
+                <a href="#" class="category-btn" onclick="filtrar('todas')">Todas</a>
+                <a href="#" class="category-btn" onclick="filtrar('accion')">Acción</a>
+                <a href="#" class="category-btn" onclick="filtrar('aventura')">Aventura</a>
+                <a href="#" class="category-btn" onclick="filtrar('deportes')">Deportes</a>
+                <a href="#" class="category-btn" onclick="filtrar('estrategia')">Estrategia</a>
+                <a href="#" class="category-btn" onclick="filtrar('simulacion')">Simulación</a>
+                <a href="#" class="category-btn" onclick="filtrar('survivalHorror')">Horror</a>
+                <a href="#" class="category-btn" onclick="filtrar('Casual')">Casual</a>
             </div>
-          </div>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <div class="game-container">
+            <div class="game-sidebar">
+                <img
+                    src="imagenes/e1ea274b18a0e5bde67da64ea2010562.jpg"
+                    alt="Call of Duty: Modern Warfare III"
+                    class="game-banner"
+                />
+                <div class="game-details">
+                    <h1 class="game-title">Call of Duty: MW III</h1>
+                    <p class="game-descripcion">
+                        Enfréntate a la amenaza definitiva en una campaña intensa, combate
+                        multijugador competitivo y el clásico modo zombies en mundo abierto.
+                    </p>
+                    <div class="game-ratings">
+                        <p>Reseñas recientes: <span class="mixed">Mixtas</span></p>
+                        <p>Reseñas generales: <span class="mixed">Mixtas</span></p>
+                    </div>
+                    <div class="game-metadata">
+                        <p>Fecha de lanzamiento: 10 NOV 2023</p>
+                        <p>Desarrollador: Sledgehammer Games</p>
+                        <p>Editor: Activision</p>
+                    </div>
+                    <div class="game-tags">
+                        <p>Etiquetas populares:</p>
+                        <ul>
+                            <li>Disparos</li>
+                            <li>FPS</li>
+                            <li>Multijugador</li>
+                            <li>Acción</li>
+                        </ul>
+                    </div>
+
+                    <div class="seccion-precio">
+                        <h3 class="titulo">Precios</h3>
+                        <div class="preciocuadro">
+                            <div class="tarjeta">
+                                <div class="nombret">Steam</div>
+                                <div class="precio">$69.99 USD</div>
+                                <a href="https://store.steampowered.com/app/1977530/Call_of_Duty_Modern_Warfare_III/" class="botonp" target="_blank">Comprar en Steam</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">Battle.net</div>
+                                <div class="precio">$69.99 USD</div>
+                                <a href="https://us.shop.battle.net/" class="botonp" target="_blank">Comprar en Battle.net</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">PlayStation</div>
+                                <div class="precio">$69.99 USD</div>
+                                <a href="https://store.playstation.com/" class="botonp" target="_blank">Comprar en PS Store</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-main-content">
+                <div class="game-media">
+                    <video controls>
+                        <source src="https://video.cloudflare.steamstatic.com/store_trailers/256987654/movie480.webm" type="video/webm">
+                    </video>
+                </div>
+
+                <div class="game-info">
+                    <h2>Acerca de este juego</h2>
+                    <p>
+                        Call of Duty: Modern Warfare III continúa la historia de la saga
+                        con una campaña llena de acción y misiones tácticas de combate abierto. 
+                        Incluye el regreso de los 16 mapas originales de Modern Warfare 2 (2009) 
+                        remasterizados y una experiencia masiva de Zombies en mundo abierto.
+                    </p>
+                </div>
+
+                <div class="game-features">
+                    <h2>Características:</h2>
+                    <ul>
+                        <li>Campaña cinematográfica de un jugador</li>
+                        <li>Multijugador masivo online</li>
+                        <li>Modo Modern Warfare Zombies (MWZ)</li>
+                        <li>Cross-play y progresión cruzada</li>
+                        <li>Sistema de personalización de armas Gunsmith</li>
+                    </ul>
+                </div>
+
+                <div class="game-languages">
+                    <h2>Idiomas:</h2>
+                    <ul>
+                        <li>Español - Latinoamérica</li>
+                        <li>Inglés</li>
+                        <li>Francés</li>
+                        <li>Italiano</li>
+                        <li>Alemán</li>
+                        <li>Portugués - Brasil</li>
+                    </ul>
+                </div>
+
+                <div class="game-requirements">
+                    <h2>Requisitos del sistema</h2>
+                    <div class="system-minimum">
+                        <h3>Mínimo:</h3>
+                        <ul>
+                            <li>SO: Windows 10 (64-bit)</li>
+                            <li>Procesador: Intel Core i5-6600 / Ryzen 5 1400</li>
+                            <li>Memoria: 8 GB de RAM</li>
+                            <li>Gráficos: GTX 960 / RX 470</li>
+                            <li>Espacio: 149 GB (SSD recomendado)</li>
+                        </ul>
+                    </div>
+                    <div class="system-recommended">
+                        <h3>Recomendado:</h3>
+                        <ul>
+                            <li>SO: Windows 10/11 (64-bit)</li>
+                            <li>Procesador: Intel i7-8700K / Ryzen 7 3700X</li>
+                            <li>Memoria: 16 GB de RAM</li>
+                            <li>Gráficos: RTX 3060 / RX 6700 XT</li>
+                            <li>Espacio: SSD con 149 GB</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </main>
 
-      <!-- Contenido principal -->
-      <div class="main-content">
-        <div class="game-media">
-          <video controls>
-            <source
-              src="https://video.cloudflare.steamstatic.com/store_trailers/256987654/movie480.webm"
-              type="video/webm"
-            />
-          </video>
-        </div>
+    <script>
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const sidebar = document.getElementById('sidebar');
 
-        <div class="game-info">
-          <h2>Acerca de este juego</h2>
-          <p>
-            Call of Duty: Modern Warfare III continúa la historia de la saga
-            Modern Warfare con una campaña llena de acción, combates intensos y
-            misiones tácticas. Incluye modos multijugador competitivos con mapas
-            clásicos renovados, además del modo Zombies en mundo abierto, donde
-            los jugadores deben cooperar para sobrevivir a hordas de enemigos en
-            escenarios hostiles.
-          </p>
-        </div>
+        hamburgerIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
 
-        <div class="game-features">
-          <h2>Características:</h2>
-          <ul>
-            <li>FPS</li>
-            <li>Multijugador online</li>
-            <li>Campaña cinematográfica</li>
-            <li>Modo Zombies</li>
-            <li>Cooperativo</li>
-            <li>Competitivo</li>
-            <li>Crossplay</li>
-            <li>Mapas clásicos remasterizados</li>
-          </ul>
-        </div>
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !hamburgerIcon.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
 
-        <div class="game-languages">
-          <h2>Idiomas:</h2>
-          <ul>
-            <li>Inglés</li>
-            <li>Español - España</li>
-            <li>Español - Latinoamérica</li>
-            <li>Francés</li>
-            <li>Alemán</li>
-            <li>Italiano</li>
-            <li>Portugués</li>
-          </ul>
-        </div>
-
-        <div class="game-requirements">
-          <h2>Requisitos del sistema</h2>
-
-          <div class="system-minimum">
-            <h3>Mínimo:</h3>
-            <ul>
-              <li>SO: Windows 10 (64-bit)</li>
-              <li>Procesador: Intel Core i5-6600 / AMD Ryzen 5 1400</li>
-              <li>Memoria: 8 GB RAM</li>
-              <li>Gráficos: GTX 960 / RX 470</li>
-              <li>Almacenamiento: 150 GB disponibles</li>
-            </ul>
-          </div>
-
-          <div class="system-recommended">
-            <h3>Recomendado:</h3>
-            <ul>
-              <li>SO: Windows 10/11 (64-bit)</li>
-              <li>Procesador: Intel Core i7-8700K / AMD Ryzen 7 3700X</li>
-              <li>Memoria: 16 GB RAM</li>
-              <li>Gráficos: RTX 3060 / RX 6700 XT</li>
-              <li>Almacenamiento: SSD recomendado (150 GB)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+        function filtrar(cat) {
+            window.location.href = `Inicio.html?categoria=${cat}`;
+        }
+    </script>
+</body>
 </html>
