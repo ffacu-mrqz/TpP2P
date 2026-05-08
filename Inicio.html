@@ -2,14 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="estilo_inicio.css"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo_inicio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <title>P2Price</title>
 </head>
 <body>
-
     <aside class="sidebar">
         <div class="sidebar-header">
-            <div style="background: var(--accent-blue); width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: bold;">P2</div>
+            <img src="imagenes/ChatGPT_Image_14_abr_2026__18_49_53-removebg-preview.png" alt="Logo P2Price" class="logo-img">
             <span class="brand-name">P2Price</span>
         </div>
 
@@ -69,7 +69,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="carousel-controls">
                 <button class="btn-control" onclick="changeSlide(-1)">❮</button>
                 <button class="btn-control" onclick="changeSlide(1)">❯</button>
@@ -78,8 +78,7 @@
 
         <section class="section-header">
             <h2 id="tituloSeccion">Todos los Juegos</h2>
-            <div class="games-grid" id="container">
-                </div>
+            <div class="games-grid" id="container"></div>
         </section>
     </main>
 
@@ -87,86 +86,39 @@
         // BASE DE DATOS DE JUEGOS
         const datos = {
             aventura: [
-                { nombre: "Hogwarts Legacy", img: "https://upload.wikimedia.org/wikipedia/commons/3/33/Hogwarts_Legacy_promotional_photo_horizontal.jpg", link: "Hogwarts Legacy.html" },
+                { nombre: "Hogwarts Legacy", img: "https://upload.wikimedia.org/wikipedia/commons/3/33/Hogwarts_Legacy_promotional_photo_horizontal.jpg", link: "Hogwarts%20Legacy.html" },
                 { nombre: "Hollow Knight", img: "https://cdn2.steamgriddb.com/grid/d18c832e8c956b4ef8b92862e6bf470d.png", link: "HollowKnight.html" },
                 { nombre: "The Forest", img: "https://media.vandal.net/m/4-2018/201841318231_1.jpg", link: "the forest.html" },
                 { nombre: "Ark", img: "https://cdn2.steamgriddb.com/grid/2fb88ee97a699cbd93cb7f3859951f69.png", link: "ark.html" },
                 { nombre: "Red Dead Redemption 2", img: "https://cdn2.steamgriddb.com/grid/3940304b536796dcc176aa83203a3955.png", link: "rdr2.html" },
-                { nombre: "The Legend of Zelda: Breath of the Wild", img: "https://cdn2.steamgriddb.com/grid/121b81f7d167ca2c24fdab4f044048f8.png", link: "The Legend of Zelda - Breath of the Wild.html" },
-                { nombre: "The Witcher 3: Wild Hunt", img: "https://cdn2.steamgriddb.com/grid/e131fa896265671584c9b01cb0ed51cd.png", link: "The Witcher 3 - Wild Hunt.html" },
-                { nombre: "Subnautica", img: "https://cdn2.steamgriddb.com/grid/50896c8a37922749110dae272e7a345b.png", link: "Subnautica.html" },
-                { nombre: "Uncharted 4: A Thief’s End", img: "https://cdn2.steamgriddb.com/grid/6fe386b00d7a58df2ee236b3bf339e6b.jpg", link: "Uncharted 4 - A Thief’s End.html" },
-                { nombre: "Tomb Raider (2013)", img: "https://cdn2.steamgriddb.com/grid/87718fee184cf838e80c6c882742309b.jpg", link: "Tomb Raider (2013).html" },
-                { nombre: "Firewatch", img: "https://cdn2.steamgriddb.com/grid/3ff3ee650ba263b5dad1a3d11c3dddf6.png", link: "Firewatch.html" },
-                { nombre: "Life is Strange", img: "https://cdn2.steamgriddb.com/grid/759bb631d23a3535c2b55dfd91c4807b.jpg", link: "Life is Strange.html" }
-
             ],
             accion: [
                 { nombre: "GTA V", img: "https://cdn2.steamgriddb.com/grid/af0a25e27510f77d97634a6bbe653b13.jpg", link: "p2price.html" },
                 { nombre: "Mortal Kombat 1", img: "https://cdn2.steamgriddb.com/grid/ee518a68d0a28d15ef08325f0a86a576.jpg", link: "mortakkombat1.html" },
                 { nombre: "DayZ", img: "https://i0.wp.com/losreyesdelmando.com/wp-content/uploads/2019/09/dayz-portada.jpg?fit=1920%2C1080&ssl=1", link: "dayz.html" },
                 { nombre: "Assassin's Creed Shadows", img: "https://cdn2.steamgriddb.com/grid/1b3ef3ee60b4c3f07b7487ba1cc3b2cd.png", link: "Assassin's Creed Shadows.html" },
-                { nombre: "Atom Fall", img: "https://cdn2.steamgriddb.com/grid/51e65f0fcfa42f9158493a5c44d50ca6.png", link: "atom fall.html" },
-                { nombre: "R.E.P.O", img: "https://cdn2.steamgriddb.com/grid/f4c4eed20e712765c9276ba9ee5bea76.png", link: "r.e.p.o.html" },
-                { nombre: "Call of Duty: Modern Warfare III", img: "https://cdn2.steamgriddb.com/grid/195937291747b2e880332a3c41d8a856.jpg", link: "Call of Duty - Modern Warfare III.html" },
-                { nombre: "DOOM: Eternal", img: "https://cdn2.steamgriddb.com/grid/cbc0567ff3299758c5228bededa7ddb5.png", link: "" },
-                { nombre: "Dark Souls: Remastered", img: "https://cdn2.steamgriddb.com/grid/dff31ca0dfaab4b6273b6e44c25b8cca.png", link: "" },
-                { nombre: "Sekiro: Shadows Die Twice", img: "https://cdn2.steamgriddb.com/grid/97771715c7dd7daf009feeb60c49915a.png", link: "" },
-                { nombre: "Marvel’s Spider-Man Remastered", img: "https://cdn2.steamgriddb.com/grid/a85d6bc329aeaf43fe76fbb48b8b9325.png", link: "" },
-                { nombre: "Cyberpunk 2077", img: "https://cdn2.steamgriddb.com/grid/994a24a2b341879b9250b56482ae95d8.jpg", link: "" },
-                { nombre: "Dark Souls III", img: "https://cdn2.steamgriddb.com/grid/61a248da6f2fe360248477e1dafcd44c.jpg", link: "" },
-                { nombre: "Dark Souls II: Scholar of the First Sin", img: "https://cdn2.steamgriddb.com/grid/221fec1d54a07a65c1ff500bcf1bc062.png", link: "" }
             ],
             deportes: [
                 { nombre: "FC 25", img: "https://www.gamerfocus.co/wp-content/uploads/2025/02/maradona_ea_sports_fc_25.webp", link: "fifa25.html" },
                 { nombre: "NBA 2K25", img: "https://cdn2.steamgriddb.com/grid/635aa5a4e9c094eaca1e598c0e970577.png", link: "nba2k25.html" },
                 { nombre: "F1 24", img: "https://cdn2.steamgriddb.com/grid/de0a915b36d507b7537365399254325a.jpg", link: "f124.html" },
-                { nombre: "Asseto Corsa: Rally", img: "https://cdn2.steamgriddb.com/grid/b38216e6daff76bd68f499682f8a6f46.png", link: "" },
-                { nombre: "Forza Horizon 5", img: "https://cdn2.steamgriddb.com/grid/1ed997b4485864e163dfd6a4da81a88b.png", link: "" },
-                { nombre: "EA SPORTS™ WRC", img: "https://cdn2.steamgriddb.com/grid/b2a00e535c8919d027fc3a4e6a8723e6.jpg", link: "" },
-                { nombre: "RIDE 6", img: "https://cdn2.steamgriddb.com/grid/fb42d382e3f99576305026d4a0da1949.jpg", link: "" },
             ],
             estrategia: [
                 { nombre: "Rust", img: "https://cdn2.steamgriddb.com/grid/56b65e3fa7ff454b04af61f18072680b.png", link: "rust.html" },
                 { nombre: "Raft", img: "https://cdn2.steamgriddb.com/grid/7604c44de3835a00816074ddcf0425ad.png", link: "raft.html" },
                 { nombre: "Age of Empires IV", img: "https://cdn2.steamgriddb.com/grid/b85db3a44a26fd02c08d87f252cc52ba.jpg", link: "" },
-                { nombre: "Sid Meier's Civilization VI", img: "https://cdn2.steamgriddb.com/grid/7ce9d67d85410c4531d26ee12e9640d2.png", link: "" },
-                { nombre: "Total War: Warhammer III", img: "https://cdn2.steamgriddb.com/grid/3a1b4579887ca846e60a1ae9b51460c2.jpg", link: "" },
-                { nombre: "StarCraft II", img: "https://cdn2.steamgriddb.com/grid/d037b7e2852f79738930ce6c850e326e.png", link: "" },
-                { nombre: "Company of Heroes 3", img: "https://cdn2.steamgriddb.com/grid/aa2195ec3baaf15e186b899c35bad7e9.png", link: "" },
-                { nombre: "Crusader Kings III", img: "https://cdn2.steamgriddb.com/grid/44f7c4c0aa53f6dcd25571253c153746.png", link: "" },
             ],
             simulacion: [
                 { nombre: "Human Fall Flat", img: "https://indistation.com/wp-content/uploads/2023/10/human-fall-flat-2-pack-scaled.jpg", link: "humanfallflat.html" },
                 { nombre: "Phasmophobia", img: "https://cdn2.steamgriddb.com/grid/b8ee42f6c6733d5db34b17a5aaa5844d.png", link: "phasmophobia.html" },
-                { nombre: "Microsoft Flight Simulator", img: "https://cdn2.steamgriddb.com/grid/7b0ff7682796d0b90b1dd565c942dda1.png", link: "" },
-                { nombre: "Euro Truck Simulator 2", img: "https://cdn2.steamgriddb.com/grid/4ba6c472f1057449e226bfc754ff0ddf.png", link: "" },
-                { nombre: "The Sims 4", img: "https://cdn2.steamgriddb.com/grid/aeb677b971d71e2c19ebd36fdbd839e9.png", link: "" },
-                { nombre: "Cities: Skylines", img: "https://cdn2.steamgriddb.com/grid/652ff58bb41f98d0cc922ea56bbcd1f9.png", link: "" },
-                { nombre: "Farming Simulator 22", img: "https://cdn2.steamgriddb.com/grid/dad3d4850b56041307b1e9635ee7a637.png", link: "" },
-                { nombre: "House Flipper", img: "https://cdn2.steamgriddb.com/grid/3cb48912b5137fa2a450dd80f19c66d6.png", link: "" },
-                { nombre: "Car Mechanic Simulator 2021", img: "https://cdn2.steamgriddb.com/grid/329e4840862fb61575d47eb64f231413.png", link: "" },
             ],
-
             survivalHorror: [
                 { nombre: "RE 4 Remake", img: "https://cdn2.steamgriddb.com/grid/dc6ab89f835061d1d33e4e97cc60b126.jpg", link: "RE4.html" },
                 { nombre: "Resident Evil 5", img: "https://cdn2.steamgriddb.com/grid/38969e6a55cd30bbcda8b2ec943bb5ad.png", link: "RE5.html" },
-                { nombre: "Resident Evil 6", img: "https://cdn2.steamgriddb.com/grid/93769b104eeff5290cbc38eb2718c0b9.png", link: "RE6.html" },
-                { nombre: "Resident Evil 2 (2019)", img: "https://cdn2.steamgriddb.com/grid/cc93ff656a4a93766327b502d978e2fb.jpg", link: "" },
-                { nombre: "Resident Evil 7: Biohazard", img: "https://cdn2.steamgriddb.com/grid/307cca680e8642bff0ce7e34903b76a8.png", link: "" },
-                { nombre: "Outlast", img: "https://cdn2.steamgriddb.com/grid/c14a7c6098d4f9d2e634977d4dc120e0.png", link: "" },
-                { nombre: "Outlast 2", img: "https://cdn2.steamgriddb.com/grid/ed6501f091829167481963751b5ac18c.jpg", link: "" },
-                { nombre: "The Last of Us Part I", img: "https://cdn2.steamgriddb.com/grid/a854beb9ca7853ef4646eae178f9f570.jpg", link: "" },
             ],
             Casual: [
                 { nombre: "Among Us", img: "https://cdn2.steamgriddb.com/grid/42acab51cf2973d1b174ec59f11c9795.png", link: "amongus.html" },
                 { nombre: "Chained Together", img: "https://www.clavecd.es/wp-content/uploads/Chained-Together-1200x628-1.jpg", link: "Chained Together.html" },
-                { nombre: "Fall Guys", img: "https://cdn2.steamgriddb.com/grid/3ad1b6db876484bd9aa053b9a9da1bd8.png", link: "" },
-                { nombre: "Stardew Valley", img: "https://cdn2.steamgriddb.com/grid/992fbfcd780c3f522308d44f1b13ee19.png", link: "" },
-                { nombre: "Minecraft", img: "https://cdn2.steamgriddb.com/grid/0ed5055450adbd836945761a6fa43ee0.jpg", link: "" },
-                { nombre: "Terraria", img: "https://cdn2.steamgriddb.com/grid/b2f0ae6f03550db0e006c6c2007b53df.png", link: "" },
-                { nombre: "Overcooked! 2", img: "https://cdn2.steamgriddb.com/grid/e66e7599ff0a1e5ebade53e786b2c9b4.png", link: "" },
-                { nombre: "Slime Rancher", img: "https://cdn2.steamgriddb.com/grid/e62dfd885dcb4b83dda5d4e336fdf520.png", link: "" },
             ]
         };
 
@@ -187,20 +139,8 @@
                 container.appendChild(card);
             });
         }
-        function crearCard(juego) {
-    const card = document.createElement('a');
-    card.href = juego.link;
-    card.className = 'juego-card';
-    card.innerHTML = `
-        <div class="img-wrapper">
-            <img src="${juego.img}" alt="${juego.nombre}">
-        </div>
-        <p>${juego.nombre}</p>
-    `;
-    container.appendChild(card);
-}
 
-        // FILTRADO POR CATEGORÍA
+        // FUNCIÓN PARA FILTRAR POR CATEGORÍA
         function filtrar(cat) {
             if (cat === 'todas') {
                 tituloSeccion.textContent = "Todos los Juegos";
@@ -211,9 +151,14 @@
             }
             // Reset active state
             document.querySelectorAll('.menu-item, .category-btn').forEach(b => b.classList.remove('active'));
+            // Marcar el botón de la categoría seleccionada como activo
+            const botonActivo = document.querySelector(`.category-btn[onclick="filtrar('${cat}')"]`);
+            if (botonActivo) {
+                botonActivo.classList.add('active');
+            }
         }
 
-        // BUSCADOR
+        // FUNCIÓN PARA BUSCAR
         function buscar() {
             const query = document.getElementById('searchInput').value.toLowerCase();
             const todos = Object.values(datos).flat();
@@ -234,6 +179,18 @@
 
         // Auto-cambio de slide cada 5 segundos
         setInterval(() => changeSlide(1), 5000);
+
+        // Filtrar al cargar la página según la URL
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoria = urlParams.get('categoria');
+
+            if (categoria) {
+                filtrar(categoria);
+            } else {
+                filtrar('todas');
+            }
+        });
 
         // Inicializar carga
         filtrar('todas');
