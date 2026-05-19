@@ -1,173 +1,207 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DayZ</title>
     <link rel="stylesheet" href="estilo_juegos.css" />
-    <link rel="stylesheet" href="estiloheader.css" />
-  </head>
-  <body>
-    <div class="categoriaI">
-      <header>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-box">P2</div>
+            <span class="brand-name">P2Price</span>
+        </div>
+        <style>
+            body {
+                background-color: var(--bg-body);
+                color: var(--text-main);
+                font-family: 'Inter', sans-serif;
+                background-image: url('imagenes/7bbb9477a17863c5f05695b754185377.png'); /* Asegúrate de que la ruta sea correcta */
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                min-height: 100vh;
+                position: relative;
+            }
+            .botonp.disabled {
+                background-color: #333 !important;
+                color: #777 !important;
+                cursor: not-allowed;
+                pointer-events: none;
+                border: 1px solid #444;
+            }
+        </style>
+
         <nav>
-          <a href="Inicio.html">Inicio</a>
-          <a href="contactanos.html">Contáctanos</a>
-        </nav>
-      </header>
-    </div>
-    <div class="container">
-      <!-- Barra lateral -->
-      <div class="sidebar">
-        <img
-          src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/221100/header.jpg?t=1741874734"
-          alt="DayZ"
-          class="game-banner"
-        />
-        <div class="game-details">
-          <h1 class="game-title">DayZ</h1>
-          <p class="game-descripcion">
-            DayZ es un juego de supervivencia multijugador en un mundo abierto
-            devastado por un brote viral. Los jugadores deben sobrevivir
-            enfrentándose a los peligros de la naturaleza, otros jugadores y la
-            escasez de recursos.
-          </p>
-          <div class="game-ratings">
-            <p>
-              Reseñas recientes:
-              <span class="positive">Muy positivas (12,534)</span>
-            </p>
-            <p>
-              Reseñas generales:
-              <span class="very-positive">Muy positivas (800,000+)</span>
-            </p>
-          </div>
-          <div class="game-metadata">
-            <p>Fecha de lanzamiento: 16 de diciembre de 2013</p>
-            <p>Desarrollador: Bohemia Interactive</p>
-            <p>Editor: Bohemia Interactive</p>
-          </div>
-          <div class="game-tags">
-            <p>Etiquetas populares:</p>
-            <ul>
-              <li>Multijugador</li>
-              <li>Supervivencia</li>
-              <li>Mundo abierto</li>
-              <li>Zombis</li>
-            </ul>
-          </div>
-          <div class="seccion-precio">
-            <h3 class="titulo">Precios</h3>
-            <div class="preciocuadro">
-              <div class="tarjeta">
-                <div class="nombret">Steam</div>
-                <div class="precio">$59.99 USD</div>
-                <a
-                  href="https://store.steampowered.com/app/221100/DayZ/?l=spanish"
-                  class="botonp"
-                  target="_blank"
-                  >Comprar en Steam</a
-                >
-              </div>
-              <div class="tarjeta">
-                <div class="nombret">Epic Games Store</div>
-                <div class="precio">No se encuentra Disponible</div>
-                <a href="" class="botonp" target="_blank"
-                  >No se encuentra Disponible</a
-                >
-              </div>
-              <div class="tarjeta">
-                <div class="titulo">Microsoft Store</div>
-                <div class="precio">ARS$ 43.999,00+</div>
-                <a
-                  href="https://www.xbox.com/es-AR/games/store/dayz/BSR9NLHVF1KL"
-                  class="botonp"
-                  target="_blank"
-                  >Comprar en Microsoft</a
-                >
-              </div>
+            <p class="menu-label">Navegación</p>
+            <a href="Inicio.html" class="menu-item">🏠 Explorar</a>
+            <a href="contactanos.html" class="menu-item">📧 Contacto</a>
+
+            <p class="menu-label">Categorías</p>
+            <div class="category-list">
+                <a href="#" class="category-btn" onclick="filtrar('todas')">Todas</a>
+                <a href="#" class="category-btn" onclick="filtrar('accion')">Acción</a>
+                <a href="#" class="category-btn" onclick="filtrar('aventura')">Aventura</a>
+                <a href="#" class="category-btn" onclick="filtrar('deportes')">Deportes</a>
+                <a href="#" class="category-btn" onclick="filtrar('estrategia')">Estrategia</a>
+                <a href="#" class="category-btn" onclick="filtrar('simulacion')">Simulación</a>
+                <a href="#" class="category-btn" onclick="filtrar('survivalHorror')">Horror</a>
+                <a href="#" class="category-btn" onclick="filtrar('Casual')">Casual</a>
             </div>
-          </div>
-        </div>
-      </div>
+        </nav>
+    </aside>
 
-      <!-- Contenido principal -->
-      <div class="main-content">
-        <div class="game-media">
-          <video controls>
-            <source
-              src="https://video.cloudflare.steamstatic.com/store_trailers/257026030/movie480_vp9.webm?t=1716813072"
-              type="video/webm"
-            />
-          </video>
-        </div>
+    <main class="main-content">
+        <div class="game-container">
+            <div class="game-sidebar">
+                <img
+                    src="imagenes/c4b61e403f3cf488306fe43aab2ed73c.jpg"
+                    alt="DayZ"
+                    class="game-banner"
+                />
+                <div class="game-details">
+                    <h1 class="game-title">DayZ</h1>
+                    <p class="game-descripcion">
+                        DayZ es un juego de supervivencia multijugador en un mundo abierto
+                        devastado por un brote viral. Los jugadores deben sobrevivir
+                        enfrentándose a la naturaleza, otros jugadores y la escasez de recursos.
+                    </p>
+                    <div class="game-ratings">
+                        <p>Reseñas recientes: <span class="positive">Muy positivas</span></p>
+                        <p>Reseñas generales: <span class="very-positive">Muy positivas</span></p>
+                    </div>
+                    <div class="game-metadata">
+                        <p>Fecha de lanzamiento: 16 DIC 2013</p>
+                        <p>Desarrollador: Bohemia Interactive</p>
+                        <p>Editor: Bohemia Interactive</p>
+                    </div>
+                    <div class="game-tags">
+                        <p>Etiquetas populares:</p>
+                        <ul>
+                            <li>Supervivencia</li>
+                            <li>Multijugador</li>
+                            <li>Mundo Abierto</li>
+                            <li>Zombis</li>
+                        </ul>
+                    </div>
 
-        <div class="game-info">
-          <h2>Acerca de este juego</h2>
-          <p>
-            DayZ es un juego de supervivencia en el que los jugadores deben
-            enfrentarse a un mundo post-apocalíptico lleno de zombis y otros
-            sobrevivientes hostiles. Recolecta recursos, busca armas, y forma
-            alianzas para sobrevivir lo máximo posible en un entorno peligroso.
-          </p>
-        </div>
+                    <div class="seccion-precio">
+                        <h3 class="titulo">Precios</h3>
+                        <div class="preciocuadro">
+                            <div class="tarjeta">
+                                <div class="nombret">Steam</div>
+                                <div class="precio">$59.99 USD</div>
+                                <a href="https://store.steampowered.com/app/221100/DayZ/?l=spanish" class="botonp" target="_blank">Comprar en Steam</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">Epic Games Store</div>
+                                <div class="precio" style="color: var(--text-muted, #777);">No disponible</div>
+                                <a href="#" class="botonp disabled" onclick="return false;">No disponible</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">Microsoft Store</div>
+                                <div class="precio">ARS$ 43.999,00</div>
+                                <a href="https://www.xbox.com/es-AR/games/store/dayz/BSR9NLHVF1KL" class="botonp" target="_blank">Comprar en Microsoft</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <div class="game-features">
-          <h2>Características:</h2>
-          <ul>
-            <li>Multijugador en línea</li>
-            <li>Supervivencia en mundo abierto</li>
-            <li>Interacción con otros jugadores</li>
-            <li>Sistema de crafting y personalización</li>
-            <li>Competencia por recursos limitados</li>
-            <li>Gráficos realistas</li>
-            <li>Modos de juego variados</li>
-          </ul>
-        </div>
+            <div class="game-main-content">
+                <div class="game-media">
+                    <video controls>
+                        <source src="https://video.cloudflare.steamstatic.com/store_trailers/257026030/movie480_vp9.webm?t=1716813072" type="video/webm">
+                    </video>
+                </div>
 
-        <div class="game-languages">
-          <h2>Idiomas:</h2>
-          <ul>
-            <li>Inglés</li>
-            <li>Español - España</li>
-            <li>Portugués - Brasil</li>
-            <li>Francés</li>
-            <li>Alemán</li>
-            <li>Italiano</li>
-            <li>Japonés</li>
-            <li>Chino simplificado</li>
-            <li>Coreano</li>
-            <li>Ruso</li>
-            <li>Turco</li>
-          </ul>
-        </div>
+                <div class="game-info">
+                    <h2>Acerca de este juego</h2>
+                    <p>
+                        No hay puntos de control ni guardados automáticos. Cuando mueres, lo pierdes todo y vuelves a empezar de cero. DayZ te sitúa en un entorno hostil post-soviético de Chernarus, donde un virus desconocido ha convertido a la población en infectados agresivos. Tu único objetivo es sobrevivir el mayor tiempo posible en un mundo despiadado donde cada decisión cuenta.
+                    </p>
+                </div>
 
-        <div class="game-requirements">
-          <h2>Requisitos del sistema</h2>
-          <div class="system-minimum">
-            <h3>Mínimo:</h3>
-            <ul>
-              <li>Requiere un procesador y un sistema operativo de 64 bits</li>
-              <li>SO: Windows 7 64-bit</li>
-              <li>Procesador: Intel Core i5-4430 / AMD FX-6300</li>
-              <li>Memoria: 8 GB de RAM</li>
-              <li>Gráficos: NVIDIA GeForce GTX 760 / AMD Radeon RX 560</li>
-              <li>Almacenamiento: 16 GB de espacio disponible</li>
-            </ul>
-          </div>
-          <div class="system-recommended">
-            <h3>Recomendado:</h3>
-            <ul>
-              <li>Requiere un procesador y un sistema operativo de 64 bits</li>
-              <li>SO: Windows 10 64-bit</li>
-              <li>Procesador: Intel Core i5-6600K / AMD Ryzen 5 1600</li>
-              <li>Memoria: 12 GB de RAM</li>
-              <li>Gráficos: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580</li>
-              <li>Almacenamiento: 16 GB de espacio disponible</li>
-            </ul>
-          </div>
+                <div class="game-features">
+                    <h2>Características:</h2>
+                    <ul>
+                        <li>Simulación de supervivencia hardcore sin ayuda de mapas o brújulas iniciales</li>
+                        <li>Servidores persistentes de hasta 60 jugadores interactuando en tiempo real</li>
+                        <li>Complejos sistemas médicos, de nutrición y de gestión biológica</li>
+                        <li>Interacciones humanas dinámicas: desde el comercio pacífico hasta la traición</li>
+                        <li>Economía de recursos orgánicos y mecánicas de caza, pesca y cultivo</li>
+                    </ul>
+                </div>
+
+                <div class="game-languages">
+                    <h2>Idiomas:</h2>
+                    <ul>
+                        <li>Español - España</li>
+                        <li>Inglés</li>
+                        <li>Portugués - Brasil</li>
+                        <li>Francés</li>
+                        <li>Alemán</li>
+                        <li>Chino simplificado</li>
+                        <li>Ruso</li>
+                    </ul>
+                </div>
+
+                <div class="game-requirements">
+                    <h2>Requisitos del sistema</h2>
+                    <div class="system-minimum">
+                        <h3>Mínimo:</h3>
+                        <ul>
+                            <li>SO: Windows 7 / 8.1 / 10 (64 bits)</li>
+                            <li>Procesador: Intel Core i5-4430 / AMD FX-6300</li>
+                            <li>Memoria: 8 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GTX 760 / AMD RX 560</li>
+                            <li>Almacenamiento: 16 GB de espacio</li>
+                        </ul>
+                    </div>
+                    <div class="system-recommended">
+                        <h3>Recomendado:</h3>
+                        <ul>
+                            <li>SO: Windows 10 (64 bits)</li>
+                            <li>Procesador: Intel Core i5-6600K / AMD Ryzen 5 1600</li>
+                            <li>Memoria: 12 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GTX 1060 / AMD RX 580</li>
+                            <li>Almacenamiento: 16 GB de espacio (SSD recomendado)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </body>
+    </main>
+
+    <script>
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const sidebar = document.getElementById('sidebar');
+
+        hamburgerIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !hamburgerIcon.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        function filtrar(cat) {
+            window.location.href = `Inicio.html?categoria=${cat}`;
+        }
+    </script>
+</body>
 </html>
