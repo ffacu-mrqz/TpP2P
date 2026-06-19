@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilo_inicio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <title>Mi Perfil - P2Price</title>
+    <style>
+        /* Estilos del Panel Dividido */
+        .profile-dashboard {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 1000px) {
+            .profile-dashboard {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .profile-card, .component-manager-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Bloque de Perfil e Información */
+        .avatar-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 25px;
+        }
+
+        .profile-avatar {
+            width: 110px;
+            height: 110px;
+            background: #2a2a30;
+            border: 3px solid var(--accent-blue);
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .user-name {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .user-role {
+            font-size: 0.9rem;
+            color: var(--accent-blue);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .info-group {
+            margin-bottom: 15px;
+        }
+
+        .info-label {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            font-size: 1rem;
+            color: white;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* BANDEJAS LIMITADAS (SLOTS DE HARDWARE) */
+        .user-hardware-section {
+            margin-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 20px;
+        }
+
+        .hardware-slots-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .slot-container {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px dashed rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.2s;
+        }
+
+        /* Clase cuando el slot tiene un componente asignado */
+        .slot-container.filled {
+            background: rgba(0, 120, 242, 0.08);
+            border: 1px solid rgba(0, 120, 242, 0.3);
+        }
+
+        .slot-label {
+            font-size: 0.75rem;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .slot-value {
+            font-size: 0.95rem;
+            color: var(--text-dim);
+            font-style: italic;
+        }
+
+        .slot-container.filled .slot-value {
+            color: white;
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        .remove-hardware-btn {
+            background: none;
+            border: none;
+            color: #ff453a;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: none; /* Oculto por defecto, se muestra solo si está lleno */
+        }
+
+        .slot-container.filled .remove-hardware-btn {
+            display: block;
+        }
+
+        /* ACORDEONES Y SELECCIÓN */
+        .components-selector-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .dropdown-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .dropdown-trigger {
+            width: 100%;
+            background: none;
+            border: none;
+            color: white;
+            padding: 15px 20px;
+            text-align: left;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dropdown-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 0 20px;
+        }
+
+        .dropdown-card.active .dropdown-content {
+            max-height: 500px;
+            overflow-y: auto;
+            padding: 15px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .inner-search-container {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 8px 12px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 15px;
+        }
+
+        .inner-search-container input {
+            background: none;
+            border: none;
+            color: white;
+            outline: none;
+            width: 100%;
+            font-size: 0.85rem;
+        }
+
+        .brand-section-title {
+            font-size: 0.85rem;
+            color: var(--accent-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 15px 0 8px 0;
+        }
+
+        .component-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .component-item {
+            font-size: 0.9rem;
+            color: #d1d1d6;
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .component-item:hover {
+            background: rgba(0, 120, 242, 0.2);
+            color: white;
+            transform: translateX(3px);
+        }
+
+        .add-icon {
+            font-size: 0.85rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-blue);
+        }
+
+        .no-results {
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            font-style: italic;
+            display: none;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="imagenes/ChatGPT_Image_14_abr_2026__18_49_53-removebg-preview.png" alt="Logo P2Price" class="logo-img">
+            <span class="brand-name">P2Price</span>
+        </div>
+
+        <nav>
+            <p class="menu-label">Navegación</p>
+            <a href="inicio.html" class="menu-item">🏠 Explorar</a>
+            <a href="contactanos.html" class="menu-item">📧 Contacto</a>
+            <a href="componentes.html" class="menu-item">🖥️ Componentes</a>
+
+            <p class="menu-label">Categorías</p>
+            <div class="category-list">
+                <button class="category-btn" onclick="location.href='inicio.html?categoria=todas'">Todas</button>
+                <button class="category-btn" onclick="location.href='inicio.html?categoria=accion'">Acción</button>
+                <button class="category-btn" onclick="location.href='inicio.html?categoria=aventura'">Aventura</button>
+                <button class="category-btn" onclick="location.href='inicio.html?categoria=deportes'">Deportes</button>
+                <button class="category-btn" onclick="location.href='inicio.html?categoria=estrategia'">Estrategia</button>
+                <button class="category-btn" onclick="location.href='inicio.html?categoria=simulacion'">Simulación</button>
+                <button class="category-btn" onclick="location.href='inicio.html?categoria=survivalHorror'">Horror</button>
+                <button class="category-btn" onclick="location.href='inicio.html?categoria=Casual'">Casual</button>
+            </div>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="top-nav">
+            <h1 style="font-weight: 800; font-size: 2rem;">Panel de Usuario</h1>
+            <div class="user-profile">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <span>Mi Perfil</span>
+                    <div style="width: 35px; height: 35px; background: var(--accent-blue); border-radius: 50%;"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="profile-dashboard">
+            
+            <div class="profile-card">
+                <div class="avatar-container">
+                    <div class="profile-avatar"></div>
+                    <div class="user-name">Usuario P2Price</div>
+                    <div class="user-role">Miembro Premium</div>
+                </div>
+
+                <div class="info-group">
+                    <div class="info-label">Correo Electrónico</div>
+                    <div class="info-value">usuario@p2price.com</div>
+                </div>
+
+                <div class="user-hardware-section">
+                    <div class="info-label" style="color: white; font-weight: 700;">Mi Configuración (Max 1 por categoría)</div>
+                    
+                    <div class="hardware-slots-list">
+                        <div class="slot-container filled" id="slot-cpu-desktop">
+                            <div>
+                                <span class="slot-label">Procesador Escritorio</span>
+                                <span class="slot-value">Intel Core i9-14900K</span>
+                            </div>
+                            <button class="remove-hardware-btn" onclick="vaciarSlot('slot-cpu-desktop')">×</button>
+                        </div>
+
+                        <div class="slot-container" id="slot-cpu-laptop">
+                            <div>
+                                <span class="slot-label">Procesador Laptop</span>
+                                <span class="slot-value">Ninguno seleccionado</span>
+                            </div>
+                            <button class="remove-hardware-btn" onclick="vaciarSlot('slot-cpu-laptop')">×</button>
+                        </div>
+
+                        <div class="slot-container filled" id="slot-gpu-dedicada">
+                            <div>
+                                <span class="slot-label">Tarjeta Gráfica Dedicada</span>
+                                <span class="slot-value">NVIDIA GeForce RTX 4090</span>
+                            </div>
+                            <button class="remove-hardware-btn" onclick="vaciarSlot('slot-gpu-dedicada')">×</button>
+                        </div>
+
+                        <div class="slot-container" id="slot-gpu-integrada">
+                            <div>
+                                <span class="slot-label">Gráfica Integrada</span>
+                                <span class="slot-value">Ninguna seleccionada</span>
+                            </div>
+                            <button class="remove-hardware-btn" onclick="vaciarSlot('slot-gpu-integrada')">×</button>
+                        </div>
+
+                        <div class="slot-container" id="slot-ram">
+                            <div>
+                                <span class="slot-label">Memoria RAM</span>
+                                <span class="slot-value">Ninguna seleccionada</span>
+                            </div>
+                            <button class="remove-hardware-btn" onclick="vaciarSlot('slot-ram')">×</button>
+                        </div>
+
+                        <div class="slot-container" id="slot-storage">
+                            <div>
+                                <span class="slot-label">Almacenamiento Principal</span>
+                                <span class="slot-value">Ninguno seleccionado</span>
+                            </div>
+                            <button class="remove-hardware-btn" onclick="vaciarSlot('slot-storage')">×</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="component-manager-card">
+                <div class="components-selector-title">Modificar Componentes</div>
+                <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 20px; line-height: 1.4;">
+                    Al hacer clic en un nuevo componente, este reemplazará automáticamente al elemento anterior de esa misma categoría.
+                </p>
+
+                <div id="dropdowns-container"></div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        // BASE DE DATOS MAPEADA CON EL SLOT CORRESPONDIENTE
+        const baseComponentes = {
+            "Procesadores Escritorio": {
+                targetSlot: "slot-cpu-desktop",
+                items: {
+                    "Intel Recientes": ["Intel Core i9-14900KS", "Intel Core i9-14900K", "Intel Core i7-14700K", "Intel Core Ultra 9 285K"],
+                    "Intel Históricos": ["Intel Core i9-11900K", "Intel Core i7-4790K", "Intel Core i7-2600K"],
+                    "AMD Ryzen": ["AMD Ryzen 9 9950X", "AMD Ryzen 9 7950X3D", "AMD Ryzen 7 7800X3D", "AMD Ryzen 5 5600X"]
+                }
+            },
+            "Procesadores Laptop": {
+                targetSlot: "slot-cpu-laptop",
+                items: {
+                    "Intel Mobile": ["Intel Core Ultra 9 185H", "Intel Core i9-14900HX", "Intel Core i7-13700H"],
+                    "AMD Mobile": ["AMD Ryzen AI 9 HX 370", "AMD Ryzen 9 7945HX", "AMD Ryzen 7 7840HS"]
+                }
+            },
+            "Tarjetas Gráficas Dedicadas": {
+                targetSlot: "slot-gpu-dedicada",
+                items: {
+                    "NVIDIA GeForce": ["NVIDIA GeForce RTX 4090", "NVIDIA GeForce RTX 4080 Super", "NVIDIA GeForce RTX 3070", "NVIDIA GeForce GTX 1080 Ti"],
+                    "AMD Radeon": ["AMD Radeon RX 7900 XTX", "AMD Radeon RX 6700 XT", "AMD Radeon RX 580", "Intel Arc A770"]
+                }
+            },
+            "Gráficas Integradas": {
+                targetSlot: "slot-gpu-integrada",
+                items: {
+                    "AMD / Intel iGPU": ["AMD Radeon 890M", "AMD Radeon 780M", "AMD Radeon Vega 8", "Intel Arc Graphics", "Intel Iris Xe Graphics", "Intel UHD Graphics 770"]
+                }
+            },
+            "Memorias RAM": {
+                targetSlot: "slot-ram",
+                items: {
+                    "DDR5 & DDR4": ["32 GB DDR5 Kit (2x16GB) 6000 MHz", "16 GB DDR5 5600 MHz", "16 GB DDR4 Kit (2x8GB) 3200 MHz"]
+                }
+            },
+            "Almacenamiento": {
+                targetSlot: "slot-storage",
+                items: {
+                    "SSD & HDD": ["2 TB NVMe M.2 Gen 4.0", "1 TB NVMe M.2 Gen 3.0", "1 TB SSD SATA III", "4 TB HDD Mecánico 3.5\""]
+                }
+            }
+        };
+
+        function toggleDropdown(button) {
+            button.parentElement.classList.toggle('active');
+        }
+
+        function inicializarSelectores() {
+            const container = document.getElementById('dropdowns-container');
+            container.innerHTML = '';
+
+            let index = 0;
+            for (const [categoria, info] of Object.entries(baseComponentes)) {
+                index++;
+                const cardId = `card-sel-${index}`;
+                const gridId = `grid-sel-${index}`;
+
+                const card = document.createElement('div');
+                card.className = 'dropdown-card';
+                card.id = cardId;
+
+                card.innerHTML = `
+                    <button class="dropdown-trigger" onclick="toggleDropdown(this)">
+                        <span>${categoria}</span>
+                        <span>▼</span>
+                    </button>
+                    <div class="dropdown-content">
+                        <div class="inner-search-container">
+                            <span>🔍</span>
+                            <input type="text" placeholder="Filtrar en ${categoria.toLowerCase()}..." onkeyup="filtrarContenidoPerfil('${cardId}', this.value)">
+                        </div>
+                        <div id="${gridId}"></div>
+                    </div>
+                `;
+
+                container.appendChild(card);
+                const gridNode = document.getElementById(gridId);
+
+                for (const [submarca, listado] of Object.entries(info.items)) {
+                    const brandSection = document.createElement('div');
+                    brandSection.className = 'sub-brand-block';
+
+                    const title = document.createElement('div');
+                    title.className = 'brand-section-title';
+                    title.textContent = submarca;
+                    brandSection.appendChild(title);
+
+                    const ul = document.createElement('ul');
+                    ul.className = 'component-list';
+
+                    listado.forEach(item => {
+                        const li = document.createElement('li');
+                        li.className = 'component-item';
+                        li.innerHTML = `<span>${item}</span> <span class="add-icon">🔄 Asignar</span>`;
+                        li.onclick = function() { asignarComponenteASlot(info.targetSlot, item); };
+                        ul.appendChild(li);
+                    });
+
+                    brandSection.appendChild(ul);
+                    gridNode.appendChild(brandSection);
+                }
+
+                const noRes = document.createElement('div');
+                noRes.className = 'no-results';
+                noRes.id = `no-res-${cardId}`;
+                noRes.textContent = "No coincide ningún componente.";
+                gridNode.appendChild(noRes);
+            }
+        }
+
+        function filtrarContenidoPerfil(cardId, query) {
+            const minQuery = query.toLowerCase().trim();
+            const blocks = document.querySelectorAll(`#${cardId} .sub-brand-block`);
+            let algoVisible = false;
+
+            blocks.forEach(block => {
+                const items = block.querySelectorAll('.component-item');
+                let visibles = 0;
+
+                items.forEach(item => {
+                    if (item.querySelector('span').textContent.toLowerCase().includes(minQuery)) {
+                        item.style.display = 'flex';
+                        visibles++;
+                        algoVisible = true;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+
+                block.style.display = visibles > 0 ? 'block' : 'none';
+            });
+
+            document.getElementById(`no-res-${cardId}`).style.display = algoVisible ? 'none' : 'block';
+        }
+
+        // ASIGNA Y REEMPLAZA EL VALOR EN EL SLOT EXCLUSIVO
+        function asignarComponenteASlot(slotId, nombreComponente) {
+            const slotNode = document.getElementById(slotId);
+            const valueNode = slotNode.querySelector('.slot-value');
+            
+            valueNode.textContent = nombreComponente;
+            slotNode.classList.add('filled');
+        }
+
+        // LIMPIA EL SLOT VUELTO A SU ESTADO POR DEFECTO
+        function vaciarSlot(slotId) {
+            const slotNode = document.getElementById(slotId);
+            const valueNode = slotNode.querySelector('.slot-value');
+            
+            let textoPorDefecto = "Ninguno seleccionado";
+            if(slotId.includes("gpu-integrada") || slotId.includes("ram")) {
+                textoPorDefecto = "Ninguna seleccionada";
+            }
+            
+            valueNode.textContent = textoPorDefecto;
+            slotNode.classList.remove('filled');
+        }
+
+        document.addEventListener('DOMContentLoaded', inicializarSelectores);
+    </script>
+</body>
+</html>
