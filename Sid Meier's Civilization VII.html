@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sid Meier's Civilization VII</title>
+    <link rel="stylesheet" href="estilo_juegos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menú hamburguesa -->
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Sidebar oculto -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-box">P2</div>
+            <span class="brand-name">P2Price</span>
+        </div>
+        <style>
+     body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    background-image: url('imagenes/civ7_bg.jpg'); /* Recuerda cambiar esta imagen si lo deseas */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+        </style>
+
+        <nav>
+            <p class="menu-label">Navegación</p>
+            <a href="Inicio.html" class="menu-item">🏠 Explorar</a>
+            <a href="contactanos.html" class="menu-item">📧 Contacto</a>
+
+            <p class="menu-label">Categorías</p>
+            <div class="category-list">
+                <a href="#" class="category-btn" onclick="filtrar('todas')">Todas</a>
+                <a href="#" class="category-btn" onclick="filtrar('accion')">Acción</a>
+                <a href="#" class="category-btn" onclick="filtrar('aventura')">Aventura</a>
+                <a href="#" class="category-btn" onclick="filtrar('deportes')">Deportes</a>
+                <a href="#" class="category-btn" onclick="filtrar('estrategia')">Estrategia</a>
+                <a href="#" class="category-btn" onclick="filtrar('simulacion')">Simulación</a>
+                <a href="#" class="category-btn" onclick="filtrar('survivalHorror')">Horror</a>
+                <a href="#" class="category-btn" onclick="filtrar('Casual')">Casual</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="game-container">
+            <div class="game-sidebar">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Civilization_VII_logo.svg"
+                    alt="Civilization VII"
+                    class="game-banner"
+                />
+                <div class="game-details">
+                    <h1 class="game-title">Sid Meier's Civilization VII</h1>
+                    <p class="game-descripcion">
+                        Construye un imperio que resista el paso del tiempo. La galardonada franquicia de estrategia por turnos regresa con una entrega revolucionaria. Gobierna como uno de los muchos líderes legendarios de la historia universal. Da forma a tu territorio, funde culturas a través de distintas eras, expande tu ciencia o milicia, y toma decisiones cruciales para guiar el destino de la humanidad.
+                    </p>
+                    <div class="game-ratings">
+                        <p>Reseñas recientes: <span class="very-positive">Muy positivas</span></p>
+                        <p>Reseñas generales: <span class="very-positive">Muy positivas</span></p>
+                    </div>
+                    <div class="game-metadata">
+                        <p>Fecha de lanzamiento: 2025</p>
+                        <p>Desarrollador: Firaxis Games</p>
+                        <p>Editor: 2K</p>
+                    </div>
+                    <div class="game-tags">
+                        <p>Etiquetas populares:</p>
+                        <ul>
+                            <li>Estrategia por turnos (4X)</li>
+                            <li>Histórico / Gestión</li>
+                            <li>Multijugador / Un jugador</li>
+                            <li>Táctico / Construcción</li>
+                        </ul>
+                    </div>
+
+                    <div class="seccion-precio">
+                        <h3 class="titulo">Precios</h3>
+                        <div class="preciocuadro">
+                            <div class="tarjeta">
+                                <div class="nombret">Steam</div>
+                                <div class="precio">$69.99 USD</div>
+                                <a href="https://store.steampowered.com/app/1295660/Sid_Meiers_Civilization_VII/" class="botonp" target="_blank">Comprar en Steam</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">PlayStation Store</div>
+                                <div class="precio">$69.99 USD</div>
+                                <a href="https://www.playstation.com/" class="botonp" target="_blank">Comprar en PS Store</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">Microsoft Store</div>
+                                <div class="precio">ARS$ 54.999,00</div>
+                                <a href="https://www.xbox.com/" class="botonp" target="_blank">Comprar en Microsoft Store</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-main-content">
+                <div class="game-media">
+                    <video controls>
+                        <source src="https://video.cloudflare.steamstatic.com/store_trailers/257062491/movie480_vp9.webm" type="video/webm">
+                    </video>
+                </div>
+
+                <div class="game-info">
+                    <h2>Tu estrategia definirá los anales de la historia</h2>
+                    <p>
+                        Civilization VII introduce cambios estructurales masivos en la fórmula clásica 4X (Explorar, Expandir, Explotar y Exterminar). En esta entrega, la progresión del juego se divide en eras dinámicas independientes, permitiéndote mezclar la herencia cultural de tu civilización al avanzar en el tiempo. Elige líderes que se adapten a tu estilo político o militar sin limitaciones estrictas de facción y gestiona el crecimiento urbano con un nivel de belleza y detalle visual nunca antes visto.
+                    </p>
+                </div>
+
+                <div class="game-features">
+                    <h2>Características clave de tu legado:</h2>
+                    <ul>
+                        <li><strong>Evolución cultural por eras:</strong> No te estanques en el pasado. Elige nuevas identidades históricas para tu imperio al inicio de cada era para adaptarte a las crisis globales y a los nuevos recursos de la época.</li>
+                        <li><strong>Líderes sin fronteras:</strong> Selecciona de forma independiente a tu líder y a tu civilización originaria. Combina las bonificaciones de comandantes legendarios, científicos o filósofos con la infraestructura de distintos reinos.</li>
+                        <li><strong>Gestión de ciudades orgánica:</strong> Expande tus distritos y maravillas arquitectónicas sobre un mapa hexagonal renovado. Diseña complejos centros comerciales, bastiones defensivos y rutas comerciales fluidas.</li>
+                        <li><strong>Diplomacia y sistemas de crisis:</strong> Enfréntate a las tensiones políticas de un mundo en constante crecimiento. Resuelve eventos críticos al final de cada era que pondrán a prueba la estabilidad económica y social de tu dinastía.</li>
+                        <li><strong>Multijugador multiplataforma de nueva generación:</strong> Compite o coopera en partidas masivas online con amigos de cualquier plataforma, con modos rápidos optimizados para sesiones de juego más dinámicas.</li>
+                    </ul>
+                </div>
+
+                <div class="game-languages">
+                    <h2>Idiomas disponibles:</h2>
+                    <ul>
+                        <li>Español - España (Interfaz, subtítulos y voces de consejeros)</li>
+                        <li>Inglés (Voces y narración original)</li>
+                        <li>Francés</li>
+                        <li>Italiano</li>
+                        <li>Alemán</li>
+                        <li>Portugués - Brasil</li>
+                        <li>Chino simplificado</li>
+                        <li>Japonés</li>
+                    </ul>
+                </div>
+
+                <div class="game-requirements">
+                    <h2>Requisitos del sistema (PC)</h2>
+                    <div class="system-minimum">
+                        <h3>Mínimo (Solo un turno más...):</h3>
+                        <ul>
+                            <li>SO: Windows 10/11 (64 bits)</li>
+                            <li>Procesador: Intel Core i5-6600K / AMD Ryzen 5 1600</li>
+                            <li>Memoria: 8 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GTX 1060 / AMD Radeon RX 580 (4GB VRAM)</li>
+                            <li>DirectX: Versión 12</li>
+                            <li>Almacenamiento: 60 GB de espacio disponible (Se requiere SSD)</li>
+                        </ul>
+                    </div>
+                    <div class="system-recommended">
+                        <h3>Recomendado (Imperio glorioso a máxima definición):</h3>
+                        <ul>
+                            <li>SO: Windows 10/11 (64 bits)</li>
+                            <li>Procesador: Intel Core i7-9700K / AMD Ryzen 7 3700X</li>
+                            <li>Memoria: 16 GB de RAM</li>
+                            <li>Gráficos: NVIDIA RTX 3060 / AMD Radeon RX 6600 XT (6GB VRAM)</li>
+                            <li>DirectX: Versión 12</li>
+                            <li>Almacenamiento: 60 GB de espacio disponible (Obligatorio SSD)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script para el menú hamburguesa y filtrado de categorías -->
+    <script>
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const sidebar = document.getElementById('sidebar');
+
+        hamburgerIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !hamburgerIcon.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        function filtrar(cat) {
+            window.location.href = `Inicio.html?categoria=${cat}`;
+        }
+    </script>
+</body>
+</html>

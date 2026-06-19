@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company of Heroes 3</title>
+    <link rel="stylesheet" href="estilo_juegos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menú hamburguesa -->
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Sidebar oculto -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-box">P2</div>
+            <span class="brand-name">P2Price</span>
+        </div>
+        <style>
+     body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    background-image: url('imagenes/coh3_bg.jpg'); /* Recuerda cambiar esta imagen si lo deseas */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+        </style>
+
+        <nav>
+            <p class="menu-label">Navegación</p>
+            <a href="Inicio.html" class="menu-item">🏠 Explorar</a>
+            <a href="contactanos.html" class="menu-item">📧 Contacto</a>
+
+            <p class="menu-label">Categorías</p>
+            <div class="category-list">
+                <a href="#" class="category-btn" onclick="filtrar('todas')">Todas</a>
+                <a href="#" class="category-btn" onclick="filtrar('accion')">Acción</a>
+                <a href="#" class="category-btn" onclick="filtrar('aventura')">Aventura</a>
+                <a href="#" class="category-btn" onclick="filtrar('deportes')">Deportes</a>
+                <a href="#" class="category-btn" onclick="filtrar('estrategia')">Estrategia</a>
+                <a href="#" class="category-btn" onclick="filtrar('simulacion')">Simulación</a>
+                <a href="#" class="category-btn" onclick="filtrar('survivalHorror')">Horror</a>
+                <a href="#" class="category-btn" onclick="filtrar('Casual')">Casual</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="game-container">
+            <div class="game-sidebar">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Company_of_Heroes_3_logo.png"
+                    alt="Company of Heroes 3"
+                    class="game-banner"
+                />
+                <div class="game-details">
+                    <h1 class="game-title">Company of Heroes 3</h1>
+                    <p class="game-descripcion">
+                        La mítica saga de estrategia en tiempo real regresa con su entrega más grande y espectacular. Toma el control en los apasionantes teatros de guerra del Mediterráneo, desde las montañas de Italia hasta los desiertos del norte de África. Dirige batallas cinemáticas de infantería, vehículos blindados y aviación donde la física del entorno, las coberturas destructibles y tus decisiones tácticas definirán la delgada línea entre la victoria y el colapso.
+                    </p>
+                    <div class="game-ratings">
+                        <p>Reseñas recientes: <span class="positive">Variadas / Positivas</span></p>
+                        <p>Reseñas generales: <span class="positive">Principalmente positivas</span></p>
+                    </div>
+                    <div class="game-metadata">
+                        <p>Fecha de lanzamiento: 2023</p>
+                        <p>Desarrollador: Relic Entertainment</p>
+                        <p>Editor: SEGA</p>
+                    </div>
+                    <div class="game-tags">
+                        <p>Etiquetas populares:</p>
+                        <ul>
+                            <li>Estrategia en tiempo real (RTS)</li>
+                            <li>Táctico / Segunda Guerra Mundial</li>
+                            <li>Destrucción / Coberturas</li>
+                            <li>Multijugador / Un jugador</li>
+                        </ul>
+                    </div>
+
+                    <div class="seccion-precio">
+                        <h3 class="titulo">Precios</h3>
+                        <div class="preciocuadro">
+                            <div class="tarjeta">
+                                <div class="nombret">Steam</div>
+                                <div class="precio">$59.99 USD</div>
+                                <a href="https://store.steampowered.com/app/1566300/Company_of_Heroes_3/" class="botonp" target="_blank">Comprar en Steam</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">PlayStation Store (PS5)</div>
+                                <div class="precio">$59.99 USD</div>
+                                <a href="https://store.playstation.com/" class="botonp" target="_blank">Comprar en PS Store</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">Microsoft Store (Xbox Series X|S)</div>
+                                <div class="precio">ARS$ 49.999,00</div>
+                                <a href="https://www.xbox.com/" class="botonp" target="_blank">Comprar en MS Store</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-main-content">
+                <div class="game-media">
+                    <video controls>
+                        <source src="https://video.cloudflare.steamstatic.com/store_trailers/256931558/movie480_vp9.webm" type="video/webm">
+                    </video>
+                </div>
+
+                <div class="game-info">
+                    <h2>Acción táctica legendaria combinada con una escala sin precedentes</h2>
+                    <p>
+                        Company of Heroes 3 redefine el combate de acción militar gracias al motor Essence Engine 5. Introduce por primera vez una Campaña Dinámica de estilo mapa general (sandbox), donde planificas el avance global de tus ejércitos en un mapa por turnos antes de sumergirte en los feroces tiroteos tácticos en tiempo real a pie de calle. Con cuatro facciones iniciales únicas, un nivel de destrucción edilicia fotorrealista y la nueva Pausa Táctica Completa para un jugador, el control del campo de batalla es absoluto.
+                    </p>
+                </div>
+
+                <div class="game-features">
+                    <h2>Características clave de la ofensiva militar:</h2>
+                    <ul>
+                        <li><strong>Campaña dinámica de Italia:</strong> Gestiona líneas de suministro, despliega defensas costeras y comanda operaciones partisanas en un gran mapa estratégico por turnos antes de liderar el asalto directo en tiempo real.</li>
+                        <li><strong>Operación del norte de África:</strong> Vive una campaña narrativa más lineal y clásica centrada en la velocidad, la guerra mecanizada y el despliegue de blindados demoledores sobre campos de batalla desérticos.</li>
+                        <li><strong>Sistema de destrucción de nueva generación:</strong> Las casas se derrumban, las fachadas se fragmentan y el terreno se deforma dinámicamente con los impactos de artillería, alterando de forma permanente las coberturas de tus soldados.</li>
+                        <li><strong>Pausa Táctica Completa (Modo un jugador):</strong> Congela el tiempo en mitad del caos para coordinar tus flanqueos, emitir órdenes en cola a diferentes escuadras y ejecutar ataques combinados perfectos sin estrés.</li>
+                        <li><strong>Cuatro facciones emblemáticas:</strong> Elige entre las fuerzas estadounidenses, las fuerzas británicas, la Wehrmacht o el Afrikakorps, cada una con árboles de habilidades tácticas y unidades de apoyo totalmente diferenciadas.</li>
+                    </ul>
+                </div>
+
+                <div class="game-languages">
+                    <h2>Idiomas disponibles:</h2>
+                    <ul>
+                        <li>Español - España (Interfaz y subtítulos con voces en inglés)</li>
+                        <li>Inglés (Voces completas y textos)</li>
+                        <li>Francés</li>
+                        <li>Italiano</li>
+                        <li>Alemán</li>
+                        <li>Portugués - Brasil</li>
+                        <li>Chino simplificado</li>
+                        <li>Coreano</li>
+                    </ul>
+                </div>
+
+                <div class="game-requirements">
+                    <h2>Requisitos del sistema (PC)</h2>
+                    <div class="system-minimum">
+                        <h3>Mínimo (Para organizar defensas básicas):</h3>
+                        <ul>
+                            <li>SO: Windows 10 (64 bits)</li>
+                            <li>Procesador: Intel Core i5 de 6ª gen / AMD Ryzen 5 de 1ª gen (4 núcleos a 3GHz)</li>
+                            <li>Memoria: 8 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GTX 950 / AMD Radeon R9 370 (2GB VRAM)</li>
+                            <li>DirectX: Versión 12</li>
+                            <li>Almacenamiento: 40 GB de espacio disponible</li>
+                        </ul>
+                    </div>
+                    <div class="system-recommended">
+                        <h3>Recomendado (Para la guerra total en alta fidelidad):</h3>
+                        <ul>
+                            <li>SO: Windows 10/11 (64 bits)</li>
+                            <li>Procesador: Intel Core i7 de 8ª gen / AMD Ryzen 7 de 3ª gen (8 núcleos a 3.2GHz)</li>
+                            <li>Memoria: 16 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GTX 1660 / AMD Radeon RX 5600 (6GB VRAM)</li>
+                            <li>DirectX: Versión 12</li>
+                            <li>Almacenamiento: 40 GB de espacio disponible (Se recomienda SSD)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script para el menú hamburguesa y filtrado de categorías -->
+    <script>
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const sidebar = document.getElementById('sidebar');
+
+        hamburgerIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !hamburgerIcon.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        function filtrar(cat) {
+            window.location.href = `Inicio.html?categoria=${cat}`;
+        }
+    </script>
+</body>
+</html>

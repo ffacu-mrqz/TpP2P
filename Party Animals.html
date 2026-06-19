@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Party Animals</title>
+    <link rel="stylesheet" href="estilo_juegos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menú hamburguesa -->
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Sidebar oculto -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-box">P2</div>
+            <span class="brand-name">P2Price</span>
+        </div>
+        <style>
+     body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    background-image: url('imagenes/partyanimals_bg.jpg'); /* Recuerda cambiar esta imagen si lo deseas */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+        </style>
+
+        <nav>
+            <p class="menu-label">Navegación</p>
+            <a href="Inicio.html" class="menu-item">🏠 Explorar</a>
+            <a href="contactanos.html" class="menu-item">📧 Contacto</a>
+
+            <p class="menu-label">Categorías</p>
+            <div class="category-list">
+                <a href="#" class="category-btn" onclick="filtrar('todas')">Todas</a>
+                <a href="#" class="category-btn" onclick="filtrar('accion')">Acción</a>
+                <a href="#" class="category-btn" onclick="filtrar('aventura')">Aventura</a>
+                <a href="#" class="category-btn" onclick="filtrar('deportes')">Deportes</a>
+                <a href="#" class="category-btn" onclick="filtrar('estrategia')">Estrategia</a>
+                <a href="#" class="category-btn" onclick="filtrar('simulacion')">Simulación</a>
+                <a href="#" class="category-btn" onclick="filtrar('survivalHorror')">Horror</a>
+                <a href="#" class="category-btn" onclick="filtrar('Casual')">Casual</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="game-container">
+            <div class="game-sidebar">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Party_Animals_Logo.png"
+                    alt="Party Animals"
+                    class="game-banner"
+                    onerror="this.src='https://placehold.co/600x400?text=Party+Animals'"
+                />
+                <div class="game-details">
+                    <h1 class="game-title">Party Animals</h1>
+                    <p class="game-descripcion">
+                        ¡Peleas peludas basadas en físicas desastrosas! Party Animals te invita a elegir a tu animalito adorable favorito (entre cachorros, gatitos, patos o tiburones) y enfrentarte a tus amigos en hilarantes batallas de bofetadas. No te dejes engañar por sus caritas tiernas: estos peluches desquiciados se lanzarán golpes, darán patadas voladoras y usarán desatascadores para noquear a los rivales y arrojarlos fuera de la arena.
+                    </p>
+                    <div class="game-ratings">
+                        <p>Reseñas recientes: <span class="very-positive">Muy positivas</span></p>
+                        <p>Reseñas generales: <span class="very-positive">Muy positivas</span></p>
+                    </div>
+                    <div class="game-metadata">
+                        <p>Fecha de lanzamiento: 2023</p>
+                        <p>Desarrollador: Recreate Games</p>
+                        <p>Editor: Source Technology</p>
+                    </div>
+                    <div class="game-tags">
+                        <p>Etiquetas populares:</p>
+                        <ul>
+                            <li>Casual / Party Game</li>
+                            <li>Físicas / Pelea Divertida</li>
+                            <li>Multijugador / Local y Online</li>
+                            <li>Lindo / Cooperativo</li>
+                        </ul>
+                    </div>
+
+                    <div class="seccion-precio">
+                        <h3 class="titulo">Precios</h3>
+                        <div class="preciocuadro">
+                            <div class="tarjeta">
+                                <div class="nombret">Steam</div>
+                                <div class="precio">$19.99 USD</div>
+                                <a href="https://store.steampowered.com/app/1260320/Party_Animals/" class="botonp" target="_blank">Comprar en Steam</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">Xbox Store</div>
+                                <div class="precio">$19.99 USD</div>
+                                <a href="https://www.xbox.com/" class="botonp" target="_blank">Comprar en Xbox</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-main-content">
+                <div class="game-media">
+                    <video controls>
+                        <source src="https://video.cloudflare.steamstatic.com/store_trailers/256968478/movie480_vp9.webm" type="video/webm">
+                    </video>
+                </div>
+
+                <div class="game-info">
+                    <h2>Un festival de mamporros y risas donde la gravedad es tu enemiga</h2>
+                    <p>
+                        Party Animals brilla con luz propia gracias a su soberbio motor de físicas avanzadas tipo "ragdoll" (muñeco de trapo). Cada movimiento de tu tierno luchador se siente pesado, tambaleante y deliciosamente torpe. Ganar requiere dominar el caótico timing para noquear a un rival de un cabezazo, agarrar su cuerpo flácido y arrastrarlo hacia el borde del mapa antes de que recupere el conocimiento. La tensión se dispara cuando los escenarios interactivos —como un submarino que se hunde o un avión bajo una tormenta helada— empiezan a destruirse.
+                    </p>
+                </div>
+
+                <div class="game-features">
+                    <h2>Características clave de los combates peludos:</h2>
+                    <ul>
+                        <li><strong>Divertidas físicas ragdoll:</strong> Experimenta encuentros únicos donde los choques fortuitos, los tropiezos y los golpes desencadenan situaciones absurdas impredecibles.</li>
+                        <li><strong>Arsenal de armas disparatado:</strong> Domina el campo de batalla empuñando ballestas que disparan ventosas, bates de béisbol, pistolas de congelación o sartenes de cocina.</li>
+                        <li><strong>Múltiples modos de juego:</strong> Enfréntate en brutales combates todos contra todos (Last Stand) o colabora en equipo para arrastrar gominolas gigantes en adictivos modos objetivo (Team Score).</li>
+                        <li><strong>Zoológico de personajes carismáticos:</strong> Juega como el perrito Nemo, el tiranosaurio Underbite, el tierno gorila o el adorable pato, todos con una infinidad de skins desbloqueables de disfraces divertidos.</li>
+                        <li><strong>Diversión en sofá y online:</strong> Disfruta de partidas competitivas con amigos en pantalla dividida local para hasta 4 jugadores, o lánzate a servidores online mundiales.</li>
+                    </ul>
+                </div>
+
+                <div class="game-languages">
+                    <h2>Idiomas disponibles:</h2>
+                    <ul>
+                        <li>Español - España (Interfaz y textos)</li>
+                        <li>Español - Latinoamérica (Interfaz y textos)</li>
+                        <li>Inglés (Interfaz, textos y voces del narrador)</li>
+                        <li>Francés</li>
+                        <li>Alemán</li>
+                        <li>Portugués - Brasil</li>
+                        <li>Chino simplificado</li>
+                        <li>Japonés</li>
+                    </ul>
+                </div>
+
+                <div class="game-requirements">
+                    <h2>Requisitos del sistema (PC)</h2>
+                    <div class="system-minimum">
+                        <h3>Mínimo (Para aguantar los porrazos a gráficos básicos):</h3>
+                        <ul>
+                            <li>SO: Windows 10 (64 bits) / Windows 11</li>
+                            <li>Procesador: Intel Core i5-4460 / AMD FX-6300</li>
+                            <li>Memoria: 8 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GeForce GTX 750Ti / AMD Radeon R7 260X</li>
+                            <li>DirectX: Versión 11</li>
+                            <li>Almacenamiento: 8 GB de espacio disponible</li>
+                        </ul>
+                    </div>
+                    <div class="system-recommended">
+                        <h3>Recomendado (Para ver el pelaje fotorrealista a 60FPS fluidos):</h3>
+                        <ul>
+                            <li>SO: Windows 10/11 (64 bits)</li>
+                            <li>Procesador: Intel Core i5-8400 / AMD Ryzen 5 2600</li>
+                            <li>Memoria: 16 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580</li>
+                            <li>DirectX: Versión 11</li>
+                            <li>Almacenamiento: 8 GB de espacio disponible (Se recomienda SSD)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script para el menú hamburguesa y filtrado de categorías -->
+    <script>
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const sidebar = document.getElementById('sidebar');
+
+        hamburgerIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !hamburgerIcon.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        function filtrar(cat) {
+            window.location.href = `Inicio.html?categoria=${cat}`;
+        }
+    </script>
+</body>
+</html>

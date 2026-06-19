@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pico Park</title>
+    <link rel="stylesheet" href="estilo_juegos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menú hamburguesa -->
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Sidebar oculto -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-box">P2</div>
+            <span class="brand-name">P2Price</span>
+        </div>
+        <style>
+     body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    background-image: url('imagenes/picopark_bg.jpg'); /* Recuerda cambiar esta imagen si lo deseas */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+        </style>
+
+        <nav>
+            <p class="menu-label">Navegación</p>
+            <a href="Inicio.html" class="menu-item">🏠 Explorar</a>
+            <a href="contactanos.html" class="menu-item">📧 Contacto</a>
+
+            <p class="menu-label">Categorías</p>
+            <div class="category-list">
+                <a href="#" class="category-btn" onclick="filtrar('todas')">Todas</a>
+                <a href="#" class="category-btn" onclick="filtrar('accion')">Acción</a>
+                <a href="#" class="category-btn" onclick="filtrar('aventura')">Aventura</a>
+                <a href="#" class="category-btn" onclick="filtrar('deportes')">Deportes</a>
+                <a href="#" class="category-btn" onclick="filtrar('estrategia')">Estrategia</a>
+                <a href="#" class="category-btn" onclick="filtrar('simulacion')">Simulación</a>
+                <a href="#" class="category-btn" onclick="filtrar('survivalHorror')">Horror</a>
+                <a href="#" class="category-btn" onclick="filtrar('Casual')">Casual</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="game-container">
+            <div class="game-sidebar">
+                <img
+                    src="https://placehold.co/600x400?text=Pico+Park"
+                    alt="Pico Park"
+                    class="game-banner"
+                    onerror="this.src='https://placehold.co/600x400?text=Pico+Park'"
+                />
+                <div class="game-details">
+                    <h1 class="game-title">Pico Park</h1>
+                    <p class="game-descripcion">
+                        ¡Cooperación cooperativa... o caos absoluto! Pico Park es un juego de puzles de acción cooperativo multijugador local y online para entre 2 y 8 jugadores. La regla es muy simple: consigue la llave, llega a la puerta y supera el nivel junto a tus compañeros. Sin embargo, cada nivel cuenta con mecánicas ingeniosas donde el peso, la altura o la unión física de vuestros pequeños avatares de gatitos exigirán una sincronización total.
+                    </p>
+                    <div class="game-ratings">
+                        <p>Reseñas recientes: <span class="very-positive">Muy positivas</span></p>
+                        <p>Reseñas generales: <span class="very-positive">Muy positivas</span></p>
+                    </div>
+                    <div class="game-metadata">
+                        <p>Fecha de lanzamiento: 2021</p>
+                        <p>Desarrollador: TECOPARK</p>
+                        <p>Editor: TECOPARK</p>
+                    </div>
+                    <div class="game-tags">
+                        <p>Etiquetas populares:</p>
+                        <ul>
+                            <li>Cooperativo / Puzles 2D</li>
+                            <li>Multijugador Local y Online</li>
+                            <li>Casual / Party Game</li>
+                            <li>Trabajo en equipo / Divertido</li>
+                        </ul>
+                    </div>
+
+                    <div class="seccion-precio">
+                        <h3 class="titulo">Precios</h3>
+                        <div class="preciocuadro">
+                            <div class="tarjeta">
+                                <div class="nombret">Steam</div>
+                                <div class="precio">$4.99 USD</div>
+                                <a href="https://store.steampowered.com/app/1509960/PICO_PARK/" class="botonp" target="_blank">Comprar en Steam</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">Nintendo eShop</div>
+                                <div class="precio">$4.99 USD</div>
+                                <a href="https://www.nintendo.com/" class="botonp" target="_blank">Comprar en eShop</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-main-content">
+                <div class="game-media">
+                    <video controls>
+                        <source src="https://video.cloudflare.steamstatic.com/store_trailers/256834015/movie480_vp9.webm" type="video/webm">
+                    </video>
+                </div>
+
+                <div class="game-info">
+                    <h2>Niveles adaptables donde el número de jugadores lo cambia todo</h2>
+                    <p>
+                        El gran atractivo de Pico Park es que todos sus puzles e ingeniosos desafíos físicos se ajustan de manera flexible en función del número total de personas conectadas en la sala. No importa si juegas en pareja o con un grupo masivo de ocho amigos; las plataformas, cuerdas y bloques requerirán que todos empujen al mismo tiempo, se sirvan de escalera humana o salten al unísono. Un solo error o un amigo con ganas de bromear puede mandar al traste el esfuerzo de todo el equipo en un instante.
+                    </p>
+                </div>
+
+                <div class="game-features">
+                    <h2>Características clave de los puzles gatunos:</h2>
+                    <ul>
+                        <li><strong>Flexibilidad multijugador masiva:</strong> Disfruta de partidas diseñadas tanto para grupos pequeños de 2 personas como para caóticas reuniones completas de hasta 8 jugadores.</li>
+                        <li><strong>Modo Mundo (World Mode):</strong> Supera 48 niveles únicos divididos en bloques temáticos, cada uno con una mecánica central totalmente diferente (bloques móviles, cuerdas de unión, interruptores, etc.).</li>
+                        <li><strong>Modo Batalla Competitiva (Battle Mode):</strong> ¿Cansado de colaborar? Enfréntate a tus amigos en minijuegos competitivos de tres rondas para ver quién tiene los mejores reflejos y control.</li>
+                        <li><strong>Modo Infinito (Endless Mode):</strong> Lleva la cooperación al límite intentando conseguir la puntuación más alta posible en niveles diseñados para no terminar nunca.</li>
+                        <li><strong>Juego Online e invitaciones simples:</strong> Conéctate directamente con amigos de todo el mundo y utiliza salas de chat de voz para gritar instrucciones y coordinar vuestros movimientos.</li>
+                    </ul>
+                </div>
+
+                <div class="game-languages">
+                    <h2>Idiomas disponibles:</h2>
+                    <ul>
+                        <li>Inglés (Interfaz y textos mínimos, ideal para jugar sin barreras de idioma)</li>
+                        <li>Japonés</li>
+                    </ul>
+                </div>
+
+                <div class="game-requirements">
+                    <h2>Requisitos del sistema (PC)</h2>
+                    <div class="system-minimum">
+                        <h3>Mínimo (Para coordinar los saltos en cualquier ordenador):</h3>
+                        <ul>
+                            <li>SO: Windows 7 / 8 / 10 / 11 (64 bits)</li>
+                            <li>Procesador: Dual Core o equivalente</li>
+                            <li>Memoria: 4 GB de RAM</li>
+                            <li>Gráficos: Tarjeta gráfica compatible con DirectX 11</li>
+                            <li>DirectX: Versión 11</li>
+                            <li>Red: Conexión de banda ancha a Internet (Para cooperativo online)</li>
+                            <li>Almacenamiento: 100 MB de espacio disponible</li>
+                        </ul>
+                    </div>
+                    <div class="system-recommended">
+                        <h3>Recomendado (Para garantizar una latencia óptima en online):</h3>
+                        <ul>
+                            <li>SO: Windows 10/11 (64 bits)</li>
+                            <li>Procesador: Intel Core i3 o superior</li>
+                            <li>Memoria: 4 GB de RAM</li>
+                            <li>Gráficos: Tarjeta dedicada básica</li>
+                            <li>DirectX: Versión 11</li>
+                            <li>Red: Conexión estable de banda ancha</li>
+                            <li>Almacenamiento: 100 MB de espacio disponible</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script para el menú hamburguesa y filtrado de categorías -->
+    <script>
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const sidebar = document.getElementById('sidebar');
+
+        hamburgerIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !hamburgerIcon.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        function filtrar(cat) {
+            window.location.href = `Inicio.html?categoria=${cat}`;
+        }
+    </script>
+</body>
+</html>

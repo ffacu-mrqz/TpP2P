@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Total War: WARHAMMER III</title>
+    <link rel="stylesheet" href="estilo_juegos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menú hamburguesa -->
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Sidebar oculto -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-box">P2</div>
+            <span class="brand-name">P2Price</span>
+        </div>
+        <style>
+     body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    background-image: url('imagenes/wh3_bg.jpg'); /* Recuerda cambiar esta imagen si lo deseas */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+        </style>
+
+        <nav>
+            <p class="menu-label">Navegación</p>
+            <a href="Inicio.html" class="menu-item">🏠 Explorar</a>
+            <a href="contactanos.html" class="menu-item">📧 Contacto</a>
+
+            <p class="menu-label">Categorías</p>
+            <div class="category-list">
+                <a href="#" class="category-btn" onclick="filtrar('todas')">Todas</a>
+                <a href="#" class="category-btn" onclick="filtrar('accion')">Acción</a>
+                <a href="#" class="category-btn" onclick="filtrar('aventura')">Aventura</a>
+                <a href="#" class="category-btn" onclick="filtrar('deportes')">Deportes</a>
+                <a href="#" class="category-btn" onclick="filtrar('estrategia')">Estrategia</a>
+                <a href="#" class="category-btn" onclick="filtrar('simulacion')">Simulación</a>
+                <a href="#" class="category-btn" onclick="filtrar('survivalHorror')">Horror</a>
+                <a href="#" class="category-btn" onclick="filtrar('Casual')">Casual</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="game-container">
+            <div class="game-sidebar">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Total_War_Warhammer_III_logo.png"
+                    alt="Total War: WARHAMMER III"
+                    class="game-banner"
+                />
+                <div class="game-details">
+                    <h1 class="game-title">Total War: WARHAMMER III</h1>
+                    <p class="game-descripcion">
+                        Más allá del mundo del hombre, el Reino del Caos aguarda. Reúne a tus ejércitos y cruza la frontera de las pesadillas en la culminación cataclísmica de la trilogía de estrategia de fantasía de Total War. Gobierna imperios mágicos, domina bestias colosales y lidera batallas en tiempo real con miles de guerreros en un mapa de proporciones descomunales. ¡Sálvalo todo o desata el apocalipsis!
+                    </p>
+                    <div class="game-ratings">
+                        <p>Reseñas recientes: <span class="very-positive">Muy positivas</span></p>
+                        <p>Reseñas generales: <span class="positive">Principalmente positivas</span></p>
+                    </div>
+                    <div class="game-metadata">
+                        <p>Fecha de lanzamiento: 2022</p>
+                        <p>Desarrollador: Creative Assembly</p>
+                        <p>Editor: SEGA</p>
+                    </div>
+                    <div class="game-tags">
+                        <p>Etiquetas populares:</p>
+                        <ul>
+                            <li>Estrategia / Fantasía oscura</li>
+                            <li>Táctico en tiempo real (RTT)</li>
+                            <li>Por turnos / Gestión 4X</li>
+                            <li>Gore / Multijugador</li>
+                        </ul>
+                    </div>
+
+                    <div class="seccion-precio">
+                        <h3 class="titulo">Precios</h3>
+                        <div class="preciocuadro">
+                            <div class="tarjeta">
+                                <div class="nombret">Steam</div>
+                                <div class="precio">$59.99 USD</div>
+                                <a href="https://store.steampowered.com/app/1142710/Total_War_WARHAMMER_III/" class="botonp" target="_blank">Comprar en Steam</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">Epic Games Store</div>
+                                <div class="precio">$59.99 USD</div>
+                                <a href="https://store.epicgames.com/es-MX/p/total-war-warhammer-3" class="botonp" target="_blank">Comprar en Epic Games</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">Microsoft Store (PC)</div>
+                                <div class="precio">ARS$ 44.999,00</div>
+                                <a href="https://www.xbox.com/es-ar/games/store/total-war-warhammer-iii/9ngv0166v75g" class="botonp" target="_blank">Comprar en MS Store</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-main-content">
+                <div class="game-media">
+                    <video controls>
+                        <source src="https://video.cloudflare.steamstatic.com/store_trailers/256872714/movie480_vp9.webm" type="video/webm">
+                    </video>
+                </div>
+
+                <div class="game-info">
+                    <h2>Conquista el Reino Mortal y domina a los Dioses del Caos</h2>
+                    <p>
+                        Total War: WARHAMMER III fusiona la gestión geopolítica por turnos de un imperio colosal con las batallas tácticas en tiempo real más feroces de la industria. Lidera a facciones únicas como el gélido imperio de Kislev, el místico Gran Catai, los brutales Reinos Ogros o las mismísimas legiones demoníacas de Khorne, Nurgle, Tzeentch y Slaanesh. Además, incluye acceso al masivo modo gratuito "Imperios Inmortales", el cual unifica los mapas de las tres entregas en la experiencia de estrategia de fantasía más grande jamás creada.
+                    </p>
+                </div>
+
+                <div class="game-features">
+                    <h2>Características clave de la maquinaria de guerra:</h2>
+                    <ul>
+                        <li><strong>Facciones asimétricas extremas:</strong> Controla dragones ancestrales con forma humana, hordas demoníacas sedientas de sangre, fanáticos religiosos del hielo o caníbales gigantes que adoran a la Gran Fauce.</li>
+                        <li><strong>Señores legendarios y magia devastadora:</strong> Lidera con héroes ultrapoderosos y desata hechizos masivos que pueden diezmar ejércitos enteros, invocar tormentas místicas o corromper el campo de batalla.</li>
+                        <li><strong>Campaña narrativa "El Reino del Caos":</strong> Cruza portales interdimensionales, sobrevive a las trampas de los reinos de los dioses oscuros y compite en asedios especiales de supervivencia para reclamar el alma de un dios moribundo.</li>
+                        <li><strong>Imperios Inmortales (El sandbox masivo):</strong> Si buscas la experiencia definitiva, conquista un mapa continental colosal que reúne a todas las razas, señores y territorios de la trilogía completa de Warhammer.</li>
+                        <li><strong>Multijugador masivo y cooperativo ágil:</strong> Disfruta de campañas cooperativas simultáneas online de hasta 8 jugadores, con turnos al mismo tiempo para eliminar los tiempos de espera y modos de escaramuza rápidos.</li>
+                    </ul>
+                </div>
+
+                <div class="game-languages">
+                    <h2>Idiomas disponibles:</h2>
+                    <ul>
+                        <li>Español - España (Interfaz y subtítulos con audio en inglés)</li>
+                        <li>Inglés (Voces completas y textos)</li>
+                        <li>Francés</li>
+                        <li>Italiano</li>
+                        <li>Alemán</li>
+                        <li>Portugués - Brasil</li>
+                        <li>Chino simplificado</li>
+                        <li>Ruso</li>
+                    </ul>
+                </div>
+
+                <div class="game-requirements">
+                    <h2>Requisitos del sistema (PC)</h2>
+                    <div class="system-minimum">
+                        <h3>Mínimo (Para marchar al frente):</h3>
+                        <ul>
+                            <li>SO: Windows 7 (64 bits)</li>
+                            <li>Procesador: Intel Core i3-2120 / AMD FX-4350</li>
+                            <li>Memoria: 6 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GTX 950 / AMD Radeon RX 460 (2GB VRAM)</li>
+                            <li>DirectX: Versión 11</li>
+                            <li>Almacenamiento: 120 GB de espacio disponible</li>
+                        </ul>
+                    </div>
+                    <div class="system-recommended">
+                        <h3>Recomendado (Guerra apocalíptica fotorrealista):</h3>
+                        <ul>
+                            <li>SO: Windows 10/11 (64 bits)</li>
+                            <li>Procesador: Intel Core i5-8600 / AMD Ryzen 5 2600X</li>
+                            <li>Memoria: 8 GB de RAM</li>
+                            <li>Gráficos: NVIDIA RTX 2060 / AMD Radeon RX 5600 XT (6GB VRAM)</li>
+                            <li>DirectX: Versión 11</li>
+                            <li>Almacenamiento: 120 GB de espacio disponible (Se recomienda encarecidamente SSD)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script para el menú hamburguesa y filtrado de categorías -->
+    <script>
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const sidebar = document.getElementById('sidebar');
+
+        hamburgerIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !hamburgerIcon.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        function filtrar(cat) {
+            window.location.href = `Inicio.html?categoria=${cat}`;
+        }
+    </script>
+</body>
+</html>

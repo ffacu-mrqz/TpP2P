@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resident Evil Village</title>
+    <link rel="stylesheet" href="estilo_juegos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menú hamburguesa -->
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Sidebar oculto -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-box">P2</div>
+            <span class="brand-name">P2Price</span>
+        </div>
+        <style>
+     body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    background-image: url('imagenes/revillage_bg.jpg'); /* Recuerda cambiar esta imagen si lo deseas */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+        </style>
+
+        <nav>
+            <p class="menu-label">Navegación</p>
+            <a href="Inicio.html" class="menu-item">🏠 Explorar</a>
+            <a href="contactanos.html" class="menu-item">📧 Contacto</a>
+
+            <p class="menu-label">Categorías</p>
+            <div class="category-list">
+                <a href="#" class="category-btn" onclick="filtrar('todas')">Todas</a>
+                <a href="#" class="category-btn" onclick="filtrar('accion')">Acción</a>
+                <a href="#" class="category-btn" onclick="filtrar('aventura')">Aventura</a>
+                <a href="#" class="category-btn" onclick="filtrar('deportes')">Deportes</a>
+                <a href="#" class="category-btn" onclick="filtrar('estrategia')">Estrategia</a>
+                <a href="#" class="category-btn" onclick="filtrar('simulacion')">Simulación</a>
+                <a href="#" class="category-btn" onclick="filtrar('survivalHorror')">Horror</a>
+                <a href="#" class="category-btn" onclick="filtrar('Casual')">Casual</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="game-container">
+            <div class="game-sidebar">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/2/23/Resident_Evil_Village_logo.svg"
+                    alt="Resident Evil Village"
+                    class="game-banner"
+                    onerror="this.src='https://placehold.co/600x400?text=Resident+Evil+Village'"
+                />
+                <div class="game-details">
+                    <h1 class="game-title">Resident Evil Village</h1>
+                    <p class="game-descripcion">
+                        Vive el horror gótico en primera persona. Años después de los terroríficos eventos de Luisiana, la apacible vida de Ethan Winters se desmorona cuando el legendario héroe Chris Redfield arrebata brutalmente a su hija recién nacida. Para rescatarla, Ethan debe adentrarse en un pueblo remoto cubierto de nieve, dominado por abominaciones feroces y gobernado por cuatro jerarcas despiadados bajo las órdenes de una entidad misteriosa: la Madre Miranda.
+                    </p>
+                    <div class="game-ratings">
+                        <p>Reseñas recientes: <span class="very-positive">Muy positivas</span></p>
+                        <p>Reseñas generales: <span class="very-positive">Muy positivas</span></p>
+                    </div>
+                    <div class="game-metadata">
+                        <p>Fecha de lanzamiento: 2021</p>
+                        <p>Desarrollador: Capcom</p>
+                        <p>Editor: Capcom</p>
+                    </div>
+                    <div class="game-tags">
+                        <p>Etiquetas populares:</p>
+                        <ul>
+                            <li>Survival Horror / Terror Gótico</li>
+                            <li>Primera persona (FPS) / Acción</li>
+                            <li>Zombies / Hombres Lobo</li>
+                            <li>Rica narrativa / Atmosférico</li>
+                        </ul>
+                    </div>
+
+                    <div class="seccion-precio">
+                        <h3 class="titulo">Precios</h3>
+                        <div class="preciocuadro">
+                            <div class="tarjeta">
+                                <div class="nombret">Steam</div>
+                                <div class="precio">$39.99 USD</div>
+                                <a href="https://store.steampowered.com/app/1196590/Resident_Evil_Village/" class="botonp" target="_blank">Comprar en Steam</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">PlayStation Store</div>
+                                <div class="precio">$39.99 USD</div>
+                                <a href="https://store.playstation.com/" class="botonp" target="_blank">Comprar en PS Store</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">Microsoft Store</div>
+                                <div class="precio">ARS$ 39.999,00</div>
+                                <a href="https://www.xbox.com/" class="botonp" target="_blank">Comprar en MS Store</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-main-content">
+                <div class="game-media">
+                    <video controls>
+                        <source src="https://video.cloudflare.steamstatic.com/store_trailers/256832623/movie480_vp9.webm" type="video/webm">
+                    </video>
+                </div>
+
+                <div class="game-info">
+                    <h2>Una pesadilla multifacética de acción y supervivencia</h2>
+                    <p>
+                        Resident Evil Village eleva la fórmula de terror inmersivo de su predecesor combinándola con el ritmo frenético y táctico del clásico RE4. Impulsado por la potencia del RE Engine, explorarás desde el majestuoso y claustrofóbico Castillo Dimitrescu hasta retorcidas fábricas industriales y pantanos corruptos. Cada rincón del pueblo presenta un tipo de terror diferente: el suspenso psicológico, la acción frenética ante oleadas de licántropos o la desesperación absoluta de quedarte sin suministros en mitad de una tormenta de nieve.
+                    </p>
+                </div>
+
+                <div class="game-features">
+                    <h2>Características clave de la aldea maldita:</h2>
+                    <ul>
+                        <li><strong>Inmersión visual visceral:</strong> Disfruta de paisajes góticos hiperrealistas, efectos de iluminación fotorrealistas y un diseño de sonido de pesadilla que te hará dudar de cada pisada en la madera.</li>
+                        <li><strong>Combate dinámico en primera persona:</strong> Utiliza el contraataque tras cubrirte para ganar espacio, destruye coberturas del entorno y apunta con precisión a las debilidades de monstruos veloces.</li>
+                        <li><strong>El Duque y la economía de armas:</strong> Conoce al enigmático comerciante ambulante. Cómprale armas letales, cocina recetas con carne de animales del pueblo para mejorar tus estadísticas de forma permanente y mejora tus atributos.</li>
+                        <li><strong>Los cuatro jerarcas:</strong> Enfréntate a villanos icónicos de la cultura del terror clásico, cada uno con una zona única y mecánicas de juego radicalmente distintas: desde puzles macabros hasta tiroteos puros.</li>
+                        <li><strong>Expansión de los Winters (Opcional):</strong> Disfruta de contenido añadido que incluye un modo en tercera persona para la campaña principal, nuevos personajes en el frenético modo arcade "Los Mercenarios" y el épico epílogo narrativo "Sombras de Rose".</li>
+                    </ul>
+                </div>
+
+                <div class="game-languages">
+                    <h2>Idiomas disponibles:</h2>
+                    <ul>
+                        <li>Español - España (Interfaz, subtítulos y doblaje completo)</li>
+                        <li>Español - Latinoamérica (Interfaz, subtítulos y doblaje local)</li>
+                        <li>Inglés (Voces originales y textos)</li>
+                        <li>Francés</li>
+                        <li>Italiano</li>
+                        <li>Alemán</li>
+                        <li>Japonés</li>
+                        <li>Portugués - Brasil</li>
+                    </ul>
+                </div>
+
+                <div class="game-requirements">
+                    <h2>Requisitos del sistema (PC)</h2>
+                    <div class="system-minimum">
+                        <h3>Mínimo (Para sobrevivir a 1080p/60FPS en modo rendimiento):</h3>
+                        <ul>
+                            <li>SO: Windows 10 (64 bits)</li>
+                            <li>Procesador: Intel Core i5-7500 / AMD Ryzen 3 1200</li>
+                            <li>Memoria: 8 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 560 (4GB VRAM)</li>
+                            <li>DirectX: Versión 12</li>
+                            <li>Almacenamiento: 50 GB de espacio disponible</li>
+                        </ul>
+                    </div>
+                    <div class="system-recommended">
+                        <h3>Recomendado (Para activar Ray Tracing y alta fidelidad):</h3>
+                        <ul>
+                            <li>SO: Windows 10/11 (64 bits)</li>
+                            <li>Procesador: Intel Core i7-8700 / AMD Ryzen 5 3600</li>
+                            <li>Memoria: 16 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GeForce GTX 1070 / AMD Radeon RX 5700 (Para Ray Tracing: RTX 2070 / RX 6700 XT)</li>
+                            <li>DirectX: Versión 12</li>
+                            <li>Almacenamiento: 50 GB de espacio disponible (Se requiere SSD)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script para el menú hamburguesa y filtrado de categorías -->
+    <script>
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const sidebar = document.getElementById('sidebar');
+
+        hamburgerIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !hamburgerIcon.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        function filtrar(cat) {
+            window.location.href = `Inicio.html?categoria=${cat}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grand Theft Auto V</title>
+    <link rel="stylesheet" href="estilo_juegos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menú hamburguesa -->
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Sidebar oculto -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-box">P2</div>
+            <span class="brand-name">P2Price</span>
+        </div>
+        <style>
+     body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    background-image: url('imagenes/gta_v_bg.jpg'); /* Recuerda cambiar esta imagen si lo deseas */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+        </style>
+
+        <nav>
+            <p class="menu-label">Navegación</p>
+            <a href="Inicio.html" class="menu-item">🏠 Explorar</a>
+            <a href="contactanos.html" class="menu-item">📧 Contacto</a>
+
+            <p class="menu-label">Categorías</p>
+            <div class="category-list">
+                <a href="#" class="category-btn" onclick="filtrar('todas')">Todas</a>
+                <a href="#" class="category-btn" onclick="filtrar('accion')">Acción</a>
+                <a href="#" class="category-btn" onclick="filtrar('aventura')">Aventura</a>
+                <a href="#" class="category-btn" onclick="filtrar('deportes')">Deportes</a>
+                <a href="#" class="category-btn" onclick="filtrar('estrategia')">Estrategia</a>
+                <a href="#" class="category-btn" onclick="filtrar('simulacion')">Simulación</a>
+                <a href="#" class="category-btn" onclick="filtrar('survivalHorror')">Horror</a>
+                <a href="#" class="category-btn" onclick="filtrar('Casual')">Casual</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="game-container">
+            <div class="game-sidebar">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Grand_Theft_Auto_V_logo.svg"
+                    alt="Grand Theft Auto V"
+                    class="game-banner"
+                />
+                <div class="game-details">
+                    <h1 class="game-title">Grand Theft Auto V: Premium Edition</h1>
+                    <p class="game-descripcion">
+                        Un joven estafador callejero, un ladrón de bancos retirado y un psicópata aterrador se ven involucrados con lo peor del submundo criminal, el gobierno de los EE. UU. y la industria del espectáculo. Lleva a cabo una serie de peligrosos golpes para sobrevivir en una ciudad implacable donde no puedes confiar en nadie.
+                    </p>
+                    <div class="game-ratings">
+                        <p>Reseñas recientes: <span class="very-positive">Muy positivas</span></p>
+                        <p>Reseñas generales: <span class="very-positive">Extremadamente positivas</span></p>
+                    </div>
+                    <div class="game-metadata">
+                        <p>Fecha de lanzamiento: 2015 (PC) / 2013 (Original)</p>
+                        <p>Desarrollador: Rockstar North</p>
+                        <p>Editor: Rockstar Games</p>
+                    </div>
+                    <div class="game-tags">
+                        <p>Etiquetas populares:</p>
+                        <ul>
+                            <li>Mundo Abierto</li>
+                            <li>Acción / Crimen</li>
+                            <li>Multijugador</li>
+                            <li>Maduro</li>
+                        </ul>
+                    </div>
+
+                    <div class="seccion-precio">
+                        <h3 class="titulo">Precios</h3>
+                        <div class="preciocuadro">
+                            <div class="tarjeta">
+                                <div class="nombret">Steam</div>
+                                <div class="precio">$29.99 USD</div>
+                                <a href="https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/" class="botonp" target="_blank">Comprar en Steam</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">Epic Games Store</div>
+                                <div class="precio">29,99 US$</div>
+                                <a href="https://store.epicgames.com/es-ES/p/grand-theft-auto-v" class="botonp" target="_blank">Comprar en Epic Games Store</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">Microsoft Store</div>
+                                <div class="precio">ARS$ 14.999,00</div>
+                                <a href="https://www.xbox.com/es-ar/games/store/grand-theft-auto-v/bpv6ptwngstg" class="botonp" target="_blank">Comprar en Microsoft Store</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-main-content">
+                <div class="game-media">
+                    <video controls>
+                        <source src="https://video.cloudflare.steamstatic.com/store_trailers/256658589/movie480_vp9.webm?t=1582834575" type="video/webm">
+                    </video>
+                </div>
+
+                <div class="game-info">
+                    <h2>Acerca del fenómeno cultural de mundo abierto</h2>
+                    <p>
+                        Grand Theft Auto V ofrece a los jugadores la oportunidad de explorar el galardonado mundo de Los Santos y el condado de Blaine con una resolución de hasta 4K y más allá, disfrutando de la fluidez que otorgan los 60 fotogramas por segundo. Alterna de forma dinámica entre las vidas interconectadas de Franklin, Michael y Trevor en una de las historias más ambiciosas, satíricas y brutales de la industria.
+                    </p>
+                </div>
+
+                <div class="game-features">
+                    <h2>Características clave de la Premium Edition:</h2>
+                    <ul>
+                        <li><strong>Tres vidas, una sola red criminal:</strong> Disfruta de un sistema de juego único que te permite cambiar de protagonista en cualquier momento, viviendo la acción y los atracos desde tres perspectivas radicalmente diferentes.</li>
+                        <li><strong>Un mapa legendario y vivo:</strong> Recorre una recreación satírica descomunal del sur de California, que incluye rascacielos, desiertos, cordilleras, bases militares y profundidades oceánicas llenas de vida.</li>
+                        <li><strong>Acceso completo a GTA Online:</strong> Construye tu propio imperio criminal desde cero. Tráfica con armas, organiza atracos cooperativos masivos, compite en carreras acrobáticas o domina los clubes nocturnos en un multijugador masivo en constante evolución.</li>
+                        <li><strong>Pack de inicio Negocios Criminales:</strong> Incluido en la edición, ideal para saltar a GTA Online con un valor estimado de más de 10 millones de dólares de GTA, propiedades, armas y un millón de dólares en efectivo.</li>
+                        <li><strong>Modo Director y Editor Rockstar:</strong> Graba, edita y comparte tus propias películas utilizando un robusto set de herramientas avanzadas integradas directamente en el juego.</li>
+                    </ul>
+                </div>
+
+                <div class="game-languages">
+                    <h2>Idiomas disponibles:</h2>
+                    <ul>
+                        <li>Español - Latinoamérica (Interfaz y subtítulos)</li>
+                        <li>Español - España</li>
+                        <li>Inglés (Voces originales cinematográficas)</li>
+                        <li>Francés</li>
+                        <li>Italiano</li>
+                        <li>Alemán</li>
+                        <li>Portugués - Brasil</li>
+                        <li>Ruso</li>
+                    </ul>
+                </div>
+
+                <div class="game-requirements">
+                    <h2>Requisitos del sistema (PC)</h2>
+                    <div class="system-minimum">
+                        <h3>Mínimo (Para entrar en Los Santos):</h3>
+                        <ul>
+                            <li>SO: Windows 10 (64 bits) / Windows 8.1 / Windows 8</li>
+                            <li>Procesador: Intel Core 2 Quad Q6600 a 2,40 GHz / AMD Phenom 9850 a 2,5 GHz</li>
+                            <li>Memoria: 4 GB de RAM</li>
+                            <li>Gráficos: NVIDIA 9800 GT (1GB) / AMD HD 4870 (1GB)</li>
+                            <li>DirectX: Versión 10</li>
+                            <li>Almacenamiento: 110 GB de espacio disponible</li>
+                        </ul>
+                    </div>
+                    <div class="system-recommended">
+                        <h3>Recomendado (Para dominar la ciudad):</h3>
+                        <ul>
+                            <li>SO: Windows 10/11 (64 bits)</li>
+                            <li>Procesador: Intel Core i5 3470 a 3,2 GHz / AMD X8 FX-8350 a 4 GHz</li>
+                            <li>Memoria: 8 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GTX 660 (2GB) / AMD HD 7870 (2GB)</li>
+                            <li>DirectX: Versión 11</li>
+                            <li>Almacenamiento: 110 GB de espacio disponible (Se recomienda SSD)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script para el menú hamburguesa y filtrado de categorías -->
+    <script>
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const sidebar = document.getElementById('sidebar');
+
+        hamburgerIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !hamburgerIcon.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        function filtrar(cat) {
+            window.location.href = `Inicio.html?categoria=${cat}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fall Guys</title>
+    <link rel="stylesheet" href="estilo_juegos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menú hamburguesa -->
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Sidebar oculto -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-box">P2</div>
+            <span class="brand-name">P2Price</span>
+        </div>
+        <style>
+     body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    background-image: url('imagenes/fallguys_bg.jpg'); /* Recuerda cambiar esta imagen si lo deseas */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+        </style>
+
+        <nav>
+            <p class="menu-label">Navegación</p>
+            <a href="Inicio.html" class="menu-item">🏠 Explorar</a>
+            <a href="contactanos.html" class="menu-item">📧 Contacto</a>
+
+            <p class="menu-label">Categorías</p>
+            <div class="category-list">
+                <a href="#" class="category-btn" onclick="filtrar('todas')">Todas</a>
+                <a href="#" class="category-btn" onclick="filtrar('accion')">Acción</a>
+                <a href="#" class="category-btn" onclick="filtrar('aventura')">Aventura</a>
+                <a href="#" class="category-btn" onclick="filtrar('deportes')">Deportes</a>
+                <a href="#" class="category-btn" onclick="filtrar('estrategia')">Estrategia</a>
+                <a href="#" class="category-btn" onclick="filtrar('simulacion')">Simulación</a>
+                <a href="#" class="category-btn" onclick="filtrar('survivalHorror')">Horror</a>
+                <a href="#" class="category-btn" onclick="filtrar('Casual')">Casual</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="game-container">
+            <div class="game-sidebar">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Fall_Guys_text_logo.svg"
+                    alt="Fall Guys"
+                    class="game-banner"
+                    onerror="this.src='https://placehold.co/600x400?text=Fall+Guys'"
+                />
+                <div class="game-details">
+                    <h1 class="game-title">Fall Guys</h1>
+                    <p class="game-descripcion">
+                        ¡Tropieza hacia la victoria! Fall Guys es un party royale gratuito, multiplataforma y multijugador masivo donde tú y los demás competidores compiten a través de caóticas y disparatadas carreras de obstáculos por rondas, hasta que solo queda un afortunado ganador. Enfréntate a las leyes de la física, rebota contra paredes, esquiva ventiladores gigantes y sabotea a tus rivales en una colorida búsqueda por reclamar la ansiada corona.
+                    </p>
+                    <div class="game-ratings">
+                        <p>Reseñas generales: <span class="very-positive">Muy positivas</span></p>
+                        <p>Estado actual: <span class="very-positive">Free to Play</span></p>
+                    </div>
+                    <div class="game-metadata">
+                        <p>Fecha de lanzamiento: 2020</p>
+                        <p>Desarrollador: Mediatonic</p>
+                        <p>Editor: Epic Games</p>
+                    </div>
+                    <div class="game-tags">
+                        <p>Etiquetas populares:</p>
+                        <ul>
+                            <li>Casual / Party Game</li>
+                            <li>Multijugador / Battle Royale</li>
+                            <li>Fisuras divertidas / Colorido</li>
+                            <li>Cooperativo / Competitivo</li>
+                        </ul>
+                    </div>
+
+                    <div class="seccion-precio">
+                        <h3 class="titulo">Precios</h3>
+                        <div class="preciocuadro">
+                            <div class="tarjeta">
+                                <div class="nombret">Epic Games Store</div>
+                                <div class="precio">Gratis</div>
+                                <a href="https://store.epicgames.com/es-MX/p/fall-guys" class="botonp" target="_blank">Obtener en Epic</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">PlayStation Store</div>
+                                <div class="precio">Gratis</div>
+                                <a href="https://store.playstation.com/" class="botonp" target="_blank">Obtener en PS Store</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">Xbox Store</div>
+                                <div class="precio">Gratis</div>
+                                <a href="https://www.xbox.com/" class="botonp" target="_blank">Obtener en Xbox</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-main-content">
+                <div class="game-media">
+                    <video controls>
+                        <source src="https://video.cloudflare.steamstatic.com/store_trailers/256891040/movie480_vp9.webm" type="video/webm">
+                    </video>
+                </div>
+
+                <div class="game-info">
+                    <h2>Un festival multijugador caótico y para todas las edades</h2>
+                    <p>
+                        Fall Guys transformó el género de los Battle Royale al cambiar las armas y la violencia por disfraces de perritos calientes, plataformas giratorias y pelotas gigantes. El control es simple pero engañosamente impreciso: puedes correr, saltar, lanzarte en plancha y agarrar a tus contrincantes. Las partidas dividen a 60 jugadores en divertidas pruebas que van desde carreras de supervivencia hasta juegos en equipo donde la coordinación (o el sabotaje mutuo) determinará quiénes clasifican a la tensa gran final.
+                    </p>
+                </div>
+
+                <div class="game-features">
+                    <h2>Características clave de la diversión competitiva:</h2>
+                    <ul>
+                        <li><strong>Caos cooperativo y competitivo:</strong> Muévete entre minijuegos competitivos de "todos contra todos" y desafíos por equipos donde el fracaso de uno puede arrastrar a todo el grupo.</li>
+                        <li><strong>Personalización sin límites:</strong> Desbloquea una inmensa variedad de trajes, gestos, patrones de color y placas de identificación icónicas, incluyendo colaboraciones masivas con franquicias de videojuegos y cine.</li>
+                        <li><strong>Modo creativo integrado:</strong> Diseña, comparte y juega tus propios mapas de obstáculos personalizados gracias al potente editor de niveles de Fall Guys y desafía a la comunidad internacional.</li>
+                        <li><strong>Juego y progreso multiplataforma total:</strong> Juga con tus amigos sin importar si están en PC, PlayStation, Xbox o Nintendo Switch gracias al sistema de juego cruzado unificado con tu cuenta de Epic Games.</li>
+                        <li><strong>Actualizaciones de temporada constantes:</strong> Cada temporada introduce nuevas temáticas estéticas, mecánicas de juego frescas, rondas completamente inéditas y pases de batalla llenos de recompensas.</li>
+                    </ul>
+                </div>
+
+                <div class="game-languages">
+                    <h2>Idiomas disponibles:</h2>
+                    <ul>
+                        <li>Español - Latinoamérica (Interfaz y textos)</li>
+                        <li>Español - España (Interfaz y textos)</li>
+                        <li>Inglés (Interfaz y textos)</li>
+                        <li>Francés</li>
+                        <li>Italiano</li>
+                        <li>Alemán</li>
+                        <li>Japonés</li>
+                        <li>Portugués - Brasil</li>
+                    </ul>
+                </div>
+
+                <div class="game-requirements">
+                    <h2>Requisitos del sistema (PC)</h2>
+                    <div class="system-minimum">
+                        <h3>Mínimo (Para correr sin tropezar en los FPS):</h3>
+                        <ul>
+                            <li>SO: Windows 10 (64 bits)</li>
+                            <li>Procesador: Intel Core i5 / AMD Phenom II X4</li>
+                            <li>Memoria: 8 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GTX 660 / AMD Radeon HD 7950</li>
+                            <li>Red: Conexión de banda ancha a Internet</li>
+                            <li>Almacenamiento: 2 GB de espacio disponible</li>
+                        </ul>
+                    </div>
+                    <div class="system-recommended">
+                        <h3>Recomendado (Para ver los rebotes a la máxima fluidez de 60FPS):</h3>
+                        <ul>
+                            <li>SO: Windows 10/11 (64 bits)</li>
+                            <li>Procesador: Intel Core i5 o superior / AMD equivalente</li>
+                            <li>Memoria: 8 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GTX 960 / AMD Radeon R9 380 o superior</li>
+                            <li>Red: Conexión de banda ancha a Internet</li>
+                            <li>Almacenamiento: 2 GB de espacio disponible</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script para el menú hamburguesa y filtrado de categorías -->
+    <script>
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const sidebar = document.getElementById('sidebar');
+
+        hamburgerIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !hamburgerIcon.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        function filtrar(cat) {
+            window.location.href = `Inicio.html?categoria=${cat}`;
+        }
+    </script>
+</body>
+</html>

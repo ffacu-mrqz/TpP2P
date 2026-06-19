@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crusader Kings III</title>
+    <link rel="stylesheet" href="estilo_juegos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menú hamburguesa -->
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Sidebar oculto -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-box">P2</div>
+            <span class="brand-name">P2Price</span>
+        </div>
+        <style>
+     body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    background-image: url('imagenes/ck3_bg.jpg'); /* Recuerda cambiar esta imagen si lo deseas */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+        </style>
+
+        <nav>
+            <p class="menu-label">Navegación</p>
+            <a href="Inicio.html" class="menu-item">🏠 Explorar</a>
+            <a href="contactanos.html" class="menu-item">📧 Contacto</a>
+
+            <p class="menu-label">Categorías</p>
+            <div class="category-list">
+                <a href="#" class="category-btn" onclick="filtrar('todas')">Todas</a>
+                <a href="#" class="category-btn" onclick="filtrar('accion')">Acción</a>
+                <a href="#" class="category-btn" onclick="filtrar('aventura')">Aventura</a>
+                <a href="#" class="category-btn" onclick="filtrar('deportes')">Deportes</a>
+                <a href="#" class="category-btn" onclick="filtrar('estrategia')">Estrategia</a>
+                <a href="#" class="category-btn" onclick="filtrar('simulacion')">Simulación</a>
+                <a href="#" class="category-btn" onclick="filtrar('survivalHorror')">Horror</a>
+                <a href="#" class="category-btn" onclick="filtrar('Casual')">Casual</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="game-container">
+            <div class="game-sidebar">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Crusader_Kings_3_Logo.png"
+                    alt="Crusader Kings III"
+                    class="game-banner"
+                />
+                <div class="game-details">
+                    <h1 class="game-title">Crusader Kings III</h1>
+                    <p class="game-descripcion">
+                        El amor, la guerra, la fe y la traición. Guía a una dinastía noble a través de los siglos en el simulador de rol y gran estrategia medieval definitivo. Reclama coronas, forja matrimonios estratégicos, organiza complots contra tus rivales y expande tu influencia sobre un mapa inmenso. Elige tu estilo de vida y defiende tu legado, porque la corona pertenece a los astutos.
+                    </p>
+                    <div class="game-ratings">
+                        <p>Reseñas recientes: <span class="very-positive">Muy positivas</span></p>
+                        <p>Reseñas generales: <span class="very-positive">Muy positivas</span></p>
+                    </div>
+                    <div class="game-metadata">
+                        <p>Fecha de lanzamiento: 2020</p>
+                        <p>Desarrollador: Paradox Development Studio</p>
+                        <p>Editor: Paradox Interactive</p>
+                    </div>
+                    <div class="game-tags">
+                        <p>Etiquetas populares:</p>
+                        <ul>
+                            <li>Gran Estrategia / Rol (RPG)</li>
+                            <li>Medieval / Histórico</li>
+                            <li>Político / Intriga</li>
+                            <li>Simulador de Dinastías</li>
+                        </ul>
+                    </div>
+
+                    <div class="seccion-precio">
+                        <h3 class="titulo">Precios</h3>
+                        <div class="preciocuadro">
+                            <div class="tarjeta">
+                                <div class="nombret">Steam</div>
+                                <div class="precio">$49.99 USD</div>
+                                <a href="https://store.steampowered.com/app/1158310/Crusader_Kings_III/" class="botonp" target="_blank">Comprar en Steam</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">Microsoft Store (PC)</div>
+                                <div class="precio">ARS$ 39.999,00</div>
+                                <a href="https://www.xbox.com/es-ar/games/store/crusader-kings-iii/9p6rdrffv1b9" class="botonp" target="_blank">Comprar en MS Store</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-main-content">
+                <div class="game-media">
+                    <video controls>
+                        <source src="https://video.cloudflare.steamstatic.com/store_trailers/256801267/movie480_vp9.webm" type="video/webm">
+                    </video>
+                </div>
+
+                <div class="game-info">
+                    <h2>Moldea la historia con sangre, hierro y secretos</h2>
+                    <p>
+                        A diferencia de otros juegos de estrategia, en Crusader Kings III no controlas a un país entero, sino al líder de una casa dinástica. Cuando tu soberano muera, pasarás a jugar como su heredero, heredando sus títulos, sus tierras... y todos los enemigos que se ganó en vida. Equilibra la cordura de tu personaje frente al estrés de gobernar, organiza cacerías medievales, comanda cruzadas sagradas o sucumbe a las tentaciones de la herejía en un drama humano que cambia con cada partida.
+                    </p>
+                </div>
+
+                <div class="game-features">
+                    <h2>Características clave de tu soberanía:</h2>
+                    <ul>
+                        <li><strong>Tu dinastía es tu prioridad:</strong> Juega a través de generaciones. Engendra herederos, educa a tus hijos con tutores de élite o deshereda a los incompetentes antes de que lleven tu linaje a la ruina.</li>
+                        <li><strong>Cinco estilos de vida únicos:</strong> Enfoca la mente de tu monarca en la Diplomacia, la Marcialidad, la Administración, la Intriga o la Erudición. Adquiere rasgos de personalidad dinámicos que alteran tus opciones de diálogo y eventos de juego.</li>
+                        <li><strong>Corte real y secretos de alcoba:</strong> Envía a tu jefe de espías a descubrir complots en cortes vecinas... o a fabricar pruebas falsas. Chantajea a duques poderosos, organiza banquetes de reconciliación o elimina discretamente a tus rivales políticos mediante venenos.</li>
+                        <li><strong>Guerra santa y reclutamiento:</strong> Reúne a tus levas feudales, contrata mercenarios extranjeros formidables y lidera ejércitos reforzados con caballeros de renombre para sitiar los castillos más imponentes de la cristiandad y el Islam.</li>
+                        <li><strong>Reforma tu propia fe o cultura:</strong> Diseña una religión personalizada adaptando los dogmas papales o crea doctrinas heréticas a tu medida. Fusiona rasgos culturales para adaptarte a las cambiantes necesidades de tus súbditos.</li>
+                    </ul>
+                </div>
+
+                <div class="game-languages">
+                    <h2>Idiomas disponibles:</h2>
+                    <ul>
+                        <li>Español - España (Interfaz y textos)</li>
+                        <li>Inglés (Voces secundarias y textos)</li>
+                        <li>Francés</li>
+                        <li>Alemán</li>
+                        <li>Ruso</li>
+                        <li>Chino simplificado</li>
+                        <li>Coreano</li>
+                    </ul>
+                </div>
+
+                <div class="game-requirements">
+                    <h2>Requisitos del sistema (PC)</h2>
+                    <div class="system-minimum">
+                        <h3>Mínimo (Para reclamar un pequeño condado):</h3>
+                        <ul>
+                            <li>SO: Windows 10 Home (64 bits, versión 1909)</li>
+                            <li>Procesador: Intel Core i3-2120 / AMD FX-6350</li>
+                            <li>Memoria: 6 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GTX 660 (2GB) / AMD Radeon HD 7870 (2GB)</li>
+                            <li>DirectX: Versión 11</li>
+                            <li>Almacenamiento: 8 GB de espacio disponible</li>
+                        </ul>
+                    </div>
+                    <div class="system-recommended">
+                        <h3>Recomendado (Para gobernar un imperio sin rebeliones):</h3>
+                        <ul>
+                            <li>SO: Windows 10/11 (64 bits)</li>
+                            <li>Procesador: Intel Core i5-4670K / AMD Ryzen 5 2400G</li>
+                            <li>Memoria: 8 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GTX 1650 (4GB) / AMD Radeon RX 590 (8GB)</li>
+                            <li>DirectX: Versión 11</li>
+                            <li>Almacenamiento: 8 GB de espacio disponible (Se recomienda SSD)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script para el menú hamburguesa y filtrado de categorías -->
+    <script>
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const sidebar = document.getElementById('sidebar');
+
+        hamburgerIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !hamburgerIcon.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        function filtrar(cat) {
+            window.location.href = `Inicio.html?categoria=${cat}`;
+        }
+    </script>
+</body>
+</html>

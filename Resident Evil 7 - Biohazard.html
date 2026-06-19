@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resident Evil 7: Biohazard</title>
+    <link rel="stylesheet" href="estilo_juegos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menú hamburguesa -->
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Sidebar oculto -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-box">P2</div>
+            <span class="brand-name">P2Price</span>
+        </div>
+        <style>
+     body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    background-image: url('imagenes/re7_bg.jpg'); /* Recuerda cambiar esta imagen si lo deseas */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+        </style>
+
+        <nav>
+            <p class="menu-label">Navegación</p>
+            <a href="Inicio.html" class="menu-item">🏠 Explorar</a>
+            <a href="contactanos.html" class="menu-item">📧 Contacto</a>
+
+            <p class="menu-label">Categorías</p>
+            <div class="category-list">
+                <a href="#" class="category-btn" onclick="filtrar('todas')">Todas</a>
+                <a href="#" class="category-btn" onclick="filtrar('accion')">Acción</a>
+                <a href="#" class="category-btn" onclick="filtrar('aventura')">Aventura</a>
+                <a href="#" class="category-btn" onclick="filtrar('deportes')">Deportes</a>
+                <a href="#" class="category-btn" onclick="filtrar('estrategia')">Estrategia</a>
+                <a href="#" class="category-btn" onclick="filtrar('simulacion')">Simulación</a>
+                <a href="#" class="category-btn" onclick="filtrar('survivalHorror')">Horror</a>
+                <a href="#" class="category-btn" onclick="filtrar('Casual')">Casual</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="game-container">
+            <div class="game-sidebar">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Resident_Evil_7_Biohazard_logo.png"
+                    alt="Resident Evil 7: Biohazard"
+                    class="game-banner"
+                    onerror="this.src='https://placehold.co/600x400?text=Resident+Evil+7'"
+                />
+                <div class="game-details">
+                    <h1 class="game-title">Resident Evil 7: Biohazard</h1>
+                    <p class="game-descripcion">
+                        Abre las puertas a una nueva era de terror. Tras recibir un críptico mensaje de su esposa desaparecida hace tres años, Ethan Winters viaja hasta una plantación abandonada en Dulvey, Luisiana. Allí se encuentra atrapado por la demente y aparentemente inmortal familia Baker. Experimenta una inmersión aterradora y visceral en primera persona que redefine la franquicia, devolviéndola a sus raíces de supervivencia más puras, claustrofóbicas y perturbadoras.
+                    </p>
+                    <div class="game-ratings">
+                        <p>Reseñas recientes: <span class="very-positive">Muy positivas</span></p>
+                        <p>Reseñas generales: <span class="very-positive">Muy positivas</span></p>
+                    </div>
+                    <div class="game-metadata">
+                        <p>Fecha de lanzamiento: 2017</p>
+                        <p>Desarrollador: Capcom</p>
+                        <p>Editor: Capcom</p>
+                    </div>
+                    <div class="game-tags">
+                        <p>Etiquetas populares:</p>
+                        <ul>
+                            <li>Survival Horror / Terror Psicológico</li>
+                            <li>Primera persona (FPS) / Gore</li>
+                            <li>Aislamiento / Puzles</li>
+                            <li>Atmosférico / Realidad Virtual</li>
+                        </ul>
+                    </div>
+
+                    <div class="seccion-precio">
+                        <h3 class="titulo">Precios</h3>
+                        <div class="preciocuadro">
+                            <div class="tarjeta">
+                                <div class="nombret">Steam</div>
+                                <div class="precio">$19.99 USD</div>
+                                <a href="https://store.steampowered.com/app/418370/RESIDENT_EVIL_7_BIOHAZARD/" class="botonp" target="_blank">Comprar en Steam</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">PlayStation Store</div>
+                                <div class="precio">$19.99 USD</div>
+                                <a href="https://store.playstation.com/" class="botonp" target="_blank">Comprar en PS Store</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">Microsoft Store</div>
+                                <div class="precio">ARS$ 19.999,00</div>
+                                <a href="https://www.xbox.com/" class="botonp" target="_blank">Comprar en MS Store</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-main-content">
+                <div class="game-media">
+                    <video controls>
+                        <source src="https://video.cloudflare.steamstatic.com/store_trailers/256679234/movie480.webm" type="video/webm">
+                    </video>
+                </div>
+
+                <div class="game-info">
+                    <h2>Miedo e indefensión en un fotorrealismo de pesadilla</h2>
+                    <p>
+                        Resident Evil 7 marcó el debut del aclamado motor RE Engine, logrando una atmósfera fotorrealista tan sucia, húmeda y decrépita que casi se puede oler. Al cambiar la clásica cámara en tercera persona por una perspectiva interna, el juego te arrastra a los angostos e impredecibles pasillos de la casa Baker. Las municiones son escasísimas, las curaciones requieren una gestión dolorosa y los combates contra los terroríficos "Holomorfos" o el implacable Jack Baker te obligarán a elegir sabiamente cuándo disparar, cuándo bloquear ataques y cuándo correr por tu vida.
+                    </p>
+                </div>
+
+                <div class="game-features">
+                    <h2>Características clave de la casa de los horrores:</h2>
+                    <ul>
+                        <li><strong>Inmersión total en primera persona:</strong> Siente el pánico de no saber qué hay a la vuelta de la esquina. El cambio de perspectiva maximiza la vulnerabilidad y la tensión psicológica de la exploración.</li>
+                        <li><strong>El regreso del verdadero Survival Horror:</strong> Resuelve puzles con siluetas de sombras, busca manivelas y llaves temáticas de animales, y administra tu espacio limitado en el baúl de inventario.</li>
+                        <li><strong>Mecánica de cintas de vídeo VHS:</strong> Encuentra cintas esparcidas por la casa y juégalas en televisores antiguos para vivir recuerdos del pasado que te darán pistas cruciales para resolver acertijos actuales.</li>
+                        <li><strong>La amenaza persistente de los Baker:</strong> Evita ser detectado por Jack y Marguerite, quienes patrullan sectores específicos de la plantación de forma dinámica y reaccionarán violentamente ante cualquier ruido.</li>
+                        <li><strong>Soporte opcional de Realidad Virtual:</strong> Juega la campaña completa en VR para experimentar el nivel de inmersión más terrorífico, asfixiante e intenso de la historia de la saga.</li>
+                    </ul>
+                </div>
+
+                <div class="game-languages">
+                    <h2>Idiomas disponibles:</h2>
+                    <ul>
+                        <li>Español - España (Interfaz, subtítulos y doblaje completo)</li>
+                        <li>Español - Latinoamérica (Interfaz, subtítulos y doblaje local)</li>
+                        <li>Inglés (Voces originales y textos)</li>
+                        <li>Francés</li>
+                        <li>Italiano</li>
+                        <li>Alemán</li>
+                        <li>Japonés</li>
+                        <li>Portugués - Brasil</li>
+                    </ul>
+                </div>
+
+                <div class="game-requirements">
+                    <h2>Requisitos del sistema (PC)</h2>
+                    <div class="system-minimum">
+                        <h3>Mínimo (Para entrar a la plantación a 1080p/30FPS):</h3>
+                        <ul>
+                            <li>SO: Windows 10 (64 bits)</li>
+                            <li>Procesador: Intel Core i5-4460 / AMD FX-6300</li>
+                            <li>Memoria: 8 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GeForce GTX 760 / AMD Radeon R7 260x (2GB VRAM)</li>
+                            <li>DirectX: Versión 11</li>
+                            <li>Almacenamiento: 24 GB de espacio disponible</li>
+                        </ul>
+                    </div>
+                    <div class="system-recommended">
+                        <h3>Recomendado (Para experimentar la pesadilla a 1080p/60FPS):</h3>
+                        <ul>
+                            <li>SO: Windows 10/11 (64 bits)</li>
+                            <li>Procesador: Intel Core i7-3770 / AMD Ryzen 5 1600 o superior</li>
+                            <li>Memoria: 8 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GeForce GTX 1060 / AMD Radeon RX 480 (3GB VRAM)</li>
+                            <li>DirectX: Versión 11 / 12</li>
+                            <li>Almacenamiento: 24 GB de espacio disponible (Se recomienda SSD)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script para el menú hamburguesa y filtrado de categorías -->
+    <script>
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const sidebar = document.getElementById('sidebar');
+
+        hamburgerIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !hamburgerIcon.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        function filtrar(cat) {
+            window.location.href = `Inicio.html?categoria=${cat}`;
+        }
+    </script>
+</body>
+</html>

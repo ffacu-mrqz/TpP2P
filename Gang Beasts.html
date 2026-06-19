@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gang Beasts</title>
+    <link rel="stylesheet" href="estilo_juegos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menú hamburguesa -->
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Sidebar oculto -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-box">P2</div>
+            <span class="brand-name">P2Price</span>
+        </div>
+        <style>
+     body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    background-image: url('imagenes/gangbeasts_bg.jpg'); /* Recuerda cambiar esta imagen si lo deseas */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+        </style>
+
+        <nav>
+            <p class="menu-label">Navegación</p>
+            <a href="Inicio.html" class="menu-item">🏠 Explorar</a>
+            <a href="contactanos.html" class="menu-item">📧 Contacto</a>
+
+            <p class="menu-label">Categorías</p>
+            <div class="category-list">
+                <a href="#" class="category-btn" onclick="filtrar('todas')">Todas</a>
+                <a href="#" class="category-btn" onclick="filtrar('accion')">Acción</a>
+                <a href="#" class="category-btn" onclick="filtrar('aventura')">Aventura</a>
+                <a href="#" class="category-btn" onclick="filtrar('deportes')">Deportes</a>
+                <a href="#" class="category-btn" onclick="filtrar('estrategia')">Estrategia</a>
+                <a href="#" class="category-btn" onclick="filtrar('simulacion')">Simulación</a>
+                <a href="#" class="category-btn" onclick="filtrar('survivalHorror')">Horror</a>
+                <a href="#" class="category-btn" onclick="filtrar('Casual')">Casual</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="game-container">
+            <div class="game-sidebar">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/4/43/Gang_Beasts_logo.png"
+                    alt="Gang Beasts"
+                    class="game-banner"
+                    onerror="this.src='https://placehold.co/600x400?text=Gang+Beasts'"
+                />
+                <div class="game-details">
+                    <h1 class="game-title">Gang Beasts</h1>
+                    <p class="game-descripcion">
+                        ¡Mamporros gelatinosos en su máxima expresión! Gang Beasts es un estrafalario juego multijugador de peleas tontas que se desarrolla en las peligrosas y coloridas calles de Beef City. Elige a tu personaje personalizable de aspecto gomoso, lánzate a la acción y observa cómo las físicas descontroladas convierten cada puñetazo, empujón y caída en una coreografía absurda de la que es imposible no reírse.
+                    </p>
+                    <div class="game-ratings">
+                        <p>Reseñas recientes: <span class="very-positive">Muy positivas</span></p>
+                        <p>Reseñas generales: <span class="very-positive">Muy positivas</span></p>
+                    </div>
+                    <div class="game-metadata">
+                        <p>Fecha de lanzamiento: 2017</p>
+                        <p>Desarrollador: Boneloaf</p>
+                        <p>Editor: Boneloaf / Double Fine</p>
+                    </div>
+                    <div class="game-tags">
+                        <p>Etiquetas populares:</p>
+                        <ul>
+                            <li>Fiesta / Físicas Graciosas</li>
+                            <li>Multijugador Local / Online</li>
+                            <li>Lucha libre / Beat 'em up</li>
+                            <li>Casual / Indie</li>
+                        </ul>
+                    </div>
+
+                    <div class="seccion-precio">
+                        <h3 class="titulo">Precios</h3>
+                        <div class="preciocuadro">
+                            <div class="tarjeta">
+                                <div class="nombret">Steam</div>
+                                <div class="precio">$19.99 USD</div>
+                                <a href="https://store.steampowered.com/app/285900/Gang_Beasts/" class="botonp" target="_blank">Comprar en Steam</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">PlayStation Store</div>
+                                <div class="precio">$19.99 USD</div>
+                                <a href="https://store.playstation.com/" class="botonp" target="_blank">Comprar en PS Store</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-main-content">
+                <div class="game-media">
+                    <video controls>
+                        <source src="https://video.cloudflare.steamstatic.com/store_trailers/256840742/movie480_vp9.webm" type="video/webm">
+                    </video>
+                </div>
+
+                <div class="game-info">
+                    <h2>Peleas desastrosas en los escenarios más peligrosos de Beef City</h2>
+                    <p>
+                        El alma de Gang Beasts radica en su complejo e impredecible sistema de control físico. Cada brazo de tu personaje de plastilina se controla de manera independiente, permitiéndote agarrar objetos, trepar paredes o aferrarte con desesperación a las piernas de tus amigos. El objetivo es simple: noquear a tus rivales a base de cabezazos y mamporros torpes para luego arrastrarlos hacia letales peligros ambientales, como incineradores industriales, norias en movimiento o camiones en marcha a toda velocidad.
+                    </p>
+                </div>
+
+                <div class="game-features">
+                    <h2>Características clave de las peleas callejeras:</h2>
+                    <ul>
+                        <li><strong>Físicas de trapo y gelatina:</strong> Diviértete con la torpeza inherente de unos personajes sin huesos que se tambalean, tropiezan y rebotan entre sí en cada rincón.</li>
+                        <li><strong>Entornos altamente peligrosos:</strong> Lucha en una quincena de mapas dinámicos interactivos, incluyendo ascensores suspendidos en el aire, andamios endebles y camiones de reparto en movimiento.</li>
+                        <li><strong>Disfraces completamente ridículos:</strong> Personaliza a tu luchador con sombreros de copa, disfraces de dinosaurio, trajes de obrero, uniformes de gato y mucho más para añadir estilo al caos.</li>
+                        <li><strong>Varios modos de juego:</strong> Enfréntate en el clásico modo todos contra todos (Melee), juega cooperativo contra oleadas de enemigos de IA (Waves) o disputa partidos de fútbol absurdos (Gang).</li>
+                        <li><strong>Perfecto para jugar en el sofá:</strong> Cuenta con soporte completo para multijugador de hasta 8 jugadores en una sola pantalla local, ideal para fiestas y reuniones familiares.</li>
+                    </ul>
+                </div>
+
+                <div class="game-languages">
+                    <h2>Idiomas disponibles:</h2>
+                    <ul>
+                        <li>Español - España (Interfaz y textos)</li>
+                        <li>Inglés (Interfaz y textos)</li>
+                        <li>Francés</li>
+                        <li>Italiano</li>
+                        <li>Alemán</li>
+                        <li>Japonés</li>
+                        <li>Portugués - Brasil</li>
+                        <li>Chino simplificado</li>
+                    </ul>
+                </div>
+
+                <div class="game-requirements">
+                    <h2>Requisitos del sistema (PC)</h2>
+                    <div class="system-minimum">
+                        <h3>Mínimo (Para reírse a tirones básicos):</h3>
+                        <ul>
+                            <li>SO: Windows 7 / 8 / 10 (64 bits)</li>
+                            <li>Procesador: Core i3 de 2.ª generación / AMD equivalente</li>
+                            <li>Memoria: 4 GB de RAM</li>
+                            <li>Gráficos: Intel HD 4000 / AMD Radeon HD 5670</li>
+                            <li>DirectX: Versión 10</li>
+                            <li>Almacenamiento: 2 GB de espacio disponible</li>
+                        </ul>
+                    </div>
+                    <div class="system-recommended">
+                        <h3>Recomendado (Para experimentar los costalazos a 60FPS estables):</h3>
+                        <ul>
+                            <li>SO: Windows 10/11 (64 bits)</li>
+                            <li>Procesador: Core i5 de 4.ª generación / AMD equivalente o superior</li>
+                            <li>Memoria: 8 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GeForce GTX 670 / AMD Radeon HD 7870</li>
+                            <li>DirectX: Versión 10</li>
+                            <li>Almacenamiento: 2 GB de espacio disponible</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script para el menú hamburguesa y filtrado de categorías -->
+    <script>
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const sidebar = document.getElementById('sidebar');
+
+        hamburgerIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !hamburgerIcon.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        function filtrar(cat) {
+            window.location.href = `Inicio.html?categoria=${cat}`;
+        }
+    </script>
+</body>
+</html>

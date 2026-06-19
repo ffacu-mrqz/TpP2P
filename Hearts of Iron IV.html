@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hearts of Iron IV</title>
+    <link rel="stylesheet" href="estilo_juegos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menú hamburguesa -->
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Sidebar oculto -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-box">P2</div>
+            <span class="brand-name">P2Price</span>
+        </div>
+        <style>
+     body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    background-image: url('imagenes/hoi4_bg.jpg'); /* Recuerda cambiar esta imagen si lo deseas */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+        </style>
+
+        <nav>
+            <p class="menu-label">Navegación</p>
+            <a href="Inicio.html" class="menu-item">🏠 Explorar</a>
+            <a href="contactanos.html" class="menu-item">📧 Contacto</a>
+
+            <p class="menu-label">Categorías</p>
+            <div class="category-list">
+                <a href="#" class="category-btn" onclick="filtrar('todas')">Todas</a>
+                <a href="#" class="category-btn" onclick="filtrar('accion')">Acción</a>
+                <a href="#" class="category-btn" onclick="filtrar('aventura')">Aventura</a>
+                <a href="#" class="category-btn" onclick="filtrar('deportes')">Deportes</a>
+                <a href="#" class="category-btn" onclick="filtrar('estrategia')">Estrategia</a>
+                <a href="#" class="category-btn" onclick="filtrar('simulacion')">Simulación</a>
+                <a href="#" class="category-btn" onclick="filtrar('survivalHorror')">Horror</a>
+                <a href="#" class="category-btn" onclick="filtrar('Casual')">Casual</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="game-container">
+            <div class="game-sidebar">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/8/87/Hearts_of_Iron_IV_logo.png"
+                    alt="Hearts of Iron IV"
+                    class="game-banner"
+                />
+                <div class="game-details">
+                    <h1 class="game-title">Hearts of Iron IV</h1>
+                    <p class="game-descripcion">
+                        La victoria está en tus manos. Toma el mando de cualquier nación durante el mayor conflicto bélico de la historia de la humanidad: la Segunda Guerra Mundial. Desde el corazón de las fábricas de suministros hasta las trincheras de la línea de fuego, gestiona la política, la producción militar, la diplomacia y los planes de invasión definitivos para reescribir el mapa geopolítico del mundo.
+                    </p>
+                    <div class="game-ratings">
+                        <p>Reseñas recientes: <span class="very-positive">Muy positivas</span></p>
+                        <p>Reseñas generales: <span class="very-positive">Muy positivas</span></p>
+                    </div>
+                    <div class="game-metadata">
+                        <p>Fecha de lanzamiento: 2016</p>
+                        <p>Desarrollador: Paradox Development Studio</p>
+                        <p>Editor: Paradox Interactive</p>
+                    </div>
+                    <div class="game-tags">
+                        <p>Etiquetas populares:</p>
+                        <ul>
+                            <li>Gran Estrategia / Wargame</li>
+                            <li>Segunda Guerra Mundial / Histórico</li>
+                            <li>Simulación Política</li>
+                            <li>Multijugador de Gestión</li>
+                        </ul>
+                    </div>
+
+                    <div class="seccion-precio">
+                        <h3 class="titulo">Precios</h3>
+                        <div class="preciocuadro">
+                            <div class="tarjeta">
+                                <div class="nombret">Steam</div>
+                                <div class="precio">$49.99 USD</div>
+                                <a href="https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/" class="botonp" target="_blank">Comprar en Steam</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">Microsoft Store (PC)</div>
+                                <div class="precio">ARS$ 39.999,00</div>
+                                <a href="https://www.xbox.com/es-ar/games/store/hearts-of-iron-iv-cadet-edition/9pf65664ksv7" class="botonp" target="_blank">Comprar en MS Store</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-main-content">
+                <div class="game-media">
+                    <video controls>
+                        <source src="https://video.cloudflare.steamstatic.com/store_trailers/256923838/movie480_vp9.webm" type="video/webm">
+                    </video>
+                </div>
+
+                <div class="game-info">
+                    <h2>Dirige la maquinaria de guerra total</h2>
+                    <p>
+                        Hearts of Iron IV te sitúa en el centro del poder político y militar de la década de 1930 y 1940. No se trata solo de ganar batallas en el frente; se trata de trazar complejas líneas de suministros, firmar pactos secretos de no agresión, desarrollar armas de destrucción masiva e influir ideológicamente en otras potencias para arrastrarlas al fascismo, comunismo, democracia o mantener el orden no alineado. Cada decisión cuenta cuando el mundo entero está en guerra.
+                    </p>
+                </div>
+
+                <div class="game-features">
+                    <h2>Características clave del comando militar:</h2>
+                    <ul>
+                        <li><strong>Guerra estratégica global y asimétrica:</strong> Lidera a las grandes potencias mundiales como la Alemania nazi, la Unión Soviética, los Estados Unidos o el Imperio de Japón, o desafía el destino guiando a una nación pequeña hacia la supervivencia.</li>
+                        <li><strong>Árboles de Enfoque Nacional profundos:</strong> Elige caminos históricos o altera el rumbo de la línea temporal a través de decisiones políticas que pueden desatar guerras civiles, cambiar el gobierno o forjar alianzas inesperadas.</li>
+                        <li><strong>Logística y producción realista:</strong> Gestiona la extracción de petróleo, caucho y acero. Configura tus líneas de montaje para producir tanques, cazas, acorazados e infantería, asegurándote de que tus divisiones nunca se queden sin suministros.</li>
+                        <li><strong>Simulación de combate terrestre, naval y aéreo:</strong> Diseña plantillas de división personalizadas, asigna generales con rasgos específicos, planea complejas operaciones de desembarco anfibio y asegura la superioridad aérea antes de una ofensiva masiva.</li>
+                        <li><strong>Comunidad masiva y soporte de mods:</strong> Disfruta de un multijugador competitivo y cooperativo online de hasta 32 jugadores, o altera por completo la experiencia con algunos de los mods históricos y de fantasía más aclamados del ecosistema de PC.</li>
+                    </ul>
+                </div>
+
+                <div class="game-languages">
+                    <h2>Idiomas disponibles:</h2>
+                    <ul>
+                        <li>Español - España (Interfaz y textos)</li>
+                        <li>Inglés (Voces y textos)</li>
+                        <li>Francés</li>
+                        <li>Alemán</li>
+                        <li>Portugués - Brasil</li>
+                        <li>Ruso</li>
+                        <li>Chino simplificado</li>
+                    </ul>
+                </div>
+
+                <div class="game-requirements">
+                    <h2>Requisitos del sistema (PC)</h2>
+                    <div class="system-minimum">
+                        <h3>Mínimo (Para movilizar tropas básicas):</h3>
+                        <ul>
+                            <li>SO: Windows 10 Home (64 bits, versión 1909 o superior)</li>
+                            <li>Procesador: Intel Core i3-2100 / AMD FX-4300</li>
+                            <li>Memoria: 4 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GTX 470 / AMD Radeon HD 5850 (1GB VRAM)</li>
+                            <li>DirectX: Versión 11</li>
+                            <li>Almacenamiento: 18 GB de espacio disponible</li>
+                        </ul>
+                    </div>
+                    <div class="system-recommended">
+                        <h3>Recomendado (Guerra relámpago fluida en velocidad 5):</h3>
+                        <ul>
+                            <li>SO: Windows 10/11 (64 bits)</li>
+                            <li>Procesador: Intel Core i5-4460 / AMD Ryzen 3 1200</li>
+                            <li>Memoria: 6 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GTX 570 / AMD Radeon RX 470 (2GB VRAM)</li>
+                            <li>DirectX: Versión 11</li>
+                            <li>Almacenamiento: 18 GB de espacio disponible</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script para el menú hamburguesa y filtrado de categorías -->
+    <script>
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const sidebar = document.getElementById('sidebar');
+
+        hamburgerIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !hamburgerIcon.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        function filtrar(cat) {
+            window.location.href = `Inicio.html?categoria=${cat}`;
+        }
+    </script>
+</body>
+</html>

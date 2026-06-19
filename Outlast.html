@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outlast</title>
+    <link rel="stylesheet" href="estilo_juegos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menú hamburguesa -->
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Sidebar oculto -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-box">P2</div>
+            <span class="brand-name">P2Price</span>
+        </div>
+        <style>
+     body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    background-image: url('imagenes/outlast_bg.jpg'); /* Recuerda cambiar esta imagen si lo deseas */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+        </style>
+
+        <nav>
+            <p class="menu-label">Navegación</p>
+            <a href="Inicio.html" class="menu-item">🏠 Explorar</a>
+            <a href="contactanos.html" class="menu-item">📧 Contacto</a>
+
+            <p class="menu-label">Categorías</p>
+            <div class="category-list">
+                <a href="#" class="category-btn" onclick="filtrar('todas')">Todas</a>
+                <a href="#" class="category-btn" onclick="filtrar('accion')">Acción</a>
+                <a href="#" class="category-btn" onclick="filtrar('aventura')">Aventura</a>
+                <a href="#" class="category-btn" onclick="filtrar('deportes')">Deportes</a>
+                <a href="#" class="category-btn" onclick="filtrar('estrategia')">Estrategia</a>
+                <a href="#" class="category-btn" onclick="filtrar('simulacion')">Simulación</a>
+                <a href="#" class="category-btn" onclick="filtrar('survivalHorror')">Horror</a>
+                <a href="#" class="category-btn" onclick="filtrar('Casual')">Casual</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="game-container">
+            <div class="game-sidebar">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Outlast_logo.svg"
+                    alt="Outlast"
+                    class="game-banner"
+                    onerror="this.src='https://placehold.co/600x400?text=Outlast'"
+                />
+                <div class="game-details">
+                    <h1 class="game-title">Outlast</h1>
+                    <p class="game-descripcion">
+                        El infierno es un experimento que no puedes detener. En las remotas montañas de Colorado, aguarda el hospital psiquiátrico de Mount Massive, un centro de investigación abandonado que volvió a abrir sus puertas en secreto. Actuando bajo un soplo anónimo, el periodista de investigación Miles Upshur se infiltra en las instalaciones. Lo que descubre allí dentro traza una delgada línea entre la ciencia, la religión y una locura sangrienta de la que no podrá defenderse.
+                    </p>
+                    <div class="game-ratings">
+                        <p>Reseñas recientes: <span class="very-positive">Extremadamente positivas</span></p>
+                        <p>Reseñas generales: <span class="very-positive">Extremadamente positivas</span></p>
+                    </div>
+                    <div class="game-metadata">
+                        <p>Fecha de lanzamiento: 2013</p>
+                        <p>Desarrollador: Red Barrels</p>
+                        <p>Editor: Red Barrels</p>
+                    </div>
+                    <div class="game-tags">
+                        <p>Etiquetas populares:</p>
+                        <ul>
+                            <li>Terror Psicológico / Gore</li>
+                            <li>Survival Horror / Primera persona</li>
+                            <li>Sigilo / Primera Persona (FPS)</li>
+                            <li>Indie / Supervivencia</li>
+                        </ul>
+                    </div>
+
+                    <div class="seccion-precio">
+                        <h3 class="titulo">Precios</h3>
+                        <div class="preciocuadro">
+                            <div class="tarjeta">
+                                <div class="nombret">Steam</div>
+                                <div class="precio">$19.99 USD</div>
+                                <a href="https://store.steampowered.com/app/238320/Outlast/" class="botonp" target="_blank">Comprar en Steam</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">GOG</div>
+                                <div class="precio">$19.99 USD</div>
+                                <a href="https://www.gog.com/" class="botonp" target="_blank">Comprar en GOG</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-main-content">
+                <div class="game-media">
+                    <video controls>
+                        <source src="https://video.cloudflare.steamstatic.com/store_trailers/2030282/movie480.webm" type="video/webm">
+                    </video>
+                </div>
+
+                <div class="game-info">
+                    <h2>Tu única opción es correr, esconderte o morir</h2>
+                    <p>
+                        Outlast revolucionó el género eliminando por completo la capacidad de combatir. No eres un soldado ni un héroe; tus únicas herramientas de supervivencia son tus piernas para huir, armarios o camas para ocultarte y una cámara de mano con visión nocturna. Los pasillos de Mount Massive están sumidos en la oscuridad más absoluta y dependerás del modo infrarrojo para ver por dónde avanzas, consumiendo baterías limitadas que te obligarán a explorar los rincones más peligrosos bajo una presión psicológica asfixiante.
+                    </p>
+                </div>
+
+                <div class="game-features">
+                    <h2>Características clave de la pesadilla institucional:</h2>
+                    <ul>
+                        <li><strong>Indefensión absoluta y sigilo:</strong> La ausencia de armas genera una tensión constante. Calcula las rutas de patrulla de los pacientes mutados y muévete agachado para evitar llamar la atención.</li>
+                        <li><strong>Mecánica vital de la videocámara:</strong> Usa la visión nocturna para orientarte en la oscuridad absoluta. Raciona minuciosamente las baterías recargables que encuentres esparcidas por los escenarios.</li>
+                        <li><strong>Inmersión física realista:</strong> Siente el peso de la persecución mediante animaciones fluidas donde Miles apoya las manos en las esquinas para asomarse, salta obstáculos con torpeza o jadea de terror.</li>
+                        <li><strong>Variantes desquiciadas memorables:</strong> Sobrevive al implacable acoso del gigantesco Chris Walker, evita las sádicas trampas del Dr. Trager y huye de los gemelos caníbales que planean despellejarte.</li>
+                        <li><strong>Terror de metraje encontrado:</strong> Graba eventos específicos dentro del manicomio para recopilar las notas del diario de Miles y recolecta documentos secretos para desentrañar el proyecto Walrider.</li>
+                    </ul>
+                </div>
+
+                <div class="game-languages">
+                    <h2>Idiomas disponibles:</h2>
+                    <ul>
+                        <li>Español - España (Interfaz y subtítulos)</li>
+                        <li>Inglés (Interfaz, subtítulos y voces originales)</li>
+                        <li>Francés</li>
+                        <li>Italiano</li>
+                        <li>Alemán</li>
+                        <li>Japonés</li>
+                        <li>Portugués - Brasil</li>
+                        <li>Ruso</li>
+                    </ul>
+                </div>
+
+                <div class="game-requirements">
+                    <h2>Requisitos del sistema (PC)</h2>
+                    <div class="system-minimum">
+                        <h3>Mínimo (Para sufrir en calidad básica):</h3>
+                        <ul>
+                            <li>SO: Windows XP / Vista / 7 / 8 (64 bits)</li>
+                            <li>Procesador: Dual Core a 2.2 GHz</li>
+                            <li>Memoria: 2 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GeForce 9800 GTX / ATI Radeon HD 3870 (512MB VRAM)</li>
+                            <li>DirectX: Versión 9.0c</li>
+                            <li>Almacenamiento: 5 GB de espacio disponible</li>
+                        </ul>
+                    </div>
+                    <div class="system-recommended">
+                        <h3>Recomendado (Para experimentar el pánico fluido a 60FPS):</h3>
+                        <ul>
+                            <li>SO: Windows Vista / 7 / 8 / 10 (64 bits)</li>
+                            <li>Procesador: Quad Core a 2.8 GHz</li>
+                            <li>Memoria: 3 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GeForce GTX 460 / ATI Radeon HD 6850 (1GB VRAM o superior)</li>
+                            <li>DirectX: Versión 9.0c</li>
+                            <li>Almacenamiento: 5 GB de espacio disponible</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script para el menú hamburguesa y filtrado de categorías -->
+    <script>
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const sidebar = document.getElementById('sidebar');
+
+        hamburgerIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !hamburgerIcon.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        function filtrar(cat) {
+            window.location.href = `Inicio.html?categoria=${cat}`;
+        }
+    </script>
+</body>
+</html>

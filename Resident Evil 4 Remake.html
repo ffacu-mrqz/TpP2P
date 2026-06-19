@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resident Evil 4</title>
+    <link rel="stylesheet" href="estilo_juegos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menú hamburguesa -->
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Sidebar oculto -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-box">P2</div>
+            <span class="brand-name">P2Price</span>
+        </div>
+        <style>
+     body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    background-image: url('imagenes/re4_bg.jpg'); /* Recuerda cambiar esta imagen si lo deseas */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+        </style>
+
+        <nav>
+            <p class="menu-label">Navegación</p>
+            <a href="Inicio.html" class="menu-item">🏠 Explorar</a>
+            <a href="contactanos.html" class="menu-item">📧 Contacto</a>
+
+            <p class="menu-label">Categorías</p>
+            <div class="category-list">
+                <a href="#" class="category-btn" onclick="filtrar('todas')">Todas</a>
+                <a href="#" class="category-btn" onclick="filtrar('accion')">Acción</a>
+                <a href="#" class="category-btn" onclick="filtrar('aventura')">Aventura</a>
+                <a href="#" class="category-btn" onclick="filtrar('deportes')">Deportes</a>
+                <a href="#" class="category-btn" onclick="filtrar('estrategia')">Estrategia</a>
+                <a href="#" class="category-btn" onclick="filtrar('simulacion')">Simulación</a>
+                <a href="#" class="category-btn" onclick="filtrar('survivalHorror')">Horror</a>
+                <a href="#" class="category-btn" onclick="filtrar('Casual')">Casual</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="game-container">
+            <div class="game-sidebar">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Resident_Evil_4_remake_logo.png"
+                    alt="Resident Evil 4 Remake"
+                    class="game-banner"
+                    onerror="this.src='https://placehold.co/600x400?text=Resident+Evil+4'"
+                />
+                <div class="game-details">
+                    <h1 class="game-title">Resident Evil 4 (2023)</h1>
+                    <p class="game-descripcion">
+                        La supervivencia es solo el principio. Seis años después de la catástrofe biológica de Raccoon City, el agente Leon S. Kennedy es enviado a rescatar a la hija del presidente de los EE. UU., quien ha sido secuestrada en un recóndito y lúgubre pueblo de Europa. Enfréntate a una locura desatada por un culto parásito ancestral en una reimaginación vanguardista donde la jugabilidad de acción intensa y la narrativa oscura se entrelazan de forma magistral.
+                    </p>
+                    <div class="game-ratings">
+                        <p>Reseñas recientes: <span class="very-positive">Extremadamente positivas</span></p>
+                        <p>Reseñas generales: <span class="very-positive">Extremadamente positivas</span></p>
+                    </div>
+                    <div class="game-metadata">
+                        <p>Fecha de lanzamiento: 2023</p>
+                        <p>Desarrollador: Capcom</p>
+                        <p>Editor: Capcom</p>
+                    </div>
+                    <div class="game-tags">
+                        <p>Etiquetas populares:</p>
+                        <ul>
+                            <li>Acción / Survival Horror</li>
+                            <li>Tercera persona / Gore</li>
+                            <li>Disparos (TPS) / Remake</li>
+                            <li>Atmosférico / Cinematic</li>
+                        </ul>
+                    </div>
+
+                    <div class="seccion-precio">
+                        <h3 class="titulo">Precios</h3>
+                        <div class="preciocuadro">
+                            <div class="tarjeta">
+                                <div class="nombret">Steam</div>
+                                <div class="precio">$39.99 USD</div>
+                                <a href="https://store.steampowered.com/app/2050650/Resident_Evil_4/" class="botonp" target="_blank">Comprar en Steam</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">PlayStation Store</div>
+                                <div class="precio">$39.99 USD</div>
+                                <a href="https://store.playstation.com/" class="botonp" target="_blank">Comprar en PS Store</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">Microsoft Store</div>
+                                <div class="precio">ARS$ 39.999,00</div>
+                                <a href="https://www.xbox.com/" class="botonp" target="_blank">Comprar en MS Store</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-main-content">
+                <div class="game-media">
+                    <video controls>
+                        <source src="https://video.cloudflare.steamstatic.com/store_trailers/256937243/movie480_vp9.webm" type="video/webm">
+                    </video>
+                </div>
+
+                <div class="game-info">
+                    <h2>Un renacimiento de leyenda con acción táctica visceral</h2>
+                    <p>
+                        Resident Evil 4 conserva la esencia de la obra maestra original de 2005 mientras introduce una jugabilidad moderna e hiperrealista impulsada por el RE Engine. Los aldeanos infectados por Las Plagas son inteligentes, agresivos y te flanquearán sin piedad. El combate evoluciona radicalmente gracias al uso dinámico del cuchillo, permitiéndote desviar ataques (*parry*), rematar enemigos en el suelo o liberarte de agarres letales en el último segundo. Protege a Ashley Graham, cruza castillos góticos plagados de trampas y sobrevive a jefes mutantes colosales en un viaje lleno de adrenalina.
+                    </p>
+                </div>
+
+                <div class="game-features">
+                    <h2>Características clave del rescate:</h2>
+                    <ul>
+                        <li><strong>Mecánicas de combate modernizadas:</strong> Dispara mientras te mueves, ejecuta patadas giratorias devastadoras tras desestabilizar a los infectados y domina el bloqueo con cuchillo para repeler hasta motosierras.</li>
+                        <li><strong>El Maletín y el Buhonero:</strong> Organiza tus recursos minuciosamente en el inventario cuadriculado. Visita al icónico comerciante encapuchado para comprar armas, mejorar tu arsenal, reparar tu equipo o intercambiar espinelas por tesoros raros.</li>
+<li><strong>Atmósfera siniestra y expandida:</strong> Explora zonas rurales rediseñadas, cuevas subterráneas y laboratorios militares con una iluminación volumétrica terrorífica que respeta el diseño clásico pero potencia el suspenso.</li>
+                        <li><strong>Misiones secundarias y coleccionables:</strong> Cumple los encargos del Buhonero destruyendo medallones azules, cazando víboras o eliminando amenazas mutadas ocultas para conseguir jugosas recompensas.</li>
+                        <li><strong>Modo Los Mercenarios gratuito:</strong> Pon a prueba tus reflejos en un vertiginoso modo arcade contrarreloj, controlando a personajes icónicos como Leon, Luis Sera, Krauser o Albert Wesker.</li>
+                    </ul>
+                </div>
+
+                <div class="game-languages">
+                    <h2>Idiomas disponibles:</h2>
+                    <ul>
+                        <li>Español - España (Interfaz, subtítulos y doblaje completo)</li>
+                        <li>Español - Latinoamérica (Interfaz, subtítulos y doblaje local)</li>
+                        <li>Inglés (Voces originales y textos)</li>
+                        <li>Francés</li>
+                        <li>Italiano</li>
+                        <li>Alemán</li>
+                        <li>Japonés</li>
+                        <li>Portugués - Brasil</li>
+                    </ul>
+                </div>
+
+                <div class="game-requirements">
+                    <h2>Requisitos del sistema (PC)</h2>
+                    <div class="system-minimum">
+                        <h3>Mínimo (Para entrar a la aldea a 1080p/45FPS):</h3>
+                        <ul>
+                            <li>SO: Windows 10 (64 bits)</li>
+                            <li>Procesador: Intel Core i5-7500 / AMD Ryzen 3 1200</li>
+                            <li>Memoria: 8 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 560 (4GB VRAM)</li>
+                            <li>DirectX: Versión 12</li>
+                            <li>Almacenamiento: 60 GB de espacio disponible</li>
+                        </ul>
+                    </div>
+                    <div class="system-recommended">
+                        <h3>Recomendado (Para una experiencia impecable a 1080p/60FPS):</h3>
+                        <ul>
+                            <li>SO: Windows 10/11 (64 bits)</li>
+                            <li>Procesador: Intel Core i7-8700 / AMD Ryzen 5 3600</li>
+                            <li>Memoria: 16 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GeForce GTX 1070 / AMD Radeon RX 5700 (8GB VRAM)</li>
+                            <li>DirectX: Versión 12</li>
+                            <li>Almacenamiento: 60 GB de espacio disponible (Se requiere SSD)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script para el menú hamburguesa y filtrado de categorías -->
+    <script>
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const sidebar = document.getElementById('sidebar');
+
+        hamburgerIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !hamburgerIcon.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        function filtrar(cat) {
+            window.location.href = `Inicio.html?categoria=${cat}`;
+        }
+    </script>
+</body>
+</html>
