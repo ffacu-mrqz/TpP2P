@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resident Evil 2</title>
+    <link rel="stylesheet" href="estilo_juegos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menú hamburguesa -->
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Sidebar oculto -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-box">P2</div>
+            <span class="brand-name">P2Price</span>
+        </div>
+        <style>
+     body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    background-image: url('imagenes/re2_bg.jpg'); /* Recuerda cambiar esta imagen si lo deseas */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+        </style>
+
+        <nav>
+            <p class="menu-label">Navegación</p>
+            <a href="Inicio.html" class="menu-item">🏠 Explorar</a>
+            <a href="contactanos.html" class="menu-item">📧 Contacto</a>
+
+            <p class="menu-label">Categorías</p>
+            <div class="category-list">
+                <a href="#" class="category-btn" onclick="filtrar('todas')">Todas</a>
+                <a href="#" class="category-btn" onclick="filtrar('accion')">Acción</a>
+                <a href="#" class="category-btn" onclick="filtrar('aventura')">Aventura</a>
+                <a href="#" class="category-btn" onclick="filtrar('deportes')">Deportes</a>
+                <a href="#" class="category-btn" onclick="filtrar('estrategia')">Estrategia</a>
+                <a href="#" class="category-btn" onclick="filtrar('simulacion')">Simulación</a>
+                <a href="#" class="category-btn" onclick="filtrar('survivalHorror')">Horror</a>
+                <a href="#" class="category-btn" onclick="filtrar('Casual')">Casual</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="game-container">
+            <div class="game-sidebar">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/2/29/Resident_Evil_2_2019_Capsule.png"
+                    alt="Resident Evil 2 Remake"
+                    class="game-banner"
+                    onerror="this.src='https://placehold.co/600x400?text=Resident+Evil+2'"
+                />
+                <div class="game-details">
+                    <h1 class="game-title">Resident Evil 2 (2019)</h1>
+                    <p class="game-descripcion">
+                        El horror absoluto regresa completamente reinventado. Una plaga letal consume a los habitantes de Raccoon City en septiembre de 1998, sumergiendo a la ciudad en el caos. Guía al policía novato Leon S. Kennedy y a la estudiante universitaria Claire Redfield a través de una pesadilla fotorrealista. Explora pasillos oscuros, resuelve acertijos macabros y huye de amenazas implacables que acechan desde las sombras.
+                    </p>
+                    <div class="game-ratings">
+                        <p>Reseñas recientes: <span class="very-positive">Extremadamente positivas</span></p>
+                        <p>Reseñas generales: <span class="very-positive">Extremadamente positivas</span></p>
+                    </div>
+                    <div class="game-metadata">
+                        <p>Fecha de lanzamiento: 2019</p>
+                        <p>Desarrollador: Capcom</p>
+                        <p>Editor: Capcom</p>
+                    </div>
+                    <div class="game-tags">
+                        <p>Etiquetas populares:</p>
+                        <ul>
+                            <li>Survival Horror / Terror</li>
+                            <li>Zombies / Gore</li>
+                            <li>Acción / Puzles</li>
+                            <li>Tercera persona / Atmosférico</li>
+                        </ul>
+                    </div>
+
+                    <div class="seccion-precio">
+                        <h3 class="titulo">Precios</h3>
+                        <div class="preciocuadro">
+                            <div class="tarjeta">
+                                <div class="nombret">Steam</div>
+                                <div class="precio">$39.99 USD</div>
+                                <a href="https://store.steampowered.com/app/883710/RESIDENT_EVIL_2/" class="botonp" target="_blank">Comprar en Steam</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">PlayStation Store</div>
+                                <div class="precio">$39.99 USD</div>
+                                <a href="https://store.playstation.com/" class="botonp" target="_blank">Comprar en PS Store</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">Microsoft Store</div>
+                                <div class="precio">ARS$ 34.999,00</div>
+                                <a href="https://www.xbox.com/" class="botonp" target="_blank">Comprar en MS Store</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-main-content">
+                <div class="game-media">
+                    <video controls>
+                        <source src="https://video.cloudflare.steamstatic.com/store_trailers/256741170/movie480.webm" type="video/webm">
+                    </video>
+                </div>
+
+                <div class="game-info">
+                    <h2>Sobrevive a la noche que definió el género del terror</h2>
+                    <p>
+                        Resident Evil 2 redefine el clásico de 1998 utilizando el aclamado motor gráfico RE Engine para ofrecer un fotorrealismo escalofriante. La perspectiva de cámara al hombro intensifica la claustrofobia mientras te adentras en la emblemática Comisaría de Policía de Raccoon City. Aquí, cada bala cuenta: los muertos vivientes resisten el daño de manera realista, mutilándose dinámicamente con los impactos. Para empeorar las cosas, el acecho constante e imparable de Mr. X te obligará a mantenerte en movimiento si no quieres ser aplastado bajo su bota.
+                    </p>
+                </div>
+
+                <div class="game-features">
+                    <h2>Características clave de la pesadilla:</h2>
+                    <ul>
+                        <li><strong>Dos campañas independientes:</strong> Juega las perspectivas únicas de Leon y Claire, interactuando con personajes clave como Ada Wong y Sherry Birkin a través de rutas y desafíos diferenciados.</li>
+                        <li><strong>Gestión de inventario clásica:</strong> Administra espacios limitados con rigidez. Combina pólvora para fabricar munición, mezcla hierbas medicinales y decide qué armas pesadas llevar antes de salir de las salas seguras.</li>
+                        <li><strong>Mr. X, el acosador definitivo:</strong> Siente el pánico con un enemigo letal controlado por una IA persistente que camina en tiempo real por el mapa, guiándose por el ruido de tus disparos y pasos.</li>
+                        <li><strong>Puzles ingeniosos y exploración:</strong> Encuentra llaves con formas de naipes, medallones ocultos y códigos secretos mientras abres atajos en un mapa intrincado plagado de pasadizos secretos y alcantarillas.</li>
+                        <li><strong>Modos adicionales desafiantes:</strong> Desbloquea modos extra clásicos como "The 4th Survivor", donde controlas al implacable agente de Umbrella, HUNK, o los vertiginosos desafíos de "The Ghost Survivors".</li>
+                    </ul>
+                </div>
+
+                <div class="game-languages">
+                    <h2>Idiomas disponibles:</h2>
+                    <ul>
+                        <li>Español - España (Interfaz, subtítulos y doblaje de voz completo)</li>
+                        <li>Español - Latinoamérica (Interfaz, subtítulos y voces localizadas)</li>
+                        <li>Inglés (Voces originales y textos)</li>
+                        <li>Francés</li>
+                        <li>Italiano</li>
+                        <li>Alemán</li>
+                        <li>Japonés</li>
+                        <li>Portugués - Brasil</li>
+                    </ul>
+                </div>
+
+                <div class="game-requirements">
+                    <h2>Requisitos del sistema (PC)</h2>
+                    <div class="system-minimum">
+                        <h3>Mínimo (Para entrar a la comisaría):</h3>
+                        <ul>
+                            <li>SO: Windows 10 (64 bits)</li>
+                            <li>Procesador: Intel Core i5-4460 / AMD FX-6300</li>
+                            <li>Memoria: 8 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GeForce GTX 760 / AMD Radeon R7 260x (2GB VRAM)</li>
+                            <li>DirectX: Versión 11</li>
+                            <li>Almacenamiento: 26 GB de espacio disponible</li>
+                        </ul>
+                    </div>
+                    <div class="system-recommended">
+                        <h3>Recomendado (Para ver el horror en alta fidelidad y 60 FPS):</h3>
+                        <ul>
+                            <li>SO: Windows 10/11 (64 bits)</li>
+                            <li>Procesador: Intel Core i7-3770 / AMD Ryzen 5 1600</li>
+                            <li>Memoria: 8 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GeForce GTX 1060 / AMD Radeon RX 480 (3GB VRAM)</li>
+                            <li>DirectX: Versión 12</li>
+                            <li>Almacenamiento: 26 GB de espacio disponible (Se recomienda SSD)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script para el menú hamburguesa y filtrado de categorías -->
+    <script>
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const sidebar = document.getElementById('sidebar');
+
+        hamburgerIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !hamburgerIcon.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        function filtrar(cat) {
+            window.location.href = `Inicio.html?categoria=${cat}`;
+        }
+    </script>
+</body>
+</html>

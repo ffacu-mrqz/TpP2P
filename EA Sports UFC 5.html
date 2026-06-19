@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EA Sports UFC 5</title>
+    <link rel="stylesheet" href="estilo_juegos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menú hamburguesa -->
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Sidebar oculto -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-box">P2</div>
+            <span class="brand-name">P2Price</span>
+        </div>
+        <style>
+     body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    background-image: url('imagenes/ufc5_bg.jpg'); /* Recuerda cambiar esta imagen si lo deseas */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+        </style>
+
+        <nav>
+            <p class="menu-label">Navegación</p>
+            <a href="Inicio.html" class="menu-item">🏠 Explorar</a>
+            <a href="contactanos.html" class="menu-item">📧 Contacto</a>
+
+            <p class="menu-label">Categorías</p>
+            <div class="category-list">
+                <a href="#" class="category-btn" onclick="filtrar('todas')">Todas</a>
+                <a href="#" class="category-btn" onclick="filtrar('accion')">Acción</a>
+                <a href="#" class="category-btn" onclick="filtrar('aventura')">Aventura</a>
+                <a href="#" class="category-btn" onclick="filtrar('deportes')">Deportes</a>
+                <a href="#" class="category-btn" onclick="filtrar('estrategia')">Estrategia</a>
+                <a href="#" class="category-btn" onclick="filtrar('simulacion')">Simulación</a>
+                <a href="#" class="category-btn" onclick="filtrar('survivalHorror')">Horror</a>
+                <a href="#" class="category-btn" onclick="filtrar('Casual')">Casual</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="game-container">
+            <div class="game-sidebar">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/2/22/UFC_Logo.svg"
+                    alt="EA Sports UFC 5"
+                    class="game-banner"
+                />
+                <div class="game-details">
+                    <h1 class="game-title">EA Sports UFC 5</h1>
+                    <p class="game-descripcion">
+                        Tan real como recibir el golpe. Experimenta la evolución de los juegos de combate gracias al motor Frostbite, que recrea el daño facial y físico de forma hiperrealista. Con el nuevo sistema de impacto real, un corte o una fractura pueden cambiar la estrategia de la pelea o provocar que el médico detenga el combate. Entra al octágono y demuestra quién es el rey indiscutible.
+                    </p>
+                    <div class="game-ratings">
+                        <p>Evaluación de la crítica: <span class="positive">Muy buena</span></p>
+                        <p>Comunidad online: <span class="positive">Competitiva / Activa</span></p>
+                    </div>
+                    <div class="game-metadata">
+                        <p>Fecha de lanzamiento: 2023</p>
+                        <p>Desarrollador: EA Vancouver</p>
+                        <p>Editor: Electronic Arts</p>
+                    </div>
+                    <div class="game-tags">
+                        <p>Etiquetas populares:</p>
+                        <ul>
+                            <li>MMA / Artes Marciales</li>
+                            <li>Lucha / Combate</li>
+                            <li>Simulación Deportiva</li>
+                            <li>Multijugador Local y Online</li>
+                        </ul>
+                    </div>
+
+                    <div class="seccion-precio">
+                        <h3 class="titulo">Precios</h3>
+                        <div class="preciocuadro">
+                            <div class="tarjeta">
+                                <div class="nombret">PlayStation Store (PS5)</div>
+                                <div class="precio">$69.99 USD</div>
+                                <a href="https://store.playstation.com/es-ar/concept/10005234/" class="botonp" target="_blank">Comprar en PS Store</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">Microsoft Store (Xbox Series X|S)</div>
+                                <div class="precio">ARS$ 59.999,00</div>
+                                <a href="https://www.xbox.com/es-ar/games/store/ea-sports-ufc-5/9p4sqv6lcs0r" class="botonp" target="_blank">Comprar en Microsoft Store</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-main-content">
+                <div class="game-media">
+                    <!-- Tráiler genérico deportivo oficial insertado en reproductor HTML5 -->
+                    <video controls poster="imagenes/ufc5_poster.jpg">
+                        <source src="https://media.rawg.io/media/stories-videos/8d5/8d5cf65b597402dc4e94b595b11a5477.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="game-info">
+                    <h2>La evolución definitiva de las artes marciales mixtas</h2>
+                    <p>
+                        EA Sports UFC 5 ofrece una fidelidad gráfica nunca antes vista en el deporte de contacto gracias al salto generacional exclusivo. Los sistemas de sumisiones han sido rediseñados por completo bajo el concepto de "Sumisiones fluidas", eliminando los minijuegos antiguos para ofrecer transiciones rápidas basadas en la estrategia de suelo. Desde las leyendas de peso pesado hasta la intensidad de las divisiones femeninas, cada golpe se siente auténtico.
+                    </p>
+                </div>
+
+                <div class="game-features">
+                    <h2>Características clave del octágono:</h2>
+                    <ul>
+                        <li><strong>Motor de Daño Físico Real:</strong> Cortes, hinchazones y hematomas acumulados en zonas específicas afectan la movilidad, la resistencia y la visión de tu peleador, influyendo de forma dinámica en el transcurso del asalto.</li>
+                        <li><strong>Sumisiones fluidas sin minijuegos:</strong> Olvídate de barras molestas en pantalla; el juego de suelo se ejecuta con comandos fluidos basados en el timing, la técnica de agarre y el desgaste físico real.</li>
+                        <li><strong>Revisiones médicas interactivas:</strong> Si el daño en el rostro o las extremidades de un luchador es crítico, el árbitro pausará las acciones para que el médico de la UFC evalúe si la pelea puede continuar.</li>
+                        <li><strong>Modo Carrera Profundo:</strong> Empieza desde abajo ganando experiencia en ligas amateur, entrena en gimnasios especializados, gestiona tus redes sociales para generar hype y conviértete en el "G.O.A.T." de la UFC.</li>
+                        <li><strong>Cinemáticas de K.O. Espectaculares:</strong> El motor Frostbite captura las repeticiones de los nocauts con una iluminación fotorrealista y cámaras lentas detalladas que muestran el impacto real en el oponente.</li>
+                    </ul>
+                </div>
+
+                <div class="game-languages">
+                    <h2>Idiomas disponibles:</h2>
+                    <ul>
+                        <li>Español - Latinoamérica (Interfaz y subtítulos con comentarios originales en inglés)</li>
+                        <li>Español - España</li>
+                        <li>Inglés (Voces y ambientación del octágono original)</li>
+                        <li>Francés</li>
+                        <li>Alemán</li>
+                        <li>Portugués - Brasil</li>
+                        <li>Japonés</li>
+                    </ul>
+                </div>
+
+                <div class="game-requirements">
+                    <h2>Rendimiento y Especificaciones de Consola</h2>
+                    <div class="system-minimum">
+                        <h3>PlayStation 5:</h3>
+                        <ul>
+                            <li>Resolución: 4K Dinámico</li>
+                            <li>Tasa de fotogramas: 60 FPS estables en gameplay</li>
+                            <li>Almacenamiento: 60 GB de espacio requerido (SSD Obligatorio)</li>
+                            <li>Funciones especiales: Respuesta háptica optimizada en los gatillos del DualSense</li>
+                        </ul>
+                    </div>
+                    <div class="system-recommended">
+                        <h3>Xbox Series X | S:</h3>
+                        <ul>
+                            <li>Resolución: 4K Nativo (Series X) / 1440p (Series S)</li>
+                            <li>Tasa de fotogramas: 60 FPS Fluidos</li>
+                            <li>Almacenamiento: 60 GB de espacio requerido (SSD NVMe)</li>
+                            <li>Funciones especiales: Arquitectura Xbox Velocity para tiempos de carga casi instantáneos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script para el menú hamburguesa y filtrado de categorías -->
+    <script>
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const sidebar = document.getElementById('sidebar');
+
+        hamburgerIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !hamburgerIcon.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        function filtrar(cat) {
+            window.location.href = `Inicio.html?categoria=${cat}`;
+        }
+    </script>
+</body>
+</html>

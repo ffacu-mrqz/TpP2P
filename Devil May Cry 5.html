@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devil May Cry 5</title>
+    <link rel="stylesheet" href="estilo_juegos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menú hamburguesa -->
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Sidebar oculto -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-box">P2</div>
+            <span class="brand-name">P2Price</span>
+        </div>
+        <style>
+     body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    background-image: url('imagenes/dmc5_bg.jpg'); /* Recuerda cambiar esta imagen si lo deseas */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+        </style>
+
+        <nav>
+            <p class="menu-label">Navegación</p>
+            <a href="Inicio.html" class="menu-item">🏠 Explorar</a>
+            <a href="contactanos.html" class="menu-item">📧 Contacto</a>
+
+            <p class="menu-label">Categorías</p>
+            <div class="category-list">
+                <a href="#" class="category-btn" onclick="filtrar('todas')">Todas</a>
+                <a href="#" class="category-btn" onclick="filtrar('accion')">Acción</a>
+                <a href="#" class="category-btn" onclick="filtrar('aventura')">Aventura</a>
+                <a href="#" class="category-btn" onclick="filtrar('deportes')">Deportes</a>
+                <a href="#" class="category-btn" onclick="filtrar('estrategia')">Estrategia</a>
+                <a href="#" class="category-btn" onclick="filtrar('simulacion')">Simulación</a>
+                <a href="#" class="category-btn" onclick="filtrar('survivalHorror')">Horror</a>
+                <a href="#" class="category-btn" onclick="filtrar('Casual')">Casual</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="game-container">
+            <div class="game-sidebar">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Devil_May_Cry_5_logo.svg"
+                    alt="Devil May Cry 5"
+                    class="game-banner"
+                />
+                <div class="game-details">
+                    <h1 class="game-title">Devil May Cry 5 + Vergil</h1>
+                    <p class="game-descripcion">
+                        El cazador de demonios definitivo regresa por todo lo alto. Una invasión demoníaca comienza cuando las semillas de un "árbol demoníaco" echan raíces en Red Grave City. Esta incursión infernal atraerá la atención del joven cazador Nero, un aliado de Dante, quien ahora deberá enfrentarse al mal con nuevos brazos robóticos destructivos y sed de venganza.
+                    </p>
+                    <div class="game-ratings">
+                        <p>Reseñas recientes: <span class="very-positive">Extremadamente positivas</span></p>
+                        <p>Reseñas generales: <span class="very-positive">Extremadamente positivas</span></p>
+                    </div>
+                    <div class="game-metadata">
+                        <p>Fecha de lanzamiento: 2019</p>
+                        <p>Desarrollador: Capcom</p>
+                        <p>Editor: Capcom</p>
+                    </div>
+                    <div class="game-tags">
+                        <p>Etiquetas populares:</p>
+                        <ul>
+                            <li>Hack and Slash</li>
+                            <li>Acción / Estilizado</li>
+                            <li>Gran Banda Sonora</li>
+                            <li>Espectacular</li>
+                        </ul>
+                    </div>
+
+                    <div class="seccion-precio">
+                        <h3 class="titulo">Precios</h3>
+                        <div class="preciocuadro">
+                            <div class="tarjeta">
+                                <div class="nombret">Steam</div>
+                                <div class="precio">$29.99 USD</div>
+                                <a href="https://store.steampowered.com/app/601150/Devil_May_Cry_5/" class="botonp" target="_blank">Comprar en Steam</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">PlayStation Store</div>
+                                <div class="precio">$29.99 USD</div>
+                                <a href="https://www.playstation.com/es-ar/games/devil-may-cry-5/" class="botonp" target="_blank">Comprar en PS Store</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">Microsoft Store</div>
+                                <div class="precio">ARS$ 19.999,00</div>
+                                <a href="https://www.xbox.com/es-ar/games/store/devil-may-cry-5-con-vergil/9mxv2s56p99j" class="botonp" target="_blank">Comprar en Microsoft Store</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-main-content">
+                <div class="game-media">
+                    <video controls>
+                        <source src="https://video.cloudflare.steamstatic.com/store_trailers/256813292/movie480_vp9.webm?t=1608003666" type="video/webm">
+                    </video>
+                </div>
+
+                <div class="game-info">
+                    <h2>Desata el rango SSS con estilo supremo</h2>
+                    <p>
+                        Devil May Cry 5 representa la cumbre de los juegos de acción estilizada en tercera persona. Desarrollado con el RE Engine de Capcom, ofrece gráficos fotorrealistas y un ritmo de combate vertiginoso. Controla a tres personajes con mecánicas y estilos completamente opuestos mientras combinas espadas, armas de fuego, invocaciones místicas y combos aéreos brutales al ritmo de una banda sonora dinámica que reacciona a tu nivel de estilo en combate.
+                    </p>
+                </div>
+
+                <div class="game-features">
+                    <h2>Características clave del combate:</h2>
+                    <ul>
+                        <li><strong>Tres estilos de juego letales:</strong> Domina a Nero y sus prótesis cambiantes Devil Breaker, a Dante con sus letales cambios de armas y cuatro estilos clásicos en tiempo real, o al misterioso V y sus letales invocaciones de pesadilla.</li>
+                        <li><strong>Vergil ya está incluido:</strong> Juega como el mismísimo Hermano de Dante y desata la precisión quirúrgica de la katana Yamato junto a su poderoso poder de concentración.</li>
+                        <li><strong>Combate estilizado dinámico:</strong> Destroza las líneas enemigas encadenando variaciones de ataques para subir tu medidor de estilo desde la D hasta la legendaria y destructiva SSS.</li>
+                        <li><strong>Banda sonora adaptativa:</strong> Escucha cómo la icónica música del juego (como "Bury the Light" o "Devil Trigger") aumenta su intensidad y añade capas vocales a medida que peleas con más estilo.</li>
+                        <li><strong>Rendimiento técnico óptimo:</strong> Gráficos ultradetallados a velocidades de fotogramas estables para garantizar que la respuesta a cada comando de combo sea perfecta e inmediata.</li>
+                    </ul>
+                </div>
+
+                <div class="game-languages">
+                    <h2>Idiomas disponibles:</h2>
+                    <ul>
+                        <li>Español - España (Interfaz y subtítulos)</li>
+                        <li>Inglés (Voces originales cinematográficas)</li>
+                        <li>Japonés</li>
+                        <li>Francés</li>
+                        <li>Italiano</li>
+                        <li>Alemán</li>
+                        <li>Portugués - Brasil</li>
+                        <li>Ruso</li>
+                    </ul>
+                </div>
+
+                <div class="game-requirements">
+                    <h2>Requisitos del sistema (PC)</h2>
+                    <div class="system-minimum">
+                        <h3>Mínimo (Para empezar la caza):</h3>
+                        <ul>
+                            <li>SO: Windows 10 (64 bits)</li>
+                            <li>Procesador: Intel Core i5-4460 / AMD FX-6300</li>
+                            <li>Memoria: 8 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GTX 760 / AMD Radeon R7 260x (2GB VRAM)</li>
+                            <li>DirectX: Versión 11</li>
+                            <li>Almacenamiento: 35 GB de espacio disponible</li>
+                        </ul>
+                    </div>
+                    <div class="system-recommended">
+                        <h3>Recomendado (Estilo SSS asegurado):</h3>
+                        <ul>
+                            <li>SO: Windows 10/11 (64 bits)</li>
+                            <li>Procesador: Intel Core i7-3770 / AMD Ryzen 5 1400</li>
+                            <li>Memoria: 8 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GTX 1060 (6GB) / AMD Radeon RX 480 (8GB VRAM)</li>
+                            <li>DirectX: Versión 11</li>
+                            <li>Almacenamiento: 35 GB de espacio disponible (Se recomienda SSD)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script para el menú hamburguesa y filtrado de categorías -->
+    <script>
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const sidebar = document.getElementById('sidebar');
+
+        hamburgerIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !hamburgerIcon.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        function filtrar(cat) {
+            window.location.href = `Inicio.html?categoria=${cat}`;
+        }
+    </script>
+</body>
+</html>

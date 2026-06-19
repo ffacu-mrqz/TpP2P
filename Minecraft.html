@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minecraft</title>
+    <link rel="stylesheet" href="estilo_juegos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menú hamburguesa -->
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Sidebar oculto -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-box">P2</div>
+            <span class="brand-name">P2Price</span>
+        </div>
+        <style>
+     body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    background-image: url('imagenes/minecraft_bg.jpg'); /* Recuerda cambiar esta imagen si lo deseas */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+        </style>
+
+        <nav>
+            <p class="menu-label">Navegación</p>
+            <a href="Inicio.html" class="menu-item">🏠 Explorar</a>
+            <a href="contactanos.html" class="menu-item">📧 Contacto</a>
+
+            <p class="menu-label">Categorías</p>
+            <div class="category-list">
+                <a href="#" class="category-btn" onclick="filtrar('todas')">Todas</a>
+                <a href="#" class="category-btn" onclick="filtrar('accion')">Acción</a>
+                <a href="#" class="category-btn" onclick="filtrar('aventura')">Aventura</a>
+                <a href="#" class="category-btn" onclick="filtrar('deportes')">Deportes</a>
+                <a href="#" class="category-btn" onclick="filtrar('estrategia')">Estrategia</a>
+                <a href="#" class="category-btn" onclick="filtrar('simulacion')">Simulación</a>
+                <a href="#" class="category-btn" onclick="filtrar('survivalHorror')">Horror</a>
+                <a href="#" class="category-btn" onclick="filtrar('Casual')">Casual</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="game-container">
+            <div class="game-sidebar">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover_art1.jpg"
+                    alt="Minecraft"
+                    class="game-banner"
+                    onerror="this.src='https://placehold.co/600x400?text=Minecraft'"
+                />
+                <div class="game-details">
+                    <h1 class="game-title">Minecraft</h1>
+                    <p class="game-descripcion">
+                        ¡Prepara tu pico y adéntrate en un mundo infinito! Minecraft es el aclamado juego de mundo abierto y construcción donde tu imaginación es el único límite. Explora terrenos colosales generados procedimentalmente, extrae valiosos minerales, cultiva tus propios alimentos y construye desde la más humilde cabaña de madera hasta un imponente castillo medieval. Define tu propio ritmo de juego construyendo en paz o preparándote para sobrevivir a los peligros que acechan en la oscuridad.
+                    </p>
+                    <div class="game-ratings">
+                        <p>Reseñas generales: <span class="very-positive">Extremadamente positivas</span></p>
+                        <p>Comunidad global: <span class="very-positive">Millones activos</span></p>
+                    </div>
+                    <div class="game-metadata">
+                        <p>Fecha de lanzamiento: 2011</p>
+                        <p>Desarrollador: Mojang Studios</p>
+                        <p>Editor: Mojang Studios / Xbox Game Studios</p>
+                    </div>
+                    <div class="game-tags">
+                        <p>Etiquetas populares:</p>
+                        <ul>
+                            <li>Mundo Abierto / Sandbox</li>
+                            <li>Supervivencia / Crafteo</li>
+                            <li>Construcción / Píxeles</li>
+                            <li>Multijugador / Aventura</li>
+                        </ul>
+                    </div>
+
+                    <div class="seccion-precio">
+                        <h3 class="titulo">Precios</h3>
+                        <div class="preciocuadro">
+                            <div class="tarjeta">
+                                <div class="nombret">Minecraft.net</div>
+                                <div class="precio">$29.99 USD</div>
+                                <a href="https://www.minecraft.net/" class="botonp" target="_blank">Comprar en Sitio Oficial</a>
+                            </div>
+                            <div class="tarjeta">
+                                <div class="nombret">Xbox Store</div>
+                                <div class="precio">$29.99 USD</div>
+                                <a href="https://www.xbox.com/" class="botonp" target="_blank">Comprar en Xbox</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-main-content">
+                <div class="game-media">
+                    <!-- Vídeo genérico ilustrativo -->
+                    <video controls>
+                        <source src="https://video.cloudflare.steamstatic.com/store_trailers/256692072/movie480.webm" type="video/webm">
+                    </video>
+                </div>
+
+                <div class="game-info">
+                    <h2>Sobrevive a la noche, domina el crafteo o edifica sin límites</h2>
+                    <p>
+                        Minecraft revolucionó el mercado global dividiendo su experiencia en dos enfoques perfectos. El Modo Supervivencia te desafía a recolectar recursos básicos antes del atardecer para fabricar tus primeras herramientas y refugios, defendiéndote de icónicos monstruos como zombis, esqueletos arqueros y los temidos Creepers explosivos. Por otra parte, el Modo Creativo elimina las restricciones de salud y te brinda acceso ilimitado a todos los bloques del catálogo para que actúes como una deidad de la arquitectura virtual, diseñando complejas megaestructuras mecánicas mediante circuitos de redstone.
+                    </p>
+                </div>
+
+                <div class="game-features">
+                    <h2>Características clave de un universo sin límites:</h2>
+                    <ul>
+                        <li><strong>Modos de juego versátiles:</strong> Alterna dinámicamente entre la adrenalina del Modo Supervivencia, la libertad pura del Creativo o la dificultad extrema de Extremo (Hardcore).</li>
+                        <li><strong>Dimensiones alternas misteriosas:</strong> Construye portales de obsidiana para descender al peligroso e infernal Nether, o rastrea fortalezas subterráneas para cruzar al End y derrocar al legendario Dragón.</li>
+                        <li><strong>Sistema de circuitos de Redstone:</strong> Diseña auténticas proezas de ingeniería utilizando polvo de piedra rojiza para automatizar cosechas, abrir puertas ocultas o incluso replicar ordenadores funcionales.</li>
+                        <li><strong>Infinitos mundos multijugador:</strong> Únete a servidores masivos de la comunidad para participar en minijuegos, o suscríbete a Minecraft Realms para gestionar un mundo privado persistente con tus mejores amigos.</li>
+                        <li><strong>Personalización masiva mediante Mods:</strong> Expande la jugabilidad original gracias al incansable soporte de la comunidad que ofrece miles de modificaciones estéticas (shaders) y nuevos contenidos mecánicos.</li>
+                    </ul>
+                </div>
+
+                <div class="game-languages">
+                    <h2>Idiomas disponibles:</h2>
+                    <ul>
+                        <li>Español - Latinoamérica (Interfaz y textos)</li>
+                        <li>Español - España (Interfaz y textos)</li>
+                        <li>Inglés (Interfaz y textos con doblaje para efectos)</li>
+                        <li>Francés</li>
+                        <li>Italiano</li>
+                        <li>Alemán</li>
+                        <li>Portugués - Brasil</li>
+                        <li>Chino simplificado</li>
+                    </ul>
+                </div>
+
+                <div class="game-requirements">
+                    <h2>Requisitos del sistema (PC - Versión Java)</h2>
+                    <div class="system-minimum">
+                        <h3>Mínimo (Para renderizar tus primeros cubos):</h3>
+                        <ul>
+                            <li>SO: Windows 7 / 8 / 10 / 11 (64 bits)</li>
+                            <li>Procesador: Intel Core i3-3210 / AMD A8-7600</li>
+                            <li>Memoria: 4 GB de RAM</li>
+                            <li>Gráficos: Intel HD Graphics 4000 / AMD Radeon R5</li>
+                            <li>Red: Conexión a Internet para autenticación</li>
+                            <li>Almacenamiento: 4 GB de espacio disponible (Se recomienda SSD)</li>
+                        </ul>
+                    </div>
+                    <div class="system-recommended">
+                        <h3>Recomendado (Para explorar con un amplio rango de visión a 60FPS):</h3>
+                        <ul>
+                            <li>SO: Windows 10/11 (64 bits)</li>
+                            <li>Procesador: Intel Core i5-4690 / AMD A10-7800 o superior</li>
+                            <li>Memoria: 8 GB de RAM</li>
+                            <li>Gráficos: NVIDIA GeForce 700 / AMD Radeon Rx 200 o superior</li>
+                            <li>Red: Conexión de banda ancha estable</li>
+                            <li>Almacenamiento: 4 GB de espacio disponible en estado sólido (SSD)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script para el menú hamburguesa y filtrado de categorías -->
+    <script>
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const sidebar = document.getElementById('sidebar');
+
+        hamburgerIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !hamburgerIcon.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        function filtrar(cat) {
+            window.location.href = `Inicio.html?categoria=${cat}`;
+        }
+    </script>
+</body>
+</html>
